@@ -1,0 +1,44 @@
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --border: #e3e3df;
+  --text: #1f1f1f;
+  --muted: #6b6b6b;
+  --accent: #c1432b;
+  --accent-soft: #fce8e4;
+  --good: #2e7d32;
+  --bad: #c62828;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans SC',
+    'Noto Sans Hebrew', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Latin/Pinyin and Hanzi flow LTR; Hebrew is tagged dir="rtl" per element. */
+.hebrew {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+.hanzi {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+}
+
+.pinyin {
+  color: var(--muted);
+  font-style: italic;
+}
