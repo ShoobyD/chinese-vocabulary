@@ -1,9 +1,9 @@
-import raw from '@/data.txt?raw'
+import raw from './data.txt?raw'
 import { flatten, parse } from './parse'
 import type { Group, Word } from './types'
 
 // Single source of truth. When data.txt becomes a JSON file, swap the import
-// above for `import groups from '@/data.json'` and drop the parse() call.
+// above for `import groups from './data.json'` and drop the parse() call.
 export const groups = parse(raw)
 export const allWords = flatten(groups)
 

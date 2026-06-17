@@ -37,10 +37,10 @@ index.html              # app entry HTML
 src/
   main.ts               # bootstraps the Vue app
   App.vue               # top bar, mode switching, group scope selector
-  data.txt              # source vocabulary (hand-edited, see format below)
   components/           # views (Browse/Flashcards/Quiz) and UI (cards, modal, tooltip)
   composables/          # reusable logic (useScope, useCard, useHanziTooltip)
   data/
+    data.txt            # source vocabulary (hand-edited, see format below)
     parse.ts            # turns data.txt into groups of words
     types.ts            # Word / Group types
     index.ts            # loads, parses, indexes, and segments the vocabulary
@@ -50,7 +50,7 @@ src/
 
 ## Editing the vocabulary
 
-Vocabulary lives in [`src/data.txt`](src/data.txt) and is parsed by
+Vocabulary lives in [`src/data/data.txt`](src/data/data.txt) and is parsed by
 [`src/data/parse.ts`](src/data/parse.ts). The format is intentionally forgiving
 so the file can be hand-edited:
 
