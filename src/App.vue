@@ -53,6 +53,13 @@ const { ALL, groups, selectedGroupId, scopedWords } = useScope()
       <QuizView v-else :words="scopedWords" />
     </main>
 
+    <footer class="credits">
+      נבנה על ידי
+      <a href="https://shoobyd.github.io/" target="_blank" rel="noopener noreferrer">ShoobyD</a>
+      ·
+      <a href="https://github.com/ShoobyD" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </footer>
+
     <WordModal />
     <HanziTooltip />
   </div>
@@ -113,5 +120,27 @@ const { ALL, groups, selectedGroupId, scopedWords } = useScope()
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--surface);
+}
+
+.credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.credits a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
 }
 </style>
