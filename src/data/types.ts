@@ -7,14 +7,16 @@ export interface Word {
   pinyin: string
   /** Hebrew translation. Optional — some entries don't have one yet. */
   hebrew?: string
-  /** Id of the group this word belongs to. */
-  groupId: string
+  /** Tag keys this word carries (see TagMap for their labels). */
+  tags: string[]
 }
 
-export interface Group {
-  /** Stable id, derived from the group's position. */
-  id: string
-  /** Display title (from a `# ...` line in the data, or an auto fallback). */
-  title: string
-  words: Word[]
+/** Map from a tag key (stable id) to its display label. */
+export type TagMap = Record<string, string>
+
+/** A tag for the filter UI: its key, display label, and word count. */
+export interface Tag {
+  key: string
+  label: string
+  count: number
 }

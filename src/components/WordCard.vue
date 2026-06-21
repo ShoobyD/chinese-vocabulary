@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { allWords, groupById, segment } from '@/data'
+import { allWords, segment, tagLabels } from '@/data'
 import type { Segment, Word } from '@/data'
 import HanziText from './HanziText.vue'
 
 const props = defineProps<{ word: Word }>()
 const emit = defineEmits<{ (e: 'select', word: Word): void }>()
 
-const groupTitle = computed(() => groupById.get(props.word.groupId)?.title ?? '')
+const tagLabelsForWord = computed(() =>
+  props.word.tags.map((key) => tagLabels[key] ?? key),
+)
 
 // Breakdown into the longest recorded sub-words; only shown when there's more
 // than one part (i.e. the word actually decomposes).
@@ -26,7 +28,9 @@ const usedIn = computed<Word[]>(() =>
 
 <template>
   <article class="word-card" dir="rtl">
-    <p v-if="groupTitle" class="group">{{ groupTitle }}</p>
+    <ul v-if="tagLabelsForWord.length" class="tags">
+      <li v-for="(label, i) in tagLabelsForWord" :key="i" class="tag">{{ label }}</li>
+    </ul>
 
     <div class="headline">
       <HanziText class="big" :text="word.hanzi" />
@@ -72,10 +76,23 @@ const usedIn = computed<Word[]>(() =>
   text-align: center;
 }
 
-.group {
-  color: var(--muted);
-  font-size: 0.85rem;
+.tags {
+  list-style: none;
   margin: 0 0 0.75rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.tag {
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
 }
 
 .headline {

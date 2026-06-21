@@ -9,8 +9,9 @@ right-to-left (RTL) and in Hebrew.
 - **Browse & search** (עיון וחיפוש) — scan the full word list and filter it.
 - **Flashcards** (כרטיסיות) — flip cards to test recall.
 - **Quiz** (בוחן) — multiple-choice practice.
-- **Group scoping** — limit any mode to a single vocabulary group (e.g. "times
-  of day", "pronouns") or study everything at once.
+- **Tag filtering** — limit any mode to one or more tags (e.g. "times of day",
+  "pronouns"); words matching any selected tag are shown, or study everything at
+  once.
 - **Hanzi helpers** — per-character tooltips and a word detail modal.
 
 ## Tech stack
@@ -36,40 +37,48 @@ npm run preview  # preview the production build locally
 index.html              # app entry HTML
 src/
   main.ts               # bootstraps the Vue app
-  App.vue               # top bar, mode switching, group scope selector
+  App.vue               # top bar, mode switching, tag filter chips
   components/           # views (Browse/Flashcards/Quiz) and UI (cards, modal, tooltip)
   composables/          # reusable logic (useScope, useCard, useHanziTooltip)
   data/
-    data.txt            # source vocabulary (hand-edited, see format below)
-    parse.ts            # turns data.txt into groups of words
-    types.ts            # Word / Group types
-    index.ts            # loads, parses, indexes, and segments the vocabulary
+    data.json           # source vocabulary (hand-edited, see format below)
+    types.ts            # Word / Tag types
+    index.ts            # loads, indexes, and segments the vocabulary
   utils.ts              # shared helpers
   style.css             # global styles
+scripts/
+  convert-data.mjs      # one-time migration that produced data.json from the old data.txt
 ```
 
 ## Editing the vocabulary
 
-Vocabulary lives in [`src/data/data.txt`](src/data/data.txt) and is parsed by
-[`src/data/parse.ts`](src/data/parse.ts). The format is intentionally forgiving
-so the file can be hand-edited:
+Vocabulary lives in [`src/data/data.json`](src/data/data.json), hand-edited
+directly. It has two parts:
 
-- Each word is one **tab-separated** line: `Hanzi <tab> Pinyin <tab> [Hebrew]`.
-  Extra alignment tabs are collapsed, and the Hebrew column is optional.
-- A **blank line** separates groups.
-- A line starting with `#` sets that group's title. Groups without one get an
-  auto title (`קבוצה N`).
+- `tags` — a map from a stable tag **key** to its display **label** (the label
+  is what shows in the UI; the key is what words reference). Filter chips appear
+  in the order keys are listed here.
+- `words` — a list of entries. Each has `hanzi`, `pinyin`, an optional `hebrew`
+  translation, and a `tags` array of one or more tag keys.
 
 Example:
 
-```
-# כינויי גוף
-我		wǒ		אני
-你		nǐ		אתה
+```json
+{
+  "tags": { "pronouns": "כינויי גוף" },
+  "words": [
+    { "hanzi": "我", "pinyin": "wǒ", "hebrew": "אני", "tags": ["pronouns"] },
+    { "hanzi": "你", "pinyin": "nǐ", "hebrew": "אתה", "tags": ["pronouns"] }
+  ]
+}
 ```
 
-Word ids are derived from group/position, so reordering entries will change
-them. If the data later moves to JSON, only `src/data/index.ts` needs to change.
+A word may carry several tags. Word ids are derived from list position at load
+time (`src/data/index.ts`), so reordering entries will change them.
+
+The data was originally a tab-separated `data.txt` grouped by blank lines;
+[`scripts/convert-data.mjs`](scripts/convert-data.mjs) performed the one-time
+migration to this tag-based JSON.
 
 ## Conventions
 

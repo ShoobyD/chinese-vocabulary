@@ -1,0 +1,1430 @@
+{
+  "tags": {
+    "direction-location": "כיוון ומיקום",
+    "times-of-day": "זמני היום",
+    "parts-of-day": "חלקי היום",
+    "pronouns": "כינויי גוף",
+    "copula": "אוגד (是)",
+    "greeting-blocks": "אבני בניין לברכות",
+    "function-words": "מילות פונקציה וחלקיקים",
+    "classifier": "קלאסיפייר",
+    "greetings": "ברכות",
+    "ke-yi": "יכולת ומילים נגזרות",
+    "polite-blocks": "אבני בניין למילות נימוס",
+    "polite-phrases": "ביטויי נימוס ופרידה",
+    "greeting-phrases": "ביטויי ברכה",
+    "numbers": "מספרים",
+    "right-wrong": "נכון ולא נכון",
+    "adjectives-size-age": "תארים: גודל, גיל, כבוד",
+    "family-char": "משפחה (家)",
+    "whole-family": "כל המשפחה",
+    "parents": "הורים",
+    "siblings": "אחים ואחיות",
+    "friends": "חברים",
+    "singing": "שירה",
+    "lesson-char": "שיעור (课)",
+    "transcription-syllables": "תעתיק והברות",
+    "phonology": "פונולוגיה: טונים והברות",
+    "great-wall": "החומה הסינית",
+    "compounds-misc": "מילים מורכבות נפוצות",
+    "animals": "בעלי חיים",
+    "body-parts": "איברי הגוף",
+    "devices-tech": "מכשירים וטכנולוגיה",
+    "qi-rise": "לקום / להמריא",
+    "chinese-language": "השפה הסינית",
+    "journey-west": "המסע למערב ומילים קשורות",
+    "ma-pair": "קנבס / לקלל",
+    "interjection": "מילות קריאה (啊)",
+    "surnames": "שמות משפחה",
+    "loanwords": "מילים שאולות"
+  },
+  "words": [
+    {
+      "hanzi": "上",
+      "pinyin": "shàng",
+      "hebrew": "לפני / למעלה",
+      "tags": [
+        "direction-location"
+      ]
+    },
+    {
+      "hanzi": "下",
+      "pinyin": "xià",
+      "hebrew": "אחרי / למטה",
+      "tags": [
+        "direction-location"
+      ]
+    },
+    {
+      "hanzi": "早",
+      "pinyin": "zǎo",
+      "tags": [
+        "times-of-day"
+      ]
+    },
+    {
+      "hanzi": "午",
+      "pinyin": "wǔ",
+      "hebrew": "צוהריים",
+      "tags": [
+        "times-of-day"
+      ]
+    },
+    {
+      "hanzi": "晚",
+      "pinyin": "wǎn",
+      "hebrew": "לילה",
+      "tags": [
+        "times-of-day"
+      ]
+    },
+    {
+      "hanzi": "早上",
+      "pinyin": "zǎoshang",
+      "hebrew": "בוקר",
+      "tags": [
+        "parts-of-day"
+      ]
+    },
+    {
+      "hanzi": "上午",
+      "pinyin": "shàngwǔ",
+      "hebrew": "לפני־צוהריים",
+      "tags": [
+        "parts-of-day"
+      ]
+    },
+    {
+      "hanzi": "下午",
+      "pinyin": "xiàwǔ",
+      "hebrew": "אחר־צוהריים",
+      "tags": [
+        "parts-of-day"
+      ]
+    },
+    {
+      "hanzi": "晚上",
+      "pinyin": "wǎnshang",
+      "hebrew": "ערב",
+      "tags": [
+        "parts-of-day"
+      ]
+    },
+    {
+      "hanzi": "晚安",
+      "pinyin": "wǎn'ān",
+      "hebrew": "לילה טוב",
+      "tags": [
+        "parts-of-day"
+      ]
+    },
+    {
+      "hanzi": "我",
+      "pinyin": "wǒ",
+      "hebrew": "אני",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "你",
+      "pinyin": "nǐ",
+      "hebrew": "אתה",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "妳",
+      "pinyin": "nǐ",
+      "hebrew": "את",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "您",
+      "pinyin": "nín",
+      "hebrew": "אתה (מכובד)",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "他",
+      "pinyin": "tā",
+      "hebrew": "הוא",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "她",
+      "pinyin": "tā",
+      "hebrew": "היא",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "怹",
+      "pinyin": "tān",
+      "hebrew": "הוא (מכובד)",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "们",
+      "pinyin": "men",
+      "hebrew": "סיומת רבים",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "我们",
+      "pinyin": "wǒmen",
+      "hebrew": "אנחנו",
+      "tags": [
+        "pronouns"
+      ]
+    },
+    {
+      "hanzi": "是",
+      "pinyin": "shì",
+      "hebrew": "להיות (אוגד) / נכון",
+      "tags": [
+        "copula"
+      ]
+    },
+    {
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "hebrew": "טוב",
+      "tags": [
+        "greeting-blocks"
+      ]
+    },
+    {
+      "hanzi": "謝",
+      "pinyin": "xiè",
+      "hebrew": "תודה",
+      "tags": [
+        "greeting-blocks"
+      ]
+    },
+    {
+      "hanzi": "久",
+      "pinyin": "jiǔ",
+      "hebrew": "ארוך (זמן)",
+      "tags": [
+        "greeting-blocks"
+      ]
+    },
+    {
+      "hanzi": "再",
+      "pinyin": "zài",
+      "hebrew": "שוב / עוד",
+      "tags": [
+        "greeting-blocks"
+      ]
+    },
+    {
+      "hanzi": "見",
+      "pinyin": "jiàn",
+      "hebrew": "לראות / להתראות / להיפגש",
+      "tags": [
+        "greeting-blocks"
+      ]
+    },
+    {
+      "hanzi": "不",
+      "pinyin": "bù",
+      "hebrew": "לא",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "吗",
+      "pinyin": "ma",
+      "hebrew": "סיומת שאלה",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "了",
+      "pinyin": "le",
+      "hebrew": "מרקר פועל עבר / סיומת שינוי",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "呢",
+      "pinyin": "ne",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "的",
+      "pinyin": "de",
+      "hebrew": "של.. מרקר שייכות",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "這",
+      "pinyin": "zhè",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "那",
+      "pinyin": "nà",
+      "tags": [
+        "function-words"
+      ]
+    },
+    {
+      "hanzi": "個",
+      "pinyin": "gè",
+      "hebrew": "קלאסיפייר כללי",
+      "tags": [
+        "classifier"
+      ]
+    },
+    {
+      "hanzi": "你好",
+      "pinyin": "nǐ hǎo",
+      "hebrew": "שלום (מילולית: שיהיה לך טוב)",
+      "tags": [
+        "greetings"
+      ]
+    },
+    {
+      "hanzi": "你好嗎",
+      "pinyin": "nǐ hǎo ma",
+      "hebrew": "מה שלומך?",
+      "tags": [
+        "greetings"
+      ]
+    },
+    {
+      "hanzi": "可",
+      "pinyin": "kě",
+      "hebrew": "יכול / אפשרי",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "以",
+      "pinyin": "yǐ",
+      "hebrew": "עם / לפי / בגלל..",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "乐",
+      "pinyin": "lè",
+      "hebrew": "אושר / צחוק",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "可以",
+      "pinyin": "kěyǐ",
+      "hebrew": "אוקיי",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "可乐",
+      "pinyin": "kělè",
+      "hebrew": "משמח / משעשע",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "辅",
+      "pinyin": "fǔ",
+      "hebrew": "לסייע",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "导",
+      "pinyin": "dǎo",
+      "hebrew": "לכוון / להוביל",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "辅导",
+      "pinyin": "fǔdǎo",
+      "hebrew": "לאמן / להדריך",
+      "tags": [
+        "ke-yi"
+      ]
+    },
+    {
+      "hanzi": "不用",
+      "pinyin": "bùyòng",
+      "tags": [
+        "polite-blocks"
+      ]
+    },
+    {
+      "hanzi": "客氣",
+      "pinyin": "kèqi",
+      "tags": [
+        "polite-blocks"
+      ]
+    },
+    {
+      "hanzi": "好久",
+      "pinyin": "hǎojiǔ",
+      "hebrew": "כבר הרבה זמן (מילולית: משך זמן טוב)",
+      "tags": [
+        "polite-blocks"
+      ]
+    },
+    {
+      "hanzi": "这個",
+      "pinyin": "zhège",
+      "tags": [
+        "polite-blocks"
+      ]
+    },
+    {
+      "hanzi": "那個",
+      "pinyin": "nàge",
+      "tags": [
+        "polite-blocks"
+      ]
+    },
+    {
+      "hanzi": "不謝",
+      "pinyin": "bùxiè",
+      "tags": [
+        "polite-phrases"
+      ]
+    },
+    {
+      "hanzi": "不用謝",
+      "pinyin": "bùyòngxiè",
+      "tags": [
+        "polite-phrases"
+      ]
+    },
+    {
+      "hanzi": "不客氣",
+      "pinyin": "bù kèqi",
+      "tags": [
+        "polite-phrases"
+      ]
+    },
+    {
+      "hanzi": "不用客氣",
+      "pinyin": "bùyòng kèqì",
+      "tags": [
+        "polite-phrases"
+      ]
+    },
+    {
+      "hanzi": "再見",
+      "pinyin": "zàijiàn",
+      "tags": [
+        "polite-phrases"
+      ]
+    },
+    {
+      "hanzi": "好久不見",
+      "pinyin": "hǎojiǔ bù jiàn",
+      "hebrew": "הרבה זמן שלא התראינו",
+      "tags": [
+        "greeting-phrases"
+      ]
+    },
+    {
+      "hanzi": "吃了嗎",
+      "pinyin": "chī le ma",
+      "hebrew": "כבר אכלת? (~מה שלומך?)",
+      "tags": [
+        "greeting-phrases"
+      ]
+    },
+    {
+      "hanzi": "第",
+      "pinyin": "dì",
+      "hebrew": "תחילית למספר סודר",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "零",
+      "pinyin": "líng",
+      "hebrew": "0",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "一",
+      "pinyin": "yī",
+      "hebrew": "1",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "二",
+      "pinyin": "èr",
+      "hebrew": "2",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "十",
+      "pinyin": "shí",
+      "hebrew": "10",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "第零",
+      "pinyin": "dì-líng",
+      "hebrew": "במיקום האפס",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "第一",
+      "pinyin": "dì-yī",
+      "hebrew": "ראשון",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "第二",
+      "pinyin": "dì'èr",
+      "hebrew": "שני",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "第十",
+      "pinyin": "dì-shí",
+      "hebrew": "עשירי",
+      "tags": [
+        "numbers"
+      ]
+    },
+    {
+      "hanzi": "实",
+      "pinyin": "shí",
+      "hebrew": "אמת",
+      "tags": [
+        "right-wrong"
+      ]
+    },
+    {
+      "hanzi": "不实",
+      "pinyin": "bùshí",
+      "hebrew": "שגוי",
+      "tags": [
+        "right-wrong"
+      ]
+    },
+    {
+      "hanzi": "对",
+      "pinyin": "duì",
+      "hebrew": "נכון",
+      "tags": [
+        "right-wrong"
+      ]
+    },
+    {
+      "hanzi": "不对",
+      "pinyin": "bùduì",
+      "hebrew": "שגוי",
+      "tags": [
+        "right-wrong"
+      ]
+    },
+    {
+      "hanzi": "大",
+      "pinyin": "dà",
+      "hebrew": "גדול",
+      "tags": [
+        "adjectives-size-age"
+      ]
+    },
+    {
+      "hanzi": "老",
+      "pinyin": "lǎo",
+      "hebrew": "זקן / נכבד / קידומת חיבה",
+      "tags": [
+        "adjectives-size-age"
+      ]
+    },
+    {
+      "hanzi": "小",
+      "pinyin": "xiǎo",
+      "hebrew": "קטן / צעיר",
+      "tags": [
+        "adjectives-size-age"
+      ]
+    },
+    {
+      "hanzi": "师",
+      "pinyin": "shī",
+      "hebrew": "מורה",
+      "tags": [
+        "adjectives-size-age"
+      ]
+    },
+    {
+      "hanzi": "老师",
+      "pinyin": "lǎoshī",
+      "hebrew": "מורה (מכובד)",
+      "tags": [
+        "adjectives-size-age"
+      ]
+    },
+    {
+      "hanzi": "不老",
+      "pinyin": "bùlǎo",
+      "hebrew": "אלמוות",
+      "tags": [
+        "adjectives-size-age"
+      ]
+    },
+    {
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "hebrew": "משפחה",
+      "tags": [
+        "family-char"
+      ]
+    },
+    {
+      "hanzi": "一家",
+      "pinyin": "yījiā",
+      "hebrew": "כל המשפחה",
+      "tags": [
+        "whole-family"
+      ]
+    },
+    {
+      "hanzi": "老小",
+      "pinyin": "lǎoxiǎo",
+      "hebrew": "מגדול ועד קטן",
+      "tags": [
+        "whole-family"
+      ]
+    },
+    {
+      "hanzi": "一家老小",
+      "pinyin": "yījiā lǎoxiǎo",
+      "hebrew": "כל המשפחה, מגדול ועד קטן",
+      "tags": [
+        "whole-family"
+      ]
+    },
+    {
+      "hanzi": "妈妈",
+      "pinyin": "māma",
+      "hebrew": "אימא",
+      "tags": [
+        "parents"
+      ]
+    },
+    {
+      "hanzi": "爸爸",
+      "pinyin": "bàba",
+      "hebrew": "אבא",
+      "tags": [
+        "parents"
+      ]
+    },
+    {
+      "hanzi": "妈",
+      "pinyin": "gēge",
+      "hebrew": "סבא",
+      "tags": [
+        "parents"
+      ]
+    },
+    {
+      "hanzi": "妈",
+      "pinyin": "gēge",
+      "hebrew": "סבתא",
+      "tags": [
+        "parents"
+      ]
+    },
+    {
+      "hanzi": "哥哥",
+      "pinyin": "gēge",
+      "hebrew": "אח גדול",
+      "tags": [
+        "siblings"
+      ]
+    },
+    {
+      "hanzi": "姐姐",
+      "pinyin": "jiějie",
+      "hebrew": "אחות גדולה",
+      "tags": [
+        "siblings"
+      ]
+    },
+    {
+      "hanzi": "弟弟",
+      "pinyin": "dìdi",
+      "hebrew": "אח קטן",
+      "tags": [
+        "siblings"
+      ]
+    },
+    {
+      "hanzi": "妹妹",
+      "pinyin": "mèimei",
+      "hebrew": "אחות קטנה",
+      "tags": [
+        "siblings"
+      ]
+    },
+    {
+      "hanzi": "朋",
+      "pinyin": "péng",
+      "hebrew": "חבר",
+      "tags": [
+        "friends"
+      ]
+    },
+    {
+      "hanzi": "友",
+      "pinyin": "yǒu",
+      "hebrew": "חבר",
+      "tags": [
+        "friends"
+      ]
+    },
+    {
+      "hanzi": "朋友",
+      "pinyin": "péngyǒu",
+      "hebrew": "חבר",
+      "tags": [
+        "friends"
+      ]
+    },
+    {
+      "hanzi": "好朋友",
+      "pinyin": "hǎopéngyǒu",
+      "hebrew": "חבר טוב",
+      "tags": [
+        "friends"
+      ]
+    },
+    {
+      "hanzi": "唱",
+      "pinyin": "chàng",
+      "hebrew": "לשיר",
+      "tags": [
+        "singing"
+      ]
+    },
+    {
+      "hanzi": "歌",
+      "pinyin": "gē",
+      "hebrew": "שיר",
+      "tags": [
+        "singing"
+      ]
+    },
+    {
+      "hanzi": "课",
+      "pinyin": "kè",
+      "hebrew": "שיעור",
+      "tags": [
+        "lesson-char"
+      ]
+    },
+    {
+      "hanzi": "拼",
+      "pinyin": "pīn",
+      "hebrew": "לחבר / לאיית",
+      "tags": [
+        "transcription-syllables"
+      ]
+    },
+    {
+      "hanzi": "音",
+      "pinyin": "yīn",
+      "hebrew": "צליל",
+      "tags": [
+        "transcription-syllables"
+      ]
+    },
+    {
+      "hanzi": "节",
+      "pinyin": "jié",
+      "hebrew": "חלק",
+      "tags": [
+        "transcription-syllables"
+      ]
+    },
+    {
+      "hanzi": "拼音",
+      "pinyin": "pīnyīn",
+      "hebrew": "תעתיק / פין־יין",
+      "tags": [
+        "transcription-syllables"
+      ]
+    },
+    {
+      "hanzi": "音节",
+      "pinyin": "yīnjié",
+      "hebrew": "הברה",
+      "tags": [
+        "transcription-syllables"
+      ]
+    },
+    {
+      "hanzi": "声",
+      "pinyin": "shēng",
+      "hebrew": "קול / טון",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "调",
+      "pinyin": "diào",
+      "hebrew": "מבטא[?]",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "韵",
+      "pinyin": "yùn",
+      "hebrew": "חרוז",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "母",
+      "pinyin": "mǔ",
+      "hebrew": "אם / נקבה / (בהשאלה) מקור",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "声调",
+      "pinyin": "shēngdiào",
+      "hebrew": "טון (בלשנות)",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "声母",
+      "pinyin": "shēngmǔ",
+      "hebrew": "תחילית הברה",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "韵母",
+      "pinyin": "yùnmǔ",
+      "hebrew": "סופית הברה",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "零声母",
+      "pinyin": "líng shēngmǔ",
+      "hebrew": "אפס תחילית",
+      "tags": [
+        "phonology"
+      ]
+    },
+    {
+      "hanzi": "萬",
+      "pinyin": "wàn",
+      "hebrew": "רבבה",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "里",
+      "pinyin": "lǐ",
+      "hebrew": "לי (חצי ק״מ)",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "萬里",
+      "pinyin": "wànlǐ",
+      "hebrew": "מרחק עצום (מילולית: 5000 ק״מ)",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "長",
+      "pinyin": "cháng",
+      "hebrew": "ארוך",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "城",
+      "pinyin": "chéng",
+      "hebrew": "חומה/עיר",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "長城",
+      "pinyin": "chángchéng",
+      "hebrew": "החומה הסינית",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "萬里長城",
+      "pinyin": "wànlǐ chángchéng",
+      "hebrew": "החומה הסינית",
+      "tags": [
+        "great-wall"
+      ]
+    },
+    {
+      "hanzi": "餃",
+      "pinyin": "jiǎo",
+      "hebrew": "כיסוני בשר",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "子",
+      "pinyin": "zǐ",
+      "hebrew": "ילד / סיומת הקטנה",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "餃子",
+      "pinyin": "jiǎozi",
+      "hebrew": "גיוזה!",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "麦",
+      "pinyin": "mài",
+      "hebrew": "חיטה / דגן",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "大麦",
+      "pinyin": "dàmài",
+      "hebrew": "שעורה",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "河",
+      "pinyin": "hé",
+      "hebrew": "נהר",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "道",
+      "pinyin": "dào",
+      "hebrew": "דרך / נתיב",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "河道",
+      "pinyin": "hédào",
+      "hebrew": "ערוץ נהר",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "瀑",
+      "pinyin": "pù",
+      "hebrew": "מפל (קידומת)",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "布",
+      "pinyin": "bù",
+      "hebrew": "להפיץ",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "瀑布",
+      "pinyin": "pùbù",
+      "hebrew": "מפל מים",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "背",
+      "pinyin": "bēi",
+      "hebrew": "לשאת (על הגב, או באופן מופשט)",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "hebrew": "תיק",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "背包",
+      "pinyin": "bēibāo",
+      "hebrew": "ילקוט / תרמיל",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "跑",
+      "pinyin": "pǎo",
+      "hebrew": "לרוץ / לברוח",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "步",
+      "pinyin": "bù",
+      "hebrew": "ללכת / צעד",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "跑步",
+      "pinyin": "pǎobù",
+      "hebrew": "לרוץ / ג׳וגינג",
+      "tags": [
+        "compounds-misc"
+      ]
+    },
+    {
+      "hanzi": "熊",
+      "pinyin": "xióng",
+      "hebrew": "דוב",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "猫",
+      "pinyin": "māo",
+      "hebrew": "חתול",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "咪",
+      "pinyin": "mī",
+      "hebrew": "מיאו",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "猫咪",
+      "pinyin": "māomī",
+      "hebrew": "חתלתול",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "鹰",
+      "pinyin": "yīng",
+      "hebrew": "נשר",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "鹿",
+      "pinyin": "lù",
+      "hebrew": "אייל",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "马",
+      "pinyin": "mǎ",
+      "hebrew": "סוס",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "虎",
+      "pinyin": "hǔ",
+      "hebrew": "טיגריס (מיושן)",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "老虎",
+      "pinyin": "lǎohǔ",
+      "hebrew": "טיגריס",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "熊猫",
+      "pinyin": "xióng māo",
+      "hebrew": "פנדה",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "长颈鹿",
+      "pinyin": "cháng jǐng lù",
+      "hebrew": "ג׳ירף",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "猫头鹰",
+      "pinyin": "māo tóu yīng",
+      "hebrew": "ינשוף",
+      "tags": [
+        "animals"
+      ]
+    },
+    {
+      "hanzi": "心",
+      "pinyin": "xīn",
+      "hebrew": "לב / מחשבה",
+      "tags": [
+        "body-parts"
+      ]
+    },
+    {
+      "hanzi": "颈",
+      "pinyin": "jǐng",
+      "hebrew": "צוואר",
+      "tags": [
+        "body-parts"
+      ]
+    },
+    {
+      "hanzi": "头",
+      "pinyin": "tóu",
+      "hebrew": "ראש",
+      "tags": [
+        "body-parts"
+      ]
+    },
+    {
+      "hanzi": "手",
+      "pinyin": "shǒu",
+      "hebrew": "יד",
+      "tags": [
+        "body-parts"
+      ]
+    },
+    {
+      "hanzi": "机",
+      "pinyin": "jī",
+      "hebrew": "מכונה / מכשיר",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "耳",
+      "pinyin": "ěr",
+      "hebrew": "אוזן",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "飞",
+      "pinyin": "fēi",
+      "hebrew": "לעוף",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "打",
+      "pinyin": "dǎ",
+      "hebrew": "להכות / להקיש",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "打字",
+      "pinyin": "dǎzì",
+      "hebrew": "להקליד",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "耳机",
+      "pinyin": "ěrjī",
+      "hebrew": "אוזניות",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "飞机",
+      "pinyin": "fēijī",
+      "hebrew": "מטוס",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "手机",
+      "pinyin": "shǒujī",
+      "hebrew": "טלפון סלולרי",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "打字機",
+      "pinyin": "dǎzì jī",
+      "hebrew": "מכונת כתיבה",
+      "tags": [
+        "devices-tech"
+      ]
+    },
+    {
+      "hanzi": "起",
+      "pinyin": "qǐ",
+      "hebrew": "לעלות / לקום / לעמוד",
+      "tags": [
+        "qi-rise"
+      ]
+    },
+    {
+      "hanzi": "一起",
+      "pinyin": "yīqǐ",
+      "hebrew": "ביחד",
+      "tags": [
+        "qi-rise"
+      ]
+    },
+    {
+      "hanzi": "起飞",
+      "pinyin": "qǐfēi",
+      "hebrew": "להמריא",
+      "tags": [
+        "qi-rise"
+      ]
+    },
+    {
+      "hanzi": "汉",
+      "pinyin": "hàn",
+      "hebrew": "האן ~ סיני",
+      "tags": [
+        "chinese-language"
+      ]
+    },
+    {
+      "hanzi": "字",
+      "pinyin": "zì",
+      "hebrew": "אות / סימן / מילה / כתב",
+      "tags": [
+        "chinese-language"
+      ]
+    },
+    {
+      "hanzi": "语",
+      "pinyin": "yǔ",
+      "hebrew": "שפה",
+      "tags": [
+        "chinese-language"
+      ]
+    },
+    {
+      "hanzi": "汉字",
+      "pinyin": "hànzì",
+      "hebrew": "הכתב הסיני",
+      "tags": [
+        "chinese-language"
+      ]
+    },
+    {
+      "hanzi": "汉语",
+      "pinyin": "hànyǔ",
+      "hebrew": "השפה הסינית",
+      "tags": [
+        "chinese-language"
+      ]
+    },
+    {
+      "hanzi": "西",
+      "pinyin": "xī",
+      "hebrew": "מערב",
+      "tags": [
+        "journey-west"
+      ]
+    },
+    {
+      "hanzi": "瓜",
+      "pinyin": "guā",
+      "hebrew": "מלון",
+      "tags": [
+        "journey-west"
+      ]
+    },
+    {
+      "hanzi": "西瓜",
+      "pinyin": "xīguā",
+      "hebrew": "אבטיח (כי הגיע לסין ממערבה)",
+      "tags": [
+        "journey-west"
+      ]
+    },
+    {
+      "hanzi": "游",
+      "pinyin": "yóu",
+      "hebrew": "לטייל",
+      "tags": [
+        "journey-west"
+      ]
+    },
+    {
+      "hanzi": "记",
+      "pinyin": "jì",
+      "hebrew": "תיעוד",
+      "tags": [
+        "journey-west"
+      ]
+    },
+    {
+      "hanzi": "西游记",
+      "pinyin": "xī yóu jì",
+      "hebrew": "\"המסע למערב\"",
+      "tags": [
+        "journey-west"
+      ]
+    },
+    {
+      "hanzi": "麻",
+      "pinyin": "má",
+      "hebrew": "קנבס",
+      "tags": [
+        "ma-pair"
+      ]
+    },
+    {
+      "hanzi": "骂",
+      "pinyin": "mà",
+      "hebrew": "לנזוף / לקלל",
+      "tags": [
+        "ma-pair"
+      ]
+    },
+    {
+      "hanzi": "啊",
+      "pinyin": "ā",
+      "hebrew": "אה!",
+      "tags": [
+        "interjection"
+      ]
+    },
+    {
+      "hanzi": "陳",
+      "pinyin": "Chén",
+      "hebrew": "צ׳ן (שם משפחה)",
+      "tags": [
+        "surnames"
+      ]
+    },
+    {
+      "hanzi": "咖啡",
+      "pinyin": "kāfēi",
+      "hebrew": "קפה",
+      "tags": [
+        "loanwords"
+      ]
+    },
+    {
+      "hanzi": "可乐",
+      "pinyin": "kělè",
+      "hebrew": "קולה",
+      "tags": [
+        "loanwords"
+      ]
+    }
+  ]
+}

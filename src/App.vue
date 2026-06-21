@@ -16,8 +16,9 @@ const modes: { id: Mode; label: string }[] = [
 ]
 
 const mode = ref<Mode>('browse')
+const tagsExpanded = ref(false)
 
-const { ALL, groups, selectedGroupId, scopedWords } = useScope()
+const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
 </script>
 
 <template>
@@ -36,15 +37,29 @@ const { ALL, groups, selectedGroupId, scopedWords } = useScope()
         </button>
       </nav>
 
-      <label class="scope">
-        קבוצה:
-        <select v-model="selectedGroupId">
-          <option :value="ALL">הכול ({{ scopedWords.length }})</option>
-          <option v-for="g in groups" :key="g.id" :value="g.id">
-            {{ g.title }} ({{ g.words.length }})
-          </option>
-        </select>
-      </label>
+      <div class="filters" :class="{ expanded: tagsExpanded }">
+        <div class="tag-list">
+          <button
+            :class="['tag', { active: selectedTags.length === 0 }]"
+            @click="clearTags"
+          >
+            הכול ({{ scopedWords.length }})
+          </button>
+          <button
+            v-for="t in tags"
+            :key="t.key"
+            :class="['tag', { active: selectedTags.includes(t.key) }]"
+            @click="toggleTag(t.key)"
+          >
+            {{ t.label }} ({{ t.count }})
+          </button>
+        </div>
+
+        <button class="expand-btn" @click="tagsExpanded = !tagsExpanded">
+          {{ tagsExpanded ? 'הצג פחות' : 'עוד תגיות…' }}
+          <span v-if="!tagsExpanded && selectedTags.length" class="badge">{{ selectedTags.length }}</span>
+        </button>
+      </div>
     </header>
 
     <main class="content">
@@ -107,19 +122,78 @@ const { ALL, groups, selectedGroupId, scopedWords } = useScope()
   color: #fff;
 }
 
-.scope {
-  margin-inline-start: auto;
-  color: var(--muted);
-  font-size: 0.9rem;
+.filters {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  flex: 1 1 100%;
 }
 
-.scope select {
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex: 1;
+  /* Collapsed: clip to a single row of chips. */
+  max-height: 2rem;
+  overflow: hidden;
+}
+
+.filters.expanded .tag-list {
+  max-height: none;
+}
+
+.expand-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font: inherit;
-  margin-inline-start: 0.4rem;
-  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding: 0.3rem 0.75rem;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 999px;
   background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.expand-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.badge {
+  min-width: 1.2rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.tag {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.tag:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.tag.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
 .credits {

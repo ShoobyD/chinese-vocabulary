@@ -1,14 +1,26 @@
-import raw from './data.txt?raw'
-import { flatten, parse } from './parse'
-import type { Group, Word } from './types'
+import data from './data.json'
+import type { Tag, TagMap, Word } from './types'
 
-// Single source of truth. When data.txt becomes a JSON file, swap the import
-// above for `import groups from './data.json'` and drop the parse() call.
-export const groups = parse(raw)
-export const allWords = flatten(groups)
+// Single source of truth: hand-edited JSON with a `tags` map (key -> label)
+// and a `words` list. Each word carries one or more tag keys.
+export const tagLabels: TagMap = data.tags
 
-/** Group lookup by id (used to show a word's lesson title). */
-export const groupById = new Map<string, Group>(groups.map((g) => [g.id, g]))
+// Generate a stable id per word from its position (matches the previous
+// position-based scheme), so the JSON file itself stays free of ids to maintain.
+export const allWords: Word[] = data.words.map((w, i) => ({
+  id: `${i}-${w.hanzi}`,
+  hanzi: w.hanzi,
+  pinyin: w.pinyin,
+  hebrew: 'hebrew' in w ? (w.hebrew as string) : undefined,
+  tags: [...w.tags],
+}))
+
+/** All tags with their label and word count, in the `tags` map's order. */
+export const tags: Tag[] = Object.entries(tagLabels).map(([key, label]) => ({
+  key,
+  label,
+  count: allWords.reduce((n, w) => n + (w.tags.includes(key) ? 1 : 0), 0),
+}))
 
 /** Index from a Hanzi string (any length) to its entry. First occurrence wins. */
 export const wordIndex = new Map<string, Word>()
@@ -55,4 +67,4 @@ export function segment(text: string): Segment[] {
   return out
 }
 
-export type { Group, Word } from './types'
+export type { Tag, TagMap, Word } from './types'
