@@ -207,7 +207,7 @@
       ]
     },
     {
-      "hanzi": "謝",
+      "hanzi": "谢",
       "pinyin": "xiè",
       "hebrew": "תודה",
       "tags": [
@@ -231,7 +231,7 @@
       ]
     },
     {
-      "hanzi": "見",
+      "hanzi": "见",
       "pinyin": "jiàn",
       "hebrew": "לראות / להתראות / להיפגש",
       "tags": [
@@ -278,7 +278,7 @@
       ]
     },
     {
-      "hanzi": "這",
+      "hanzi": "这",
       "pinyin": "zhè",
       "tags": [
         "function-words"
@@ -292,7 +292,7 @@
       ]
     },
     {
-      "hanzi": "個",
+      "hanzi": "个",
       "pinyin": "gè",
       "hebrew": "קלאסיפייר כללי",
       "tags": [
@@ -308,7 +308,7 @@
       ]
     },
     {
-      "hanzi": "你好嗎",
+      "hanzi": "你好吗",
       "pinyin": "nǐ hǎo ma",
       "hebrew": "מה שלומך?",
       "tags": [
@@ -387,7 +387,7 @@
       ]
     },
     {
-      "hanzi": "客氣",
+      "hanzi": "客气",
       "pinyin": "kèqi",
       "tags": [
         "polite-blocks"
@@ -402,56 +402,56 @@
       ]
     },
     {
-      "hanzi": "这個",
+      "hanzi": "这个",
       "pinyin": "zhège",
       "tags": [
         "polite-blocks"
       ]
     },
     {
-      "hanzi": "那個",
+      "hanzi": "那个",
       "pinyin": "nàge",
       "tags": [
         "polite-blocks"
       ]
     },
     {
-      "hanzi": "不謝",
+      "hanzi": "不谢",
       "pinyin": "bùxiè",
       "tags": [
         "polite-phrases"
       ]
     },
     {
-      "hanzi": "不用謝",
+      "hanzi": "不用谢",
       "pinyin": "bùyòngxiè",
       "tags": [
         "polite-phrases"
       ]
     },
     {
-      "hanzi": "不客氣",
+      "hanzi": "不客气",
       "pinyin": "bù kèqi",
       "tags": [
         "polite-phrases"
       ]
     },
     {
-      "hanzi": "不用客氣",
+      "hanzi": "不用客气",
       "pinyin": "bùyòng kèqì",
       "tags": [
         "polite-phrases"
       ]
     },
     {
-      "hanzi": "再見",
+      "hanzi": "再见",
       "pinyin": "zàijiàn",
       "tags": [
         "polite-phrases"
       ]
     },
     {
-      "hanzi": "好久不見",
+      "hanzi": "好久不见",
       "pinyin": "hǎojiǔ bù jiàn",
       "hebrew": "הרבה זמן שלא התראינו",
       "tags": [
@@ -459,7 +459,7 @@
       ]
     },
     {
-      "hanzi": "吃了嗎",
+      "hanzi": "吃了吗",
       "pinyin": "chī le ma",
       "hebrew": "כבר אכלת? (~מה שלומך?)",
       "tags": [
@@ -875,7 +875,7 @@
       ]
     },
     {
-      "hanzi": "萬",
+      "hanzi": "万",
       "pinyin": "wàn",
       "hebrew": "רבבה",
       "tags": [
@@ -891,7 +891,7 @@
       ]
     },
     {
-      "hanzi": "萬里",
+      "hanzi": "万里",
       "pinyin": "wànlǐ",
       "hebrew": "מרחק עצום (מילולית: 5000 ק״מ)",
       "tags": [
@@ -899,7 +899,7 @@
       ]
     },
     {
-      "hanzi": "長",
+      "hanzi": "长",
       "pinyin": "cháng",
       "hebrew": "ארוך",
       "tags": [
@@ -915,7 +915,7 @@
       ]
     },
     {
-      "hanzi": "長城",
+      "hanzi": "长城",
       "pinyin": "chángchéng",
       "hebrew": "החומה הסינית",
       "tags": [
@@ -923,7 +923,7 @@
       ]
     },
     {
-      "hanzi": "萬里長城",
+      "hanzi": "万里长城",
       "pinyin": "wànlǐ chángchéng",
       "hebrew": "החומה הסינית",
       "tags": [
@@ -931,7 +931,7 @@
       ]
     },
     {
-      "hanzi": "餃",
+      "hanzi": "饺",
       "pinyin": "jiǎo",
       "hebrew": "כיסוני בשר",
       "tags": [
@@ -947,7 +947,7 @@
       ]
     },
     {
-      "hanzi": "餃子",
+      "hanzi": "饺子",
       "pinyin": "jiǎozi",
       "hebrew": "גיוזה!",
       "tags": [
@@ -1259,7 +1259,7 @@
       ]
     },
     {
-      "hanzi": "打字機",
+      "hanzi": "打字机",
       "pinyin": "dǎzì jī",
       "hebrew": "מכונת כתיבה",
       "tags": [
@@ -1403,7 +1403,7 @@
       ]
     },
     {
-      "hanzi": "陳",
+      "hanzi": "陈",
       "pinyin": "Chén",
       "hebrew": "צ׳ן (שם משפחה)",
       "tags": [
