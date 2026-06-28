@@ -42,7 +42,7 @@
     {
       "hanzi": "上",
       "pinyin": "shàng",
-      "hebrew": "לפני / למעלה",
+      "hebrew": "לפני / למעלה / על",
       "tags": [
         "direction-location"
       ]
@@ -50,7 +50,7 @@
     {
       "hanzi": "下",
       "pinyin": "xià",
-      "hebrew": "אחרי / למטה",
+      "hebrew": "אחרי / למטה / מתחת",
       "tags": [
         "direction-location"
       ]
