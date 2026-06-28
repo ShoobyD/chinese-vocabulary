@@ -58,6 +58,7 @@
     {
       "hanzi": "早",
       "pinyin": "zǎo",
+      "hebrew": "מוקדם / בוקר",
       "tags": [
         "times-of-day"
       ]
@@ -81,7 +82,7 @@
     {
       "hanzi": "早上",
       "pinyin": "zǎoshang",
-      "hebrew": "בוקר",
+      "hebrew": "בוקר (מילולית: \"על הבוקר\")",
       "tags": [
         "parts-of-day"
       ]
