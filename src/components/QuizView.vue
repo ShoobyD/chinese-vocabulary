@@ -20,6 +20,8 @@ const directions: Direction[] = [
   { id: 'hebrew-hanzi', label: 'עברית ← סינית', prompt: 'hebrew', answer: 'hanzi' },
   { id: 'hanzi-pinyin', label: 'סינית ← פין־יין', prompt: 'hanzi', answer: 'pinyin' },
   { id: 'pinyin-hanzi', label: 'פין־יין ← סינית', prompt: 'pinyin', answer: 'hanzi' },
+  { id: 'hebrew-pinyin', label: 'עברית ← פין־יין', prompt: 'hebrew', answer: 'pinyin' },
+  { id: 'pinyin-hebrew', label: 'פין־יין ← עברית', prompt: 'pinyin', answer: 'hebrew' },
 ]
 
 const direction = ref<Direction>(directions[0])
