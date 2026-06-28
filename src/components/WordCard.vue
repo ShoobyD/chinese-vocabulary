@@ -39,7 +39,7 @@ const usedIn = computed<Word[]>(() =>
     <p class="hebrew meaning">{{ word.hebrew ?? '—' }}</p>
 
     <section v-if="breakdown.length" class="breakdown">
-      <h3 class="breakdown-title">פירוק לסימניות</h3>
+      <h3 class="breakdown-title">פירוק לרכיבים</h3>
       <ul class="parts" dir="ltr">
         <li
           v-for="(p, i) in breakdown"
