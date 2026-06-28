@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { defineAsyncComponent, ref } from 'vue'
 import { useScope } from '@/composables/useScope'
 import BrowseView from '@/components/BrowseView.vue'
 import FlashcardsView from '@/components/FlashcardsView.vue'
@@ -7,12 +7,21 @@ import QuizView from '@/components/QuizView.vue'
 import WordModal from '@/components/WordModal.vue'
 import HanziTooltip from '@/components/HanziTooltip.vue'
 
-type Mode = 'browse' | 'flashcards' | 'quiz'
+type Mode = 'browse' | 'flashcards' | 'quiz' | 'edit'
+
+// Editing is a dev-only tool: the component (and its button) are excluded from
+// production builds — import.meta.env.DEV is statically false in prod, so the
+// async import is tree-shaken away.
+const isDev = import.meta.env.DEV
+const EditView = isDev
+  ? defineAsyncComponent(() => import('@/components/EditView.vue'))
+  : null
 
 const modes: { id: Mode; label: string }[] = [
   { id: 'browse', label: 'עיון וחיפוש' },
   { id: 'flashcards', label: 'כרטיסיות' },
   { id: 'quiz', label: 'בוחן' },
+  ...(isDev ? [{ id: 'edit' as Mode, label: 'עריכה' }] : []),
 ]
 
 const mode = ref<Mode>('browse')
@@ -65,7 +74,8 @@ const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
     <main class="content">
       <BrowseView v-if="mode === 'browse'" :words="scopedWords" />
       <FlashcardsView v-else-if="mode === 'flashcards'" :words="scopedWords" />
-      <QuizView v-else :words="scopedWords" />
+      <QuizView v-else-if="mode === 'quiz'" :words="scopedWords" />
+      <component :is="EditView" v-else-if="EditView && mode === 'edit'" />
     </main>
 
     <footer class="credits">

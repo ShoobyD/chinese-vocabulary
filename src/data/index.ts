@@ -1,32 +1,44 @@
+import { computed, reactive } from 'vue'
 import data from './data.json'
 import type { Tag, TagMap, Word } from './types'
 
 // Single source of truth: hand-edited JSON with a `tags` map (key -> label)
 // and a `words` list. Each word carries one or more tag keys.
-export const tagLabels: TagMap = data.tags
+//
+// Both stores are reactive so the dev-only editing mode (useEditor) can mutate
+// them in place and have every view update live. `tags` and `wordIndex` are
+// derived, so they recompute as words/labels change.
+export const tagLabels: TagMap = reactive({ ...data.tags })
 
 // Generate a stable id per word from its position (matches the previous
 // position-based scheme), so the JSON file itself stays free of ids to maintain.
-export const allWords: Word[] = data.words.map((w, i) => ({
-  id: `${i}-${w.hanzi}`,
-  hanzi: w.hanzi,
-  pinyin: w.pinyin,
-  hebrew: 'hebrew' in w ? (w.hebrew as string) : undefined,
-  tags: [...w.tags],
-}))
+export const allWords = reactive<Word[]>(
+  data.words.map((w, i) => ({
+    id: `${i}-${w.hanzi}`,
+    hanzi: w.hanzi,
+    pinyin: w.pinyin,
+    hebrew: 'hebrew' in w ? (w.hebrew as string) : undefined,
+    tags: [...w.tags],
+  })),
+)
 
 /** All tags with their label and word count, in the `tags` map's order. */
-export const tags: Tag[] = Object.entries(tagLabels).map(([key, label]) => ({
-  key,
-  label,
-  count: allWords.reduce((n, w) => n + (w.tags.includes(key) ? 1 : 0), 0),
-}))
+export const tags = computed<Tag[]>(() =>
+  Object.entries(tagLabels).map(([key, label]) => ({
+    key,
+    label,
+    count: allWords.reduce((n, w) => n + (w.tags.includes(key) ? 1 : 0), 0),
+  })),
+)
 
 /** Index from a Hanzi string (any length) to its entry. First occurrence wins. */
-export const wordIndex = new Map<string, Word>()
-for (const w of allWords) {
-  if (!wordIndex.has(w.hanzi)) wordIndex.set(w.hanzi, w)
-}
+export const wordIndex = computed(() => {
+  const index = new Map<string, Word>()
+  for (const w of allWords) {
+    if (!index.has(w.hanzi)) index.set(w.hanzi, w)
+  }
+  return index
+})
 
 export interface Segment {
   text: string
@@ -51,7 +63,7 @@ export function segment(text: string): Segment[] {
     for (let len = n - i; len >= 1; len--) {
       if (i === 0 && len === n) continue
       const sub = chars.slice(i, i + len).join('')
-      const word = wordIndex.get(sub)
+      const word = wordIndex.value.get(sub)
       if (word) {
         out.push({ text: sub, word })
         took = len
