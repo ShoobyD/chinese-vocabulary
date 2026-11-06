@@ -1,18 +1,111 @@
+/*
+ * Visual world: mahjong tiles on a felt table.
+ * Jade shell, bone tile faces with a jade underside, carving inks
+ * (red / green / blue / black) that double as Mandarin tone colours.
+ */
 :root {
-  --bg: #f7f7f5;
-  --surface: #ffffff;
-  --border: #e3e3df;
-  --text: #1f1f1f;
-  --muted: #6b6b6b;
-  --accent: #c1432b;
-  --accent-soft: #fce8e4;
-  --good: #2e7d32;
-  --bad: #c62828;
+  /* Jade: the shell and the tile backs. */
+  --jade-950: #072a22;
+  --jade-900: #0a3a2f;
+  --jade-800: #0f4f40;
+  --jade-700: #1b6b57;
+  --jade-200: #bfd9cd;
+  --jade-100: #dcebe4;
 
-  font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans SC',
-    'Noto Sans Hebrew', sans-serif;
+  /* Bone: the carved tile face. */
+  --bone: #f1ece0;
+  --bone-shade: #d8cfba;
+  --bone-deep: #b9ae95;
+
+  /* Felt: the table the tiles sit on. */
+  --felt: #e4ddcc;
+  --felt-deep: #d6cdb8;
+
+  /* Ink. */
+  --ink: #1a1a1a;
+  --ink-soft: #3d3a33;
+  --ink-muted: #5d574b;
+  --on-jade: #f1ece0;
+  --on-jade-muted: #bfd9cd;
+
+  /* Carving inks. Each holds >= 4.5:1 on bone and felt. */
+  --carve-red: #b8232b;
+  --carve-green: #17683b;
+  --carve-blue: #1d4f9a;
+  --carve-black: #1a1a1a;
+
+  /* Tone contours: 1 flat, 2 rising, 3 dipping, 4 falling, 0 neutral. */
+  --tone-1: var(--carve-red);
+  --tone-2: var(--carve-green);
+  --tone-3: var(--carve-blue);
+  --tone-4: var(--carve-black);
+  --tone-0: var(--ink-muted);
+  --tone-stagger: 380ms;
+  --tone-draw: 450ms;
+
+  /* Type. */
+  --font-ui: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-hanzi: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+
+  /* Space, on a 4px step. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Shape. */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /*
+   * Tile depth: a bone face resting on a jade back. Set --lift on a tile
+   * (positive = raised, negative = pressed) and the stack follows.
+   */
+  --tile-face-edge: inset 0 -3px 0 var(--bone-shade);
+  --tile-depth:
+    var(--tile-face-edge),
+    0 calc(5px + var(--lift, 0px)) 0 var(--jade-800),
+    0 calc(8px + var(--lift, 0px)) 0 var(--jade-900),
+    0 calc(12px + var(--lift, 0px) * 2) calc(16px + var(--lift, 0px) * 2) rgba(7, 42, 34, 0.24);
+
+  /* Motion. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 650ms;
+
+  /* Legacy names, mapped onto the world so existing components keep working. */
+  --bg: var(--felt);
+  --surface: var(--bone);
+  --border: var(--bone-shade);
+  --text: var(--ink);
+  --muted: var(--ink-muted);
+  --accent: var(--jade-800);
+  --accent-soft: var(--jade-100);
+  --good: var(--carve-green);
+  --bad: var(--carve-red);
+
+  font-family: var(--font-ui);
+  font-size: 100%;
+  line-height: 1.5;
   color: var(--text);
-  background: var(--bg);
+  background: var(--felt);
+  color-scheme: light;
+  accent-color: var(--jade-800);
+  caret-color: var(--jade-800);
+  scrollbar-color: var(--bone-deep) var(--felt);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 * {
@@ -21,11 +114,46 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
+  background: var(--felt);
+}
+
+::selection {
+  background: var(--jade-800);
+  color: var(--on-jade);
 }
 
 button {
   font: inherit;
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ink-muted);
+  opacity: 1;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--jade-800);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
 }
 
 /* Latin/Pinyin and Hanzi flow LTR; Hebrew is tagged dir="rtl" per element. */
@@ -35,10 +163,22 @@ button {
 }
 
 .hanzi {
-  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  font-family: var(--font-hanzi);
+  font-weight: 700;
 }
 
 .pinyin {
-  color: var(--muted);
-  font-style: italic;
+  color: var(--carve-blue);
+  font-weight: 600;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
+
