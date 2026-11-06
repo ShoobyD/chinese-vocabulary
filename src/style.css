@@ -34,6 +34,12 @@
   --carve-blue: #1d4f9a;
   --carve-black: #1a1a1a;
 
+  /* Quiz verdicts: carving green/red borrowed for fill and underside only. */
+  --verdict-good-fill: #e2efe6;
+  --verdict-good-deep: #0f4a29;
+  --verdict-bad-fill: #f6e1e1;
+  --verdict-bad-deep: #7d161c;
+
   /* Tone contours: 1 flat, 2 rising, 3 dipping, 4 falling, 0 neutral. */
   --tone-1: var(--carve-red);
   --tone-2: var(--carve-green);

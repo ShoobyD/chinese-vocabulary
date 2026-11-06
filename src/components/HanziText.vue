@@ -55,7 +55,8 @@ function onActivate(word: Word) {
   white-space: nowrap;
 }
 
-/* Known sub-words carry a fine dotted rule; it inks red under the pointer. */
+/* Known sub-words carry a fine dotted rule; it turns jade under the pointer
+   (never a carving ink — those are reserved for tones). */
 .seg.known {
   cursor: pointer;
   text-decoration: underline dotted var(--bone-deep);

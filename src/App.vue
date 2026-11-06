@@ -188,7 +188,7 @@ const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
   min-height: 2.75rem;
   padding: 0 var(--space-5);
   border: 0;
-  border-radius: 7px;
+  border-radius: var(--radius-sm);
   background: transparent;
   color: var(--on-jade-muted);
   font-size: var(--text-md);

@@ -517,24 +517,24 @@ const promptSize = computed(() => {
 
 .option.correct {
   --lift: 3px;
-  background: #e2efe6;
+  background: var(--verdict-good-fill);
   color: var(--carve-green);
   box-shadow:
     inset 0 0 0 2px var(--carve-green),
     0 calc(5px + var(--lift)) 0 var(--carve-green),
-    0 calc(8px + var(--lift)) 0 #0f4a29,
+    0 calc(8px + var(--lift)) 0 var(--verdict-good-deep),
     0 calc(12px + var(--lift) * 2) 18px rgba(7, 42, 34, 0.24);
   animation: land 420ms var(--ease-spring);
 }
 
 .option.wrong {
   --lift: -3px;
-  background: #f6e1e1;
+  background: var(--verdict-bad-fill);
   color: var(--carve-red);
   box-shadow:
     inset 0 0 0 2px var(--carve-red),
     0 calc(5px + var(--lift)) 0 var(--carve-red),
-    0 calc(8px + var(--lift)) 0 #7d161c,
+    0 calc(8px + var(--lift)) 0 var(--verdict-bad-deep),
     0 6px 10px rgba(7, 42, 34, 0.18);
   animation: shake 380ms var(--ease-out);
 }
@@ -544,6 +544,12 @@ const promptSize = computed(() => {
 .option.hanzi.correct,
 .option.hanzi.wrong {
   color: var(--ink);
+}
+
+/* Pinyin answers keep the neutral pinyin ink through a verdict too. */
+.option.pinyin.correct,
+.option.pinyin.wrong {
+  color: var(--ink-soft);
 }
 
 .option.correct .mark {
@@ -627,13 +633,13 @@ const promptSize = computed(() => {
 .answer-input.correct {
   border-color: var(--carve-green);
   box-shadow: inset 0 0 0 1px var(--carve-green);
-  color: var(--carve-green);
+  background: var(--verdict-good-fill);
 }
 
 .answer-input.wrong {
   border-color: var(--carve-red);
   box-shadow: inset 0 0 0 1px var(--carve-red);
-  color: var(--carve-red);
+  background: var(--verdict-bad-fill);
   animation: shake 380ms var(--ease-out);
 }
 
@@ -751,9 +757,13 @@ const promptSize = computed(() => {
 .empty {
   margin: 0;
   padding: var(--space-7) var(--space-4);
-  border: 2px dashed var(--felt-deep);
+  /* An empty tile well pressed into the felt, as in Browse. */
   border-radius: var(--radius-lg);
-  color: var(--ink-muted);
+  background: var(--felt-deep);
+  box-shadow:
+    inset 0 3px 8px rgba(7, 42, 34, 0.18),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  color: var(--ink-soft);
   text-align: center;
 }
 

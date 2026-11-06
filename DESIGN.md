@@ -20,6 +20,10 @@ colors:
   carve-green: "#17683b"
   carve-blue: "#1d4f9a"
   carve-black: "#1a1a1a"
+  verdict-good-fill: "#e2efe6"
+  verdict-good-deep: "#0f4a29"
+  verdict-bad-fill: "#f6e1e1"
+  verdict-bad-deep: "#7d161c"
 typography:
   hanzi-display:
     fontFamily: "Noto Serif SC, Songti SC, SimSun, serif"
