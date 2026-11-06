@@ -19,3 +19,9 @@ dev.err.log
 
 # OS junk
 .DS_Store
+
+# Impeccable: local tool state and review captures (regenerated, not source)
+.impeccable/questions/
+.impeccable/hook.cache.json
+.impeccable/review/
+

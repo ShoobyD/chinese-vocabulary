@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-06T06:05:41.829Z",
+  "generatedAt": "2026-11-06T15:12:24.212Z",
   "title": "Design System: לימוד סינית",
   "extensions": {
     "colorMeta": {
@@ -273,6 +273,66 @@
           "oklch(83.6% 0 89.9)",
           "oklch(95% 0 89.9)"
         ]
+      },
+      "verdict-good-fill": {
+        "role": "tertiary",
+        "displayName": "Verdict Green Fill",
+        "canonical": "oklch(94% 0.018 155.8)",
+        "tonalRamp": [
+          "oklch(15% 0.105 153.8)",
+          "oklch(26.4% 0.105 153.8)",
+          "oklch(37.9% 0.105 153.8)",
+          "oklch(49.3% 0.105 153.8)",
+          "oklch(60.7% 0.105 153.8)",
+          "oklch(72.1% 0.105 153.8)",
+          "oklch(83.6% 0.105 153.8)",
+          "oklch(95% 0.105 153.8)"
+        ]
+      },
+      "verdict-good-deep": {
+        "role": "tertiary",
+        "displayName": "Verdict Green Deep",
+        "canonical": "oklch(36.3% 0.082 153.9)",
+        "tonalRamp": [
+          "oklch(15% 0.105 153.8)",
+          "oklch(26.4% 0.105 153.8)",
+          "oklch(37.9% 0.105 153.8)",
+          "oklch(49.3% 0.105 153.8)",
+          "oklch(60.7% 0.105 153.8)",
+          "oklch(72.1% 0.105 153.8)",
+          "oklch(83.6% 0.105 153.8)",
+          "oklch(95% 0.105 153.8)"
+        ]
+      },
+      "verdict-bad-fill": {
+        "role": "tertiary",
+        "displayName": "Verdict Red Fill",
+        "canonical": "oklch(92.7% 0.023 17.6)",
+        "tonalRamp": [
+          "oklch(15% 0.184 24.5)",
+          "oklch(26.4% 0.184 24.5)",
+          "oklch(37.9% 0.184 24.5)",
+          "oklch(49.3% 0.184 24.5)",
+          "oklch(60.7% 0.184 24.5)",
+          "oklch(72.1% 0.184 24.5)",
+          "oklch(83.6% 0.184 24.5)",
+          "oklch(95% 0.184 24.5)"
+        ]
+      },
+      "verdict-bad-deep": {
+        "role": "tertiary",
+        "displayName": "Verdict Red Deep",
+        "canonical": "oklch(38.6% 0.137 24)",
+        "tonalRamp": [
+          "oklch(15% 0.184 24.5)",
+          "oklch(26.4% 0.184 24.5)",
+          "oklch(37.9% 0.184 24.5)",
+          "oklch(49.3% 0.184 24.5)",
+          "oklch(60.7% 0.184 24.5)",
+          "oklch(72.1% 0.184 24.5)",
+          "oklch(83.6% 0.184 24.5)",
+          "oklch(95% 0.184 24.5)"
+        ]
       }
     },
     "typographyMeta": {
@@ -290,7 +350,7 @@
       },
       "pinyin": {
         "displayName": "Pinyin",
-        "purpose": "Pinyin under every contour row, always Soft Ink at 600."
+        "purpose": "Pinyin under every contour row at 600, each syllable inked in its tone colour (PinyinText); separators and standalone Pinyin (quiz options) stay Soft Ink."
       },
       "body": {
         "displayName": "Body",
@@ -430,8 +490,8 @@
       "name": "Word Tile",
       "kind": "card",
       "refersTo": "word-tile",
-      "description": "Signature: a bone tile on a jade underside with Hanzi, tone contours, Pinyin and Hebrew. Lifts on hover, presses on click.",
-      "html": "<div class=\"ds-tile\" tabindex=\"0\" role=\"button\"><span class=\"ds-tile-hanzi\" lang=\"zh-Hans\">你好</span><span class=\"ds-tones\" dir=\"ltr\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg></span><span class=\"ds-tile-pinyin\" dir=\"ltr\">nǐ hǎo</span><span class=\"ds-tile-hebrew\" dir=\"rtl\">שלום</span></div>",
+      "description": "Signature: a bone tile on a jade underside with Hanzi, tone contours, tone-inked Pinyin and Hebrew. Lifts on hover, presses on click.",
+      "html": "<div class=\"ds-tile\" tabindex=\"0\" role=\"button\"><span class=\"ds-tile-hanzi\" lang=\"zh-Hans\">你好</span><span class=\"ds-tones\" dir=\"ltr\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg></span><span class=\"ds-tile-pinyin\" dir=\"ltr\"><span style=\"color: var(--tone-3)\">nǐ</span> <span style=\"color: var(--tone-3)\">hǎo</span></span><span class=\"ds-tile-hebrew\" dir=\"rtl\">שלום</span></div>",
       "css": ".ds-tile { --lift: 0px; display: inline-flex; flex-direction: column; align-items: center; gap: var(--space-1); width: 9rem; padding: var(--space-4) var(--space-3); border-radius: var(--radius-md); background: var(--bone); color: var(--ink); text-align: center; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--jade-800), 0 calc(8px + var(--lift)) 0 var(--jade-900), 0 calc(12px + var(--lift) * 2) calc(16px + var(--lift) * 2) rgba(7, 42, 34, 0.24); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-tile:hover { --lift: 6px; } .ds-tile:active { --lift: -3px; transition-duration: var(--dur-fast); } .ds-tile:focus-visible { --lift: 6px; outline: 3px solid var(--jade-800); outline-offset: 4px; } .ds-tile-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 2.6rem; line-height: 1; height: 4.25rem; display: flex; align-items: center; } .ds-tones { display: inline-flex; gap: 0.25rem; } .ds-contour { width: 2.25rem; height: 1.4rem; overflow: visible; } .ds-contour path { fill: none; stroke: var(--tone-color); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; } .ds-tile-pinyin { margin-top: var(--space-1); color: var(--ink-soft); font-weight: 600; font-size: var(--text-md); line-height: 1.3; } .ds-tile-hebrew { color: var(--ink-soft); font-size: var(--text-sm); line-height: 1.35; }"
     },
     {
@@ -441,6 +501,14 @@
       "description": "Signature: one pitch line per syllable in its carving ink (1 red flat, 2 green rising, 3 blue dipping, 4 black falling, neutral dot), redrawn in reading order on hover.",
       "html": "<span class=\"ds-tones-demo\" dir=\"ltr\" tabindex=\"0\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-1)\"><path d=\"M3 4 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-2)\"><path d=\"M3 12 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-4)\"><path d=\"M3 4 L29 15\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-0)\"><path class=\"ds-neutral\" d=\"M15 10 L17 10\"/></svg></span>",
       "css": ".ds-tones-demo { display: inline-flex; gap: 0.75rem; padding: var(--space-4); border-radius: var(--radius-md); background: var(--bone); } .ds-tones-demo .ds-contour { width: 3.5rem; height: 2.2rem; overflow: visible; } .ds-tones-demo path { fill: none; stroke: var(--tone-color); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 0; } .ds-tones-demo path.ds-neutral { stroke-width: 5; } .ds-tones-demo:hover path, .ds-tones-demo:focus-visible path { animation: ds-draw var(--tone-draw) var(--ease-out) both; } .ds-tones-demo .ds-contour:nth-child(2) path { animation-delay: calc(1 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(3) path { animation-delay: calc(2 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(4) path { animation-delay: calc(3 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(5) path { animation-delay: calc(4 * var(--tone-stagger)); } @keyframes ds-draw { from { stroke-dashoffset: 40; } to { stroke-dashoffset: 0; } } @media (prefers-reduced-motion: reduce) { .ds-tones-demo path { animation: none !important; } }"
+    },
+    {
+      "name": "Sub-word Seam",
+      "kind": "custom",
+      "refersTo": "hanzi-display",
+      "description": "Known sub-words inside a Hanzi word are joined by a fine carved Old Bone seam (no underline); hover or focus gives a part a Jade Wash fill with Table Jade text. Physical left positioning, since Hanzi always run LTR.",
+      "html": "<span class=\"ds-seam-demo\" lang=\"zh-Hans\" dir=\"ltr\"><span class=\"ds-seg\" tabindex=\"0\" role=\"button\">早</span><span class=\"ds-seg\" tabindex=\"0\" role=\"button\">上</span></span>",
+      "css": ".ds-seam-demo { display: inline-block; padding: var(--space-4) var(--space-5); border-radius: var(--radius-lg); background: var(--bone); color: var(--ink); font-family: var(--font-hanzi); font-weight: 700; font-size: 4.5rem; line-height: 1.15; white-space: nowrap; box-shadow: inset 0 -5px 0 var(--bone-shade), 0 9px 0 var(--jade-800), 0 13px 0 var(--jade-900), 0 26px 36px rgba(7, 42, 34, 0.26); } .ds-seg { position: relative; cursor: pointer; border-radius: 0.12em; outline-offset: 2px; transition: color var(--dur-base) var(--ease-out), background-color var(--dur-base) var(--ease-out); } .ds-seg:hover, .ds-seg:focus-visible { color: var(--jade-800); background-color: var(--jade-100); } .ds-seg:focus-visible { outline: 2px solid var(--jade-800); } .ds-seg + .ds-seg { margin-left: 0.14em; } .ds-seg + .ds-seg::before { content: \"\"; position: absolute; left: -0.085em; top: 22%; bottom: 18%; width: max(1px, 0.025em); border-radius: 1px; background: var(--bone-deep); pointer-events: none; }"
     },
     {
       "name": "Button",
@@ -464,7 +532,7 @@
       "refersTo": "tab-active",
       "description": "Mode tabs sunk into a jade well; the active tab becomes a bone tile.",
       "html": "<nav class=\"ds-modes\" dir=\"rtl\"><button type=\"button\" class=\"ds-mode is-active\" aria-pressed=\"true\">עיון וחיפוש</button><button type=\"button\" class=\"ds-mode\" aria-pressed=\"false\">כרטיסיות</button><button type=\"button\" class=\"ds-mode\" aria-pressed=\"false\">בוחן</button></nav>",
-      "css": ".ds-modes { display: inline-flex; gap: var(--space-1); padding: var(--space-1); border-radius: var(--radius-md); background: var(--jade-900); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3); } .ds-mode { min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: 7px; background: transparent; color: var(--on-jade-muted); font-family: var(--font-ui); font-size: var(--text-md); font-weight: 600; cursor: pointer; transition: background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-spring); } .ds-mode:hover { background: var(--jade-700); color: var(--on-jade); } .ds-mode.is-active { background: var(--bone); color: var(--ink); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 2px 0 var(--jade-950); } .ds-mode:active { transform: translateY(1px); } .ds-mode:focus-visible { outline: 2px solid var(--bone); outline-offset: 2px; }"
+      "css": ".ds-modes { display: inline-flex; gap: var(--space-1); padding: var(--space-1); border-radius: var(--radius-md); background: var(--jade-900); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3); } .ds-mode { min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--on-jade-muted); font-family: var(--font-ui); font-size: var(--text-md); font-weight: 600; cursor: pointer; transition: background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-spring); } .ds-mode:hover { background: var(--jade-700); color: var(--on-jade); } .ds-mode.is-active { background: var(--bone); color: var(--ink); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 2px 0 var(--jade-950); } .ds-mode:active { transform: translateY(1px); } .ds-mode:focus-visible { outline: 2px solid var(--bone); outline-offset: 2px; }"
     },
     {
       "name": "Tag Chip",
@@ -486,17 +554,25 @@
       "name": "Quiz Answer Tile",
       "kind": "button",
       "refersTo": "word-tile",
-      "description": "Answer tiles that lift and press, then hold their verdict in fill, edge, underside and icon; Hanzi stay ink.",
-      "html": "<div class=\"ds-options\" dir=\"rtl\"><button type=\"button\" class=\"ds-option ds-correct\" lang=\"zh-Hans\" disabled><span class=\"ds-option-hanzi\">朋友</span><svg class=\"ds-mark\" viewBox=\"0 0 20 20\" aria-label=\"נכון\"><path d=\"M4.5 10.5 8.5 14.5 15.5 6\"/></svg></button><button type=\"button\" class=\"ds-option ds-wrong\" lang=\"zh-Hans\" disabled><span class=\"ds-option-hanzi\">老师</span><svg class=\"ds-mark\" viewBox=\"0 0 20 20\" aria-label=\"לא נכון\"><path d=\"M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5\"/></svg></button><button type=\"button\" class=\"ds-option\"><span class=\"ds-option-hanzi\">学生</span></button></div>",
-      "css": ".ds-options { display: grid; grid-template-columns: repeat(3, 9rem); gap: var(--space-5) var(--space-4); padding-bottom: var(--space-4); } .ds-option { --lift: 0px; min-height: 5rem; display: flex; align-items: center; justify-content: center; gap: var(--space-2); border: 0; border-radius: var(--radius-md); background: var(--bone); color: var(--ink); cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--jade-800), 0 calc(8px + var(--lift)) 0 var(--jade-900), 0 calc(12px + var(--lift) * 2) calc(16px + var(--lift) * 2) rgba(7, 42, 34, 0.24); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring), background-color var(--dur-base) var(--ease-out); } .ds-option:not(:disabled):hover { --lift: 5px; } .ds-option:not(:disabled):active { --lift: -3px; transition-duration: var(--dur-fast); } .ds-option:disabled { cursor: default; } .ds-option-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 2rem; color: var(--ink); } .ds-correct { --lift: 3px; background: var(--verdict-good-fill); box-shadow: inset 0 0 0 2px var(--carve-green), 0 calc(5px + var(--lift)) 0 var(--carve-green), 0 calc(8px + var(--lift)) 0 var(--verdict-good-deep), 0 calc(12px + var(--lift) * 2) 18px rgba(7, 42, 34, 0.24); } .ds-wrong { --lift: -3px; background: var(--verdict-bad-fill); box-shadow: inset 0 0 0 2px var(--carve-red), 0 calc(5px + var(--lift)) 0 var(--carve-red), 0 calc(8px + var(--lift)) 0 var(--verdict-bad-deep), 0 6px 10px rgba(7, 42, 34, 0.18); } .ds-mark { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; } .ds-correct .ds-mark { color: var(--carve-green); } .ds-wrong .ds-mark { color: var(--carve-red); }"
+      "description": "Answer tiles that lift and press, then hold their verdict in fill, edge, underside and icon; Hanzi stay ink and standalone Pinyin options stay Soft Ink. The typed answer well carries its verdict in border and fill, never in text.",
+      "html": "<div class=\"ds-options\" dir=\"rtl\"><button type=\"button\" class=\"ds-option ds-correct\" lang=\"zh-Hans\" disabled><span class=\"ds-option-hanzi\">朋友</span><svg class=\"ds-mark\" viewBox=\"0 0 20 20\" aria-label=\"נכון\"><path d=\"M4.5 10.5 8.5 14.5 15.5 6\"/></svg></button><button type=\"button\" class=\"ds-option ds-wrong\" lang=\"zh-Hans\" disabled><span class=\"ds-option-hanzi\">老师</span><svg class=\"ds-mark\" viewBox=\"0 0 20 20\" aria-label=\"לא נכון\"><path d=\"M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5\"/></svg></button><button type=\"button\" class=\"ds-option ds-option-pinyin\" dir=\"ltr\">xuésheng</button></div><input class=\"ds-answer ds-answer-correct\" type=\"text\" value=\"חבר\" dir=\"rtl\" aria-label=\"תשובה\" readonly/>",
+      "css": ".ds-options { display: grid; grid-template-columns: repeat(3, 9rem); gap: var(--space-5) var(--space-4); padding-bottom: var(--space-4); } .ds-option { --lift: 0px; min-height: 5rem; display: flex; align-items: center; justify-content: center; gap: var(--space-2); border: 0; border-radius: var(--radius-md); background: var(--bone); color: var(--ink); cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--jade-800), 0 calc(8px + var(--lift)) 0 var(--jade-900), 0 calc(12px + var(--lift) * 2) calc(16px + var(--lift) * 2) rgba(7, 42, 34, 0.24); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring), background-color var(--dur-base) var(--ease-out); } .ds-option:not(:disabled):hover { --lift: 5px; } .ds-option:not(:disabled):active { --lift: -3px; transition-duration: var(--dur-fast); } .ds-option:disabled { cursor: default; } .ds-option-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 2rem; color: var(--ink); } .ds-correct { --lift: 3px; background: var(--verdict-good-fill); box-shadow: inset 0 0 0 2px var(--carve-green), 0 calc(5px + var(--lift)) 0 var(--carve-green), 0 calc(8px + var(--lift)) 0 var(--verdict-good-deep), 0 calc(12px + var(--lift) * 2) 18px rgba(7, 42, 34, 0.24); } .ds-wrong { --lift: -3px; background: var(--verdict-bad-fill); box-shadow: inset 0 0 0 2px var(--carve-red), 0 calc(5px + var(--lift)) 0 var(--carve-red), 0 calc(8px + var(--lift)) 0 var(--verdict-bad-deep), 0 6px 10px rgba(7, 42, 34, 0.18); } .ds-mark { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; } .ds-correct .ds-mark { color: var(--carve-green); } .ds-wrong .ds-mark { color: var(--carve-red); } .ds-option-pinyin { color: var(--ink-soft); font-family: var(--font-ui); font-weight: 600; font-size: var(--text-lg); } .ds-answer { display: block; width: 100%; margin-top: var(--space-5); min-height: 3.25rem; padding: 0 var(--space-4); border: 1px solid var(--felt-deep); border-radius: var(--radius-md); background: var(--bone); color: var(--ink); font-family: var(--font-ui); font-size: var(--text-lg); box-shadow: inset 0 2px 4px rgba(7, 42, 34, 0.12); transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); } .ds-answer:focus { outline: none; border-color: var(--jade-800); box-shadow: inset 0 2px 4px rgba(7, 42, 34, 0.12), 0 0 0 3px var(--jade-200); } .ds-answer-correct { border-color: var(--carve-green); box-shadow: inset 0 0 0 1px var(--carve-green); background: var(--verdict-good-fill); }"
     },
     {
       "name": "Flashcard",
       "kind": "card",
       "refersTo": "flip-tile-back",
-      "description": "A 3:4 tile that flips on spring from its jade back (Hanzi inlaid in bone) to its bone face.",
-      "html": "<div class=\"ds-flip-slot\"><div class=\"ds-flip\" tabindex=\"0\" role=\"button\" aria-label=\"הפיכת הכרטיס\"><div class=\"ds-face ds-face-front\"><span class=\"ds-flip-hanzi\" lang=\"zh-Hans\">茶</span><span class=\"ds-hint\" dir=\"rtl\">לחצו לחשיפה</span></div><div class=\"ds-face ds-face-back\"><span class=\"ds-flip-hanzi\" lang=\"zh-Hans\">茶</span><span class=\"ds-flip-pinyin\" dir=\"ltr\">chá</span><span class=\"ds-flip-hebrew\" dir=\"rtl\">תה</span></div></div></div>",
+      "description": "A 3:4 tile that flips on spring from its jade back (Hanzi inlaid in bone) to its bone face with tone-inked Pinyin.",
+      "html": "<div class=\"ds-flip-slot\"><div class=\"ds-flip\" tabindex=\"0\" role=\"button\" aria-label=\"הפיכת הכרטיס\"><div class=\"ds-face ds-face-front\"><span class=\"ds-flip-hanzi\" lang=\"zh-Hans\">茶</span><span class=\"ds-hint\" dir=\"rtl\">לחצו לחשיפה</span></div><div class=\"ds-face ds-face-back\"><span class=\"ds-flip-hanzi\" lang=\"zh-Hans\">茶</span><span class=\"ds-flip-pinyin\" dir=\"ltr\"><span style=\"color: var(--tone-2)\">chá</span></span><span class=\"ds-flip-hebrew\" dir=\"rtl\">תה</span></div></div></div>",
       "css": ".ds-flip-slot { width: 14rem; perspective: 1400px; padding-bottom: 2.5rem; } .ds-flip { position: relative; aspect-ratio: 3 / 4; transform-style: preserve-3d; transition: transform var(--dur-slow) var(--ease-spring); cursor: pointer; } .ds-flip:hover, .ds-flip:focus-visible { transform: rotateY(180deg); outline: none; } .ds-face { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-3); border-radius: var(--radius-lg); backface-visibility: hidden; -webkit-backface-visibility: hidden; } .ds-face-front { background: var(--jade-800); color: var(--bone); box-shadow: inset 0 0 0 0.6rem var(--jade-700), inset 0 0 0 calc(0.6rem + 1px) var(--jade-900), 0 9px 0 var(--bone-shade), 0 13px 0 var(--bone-deep), 0 26px 36px rgba(7, 42, 34, 0.3); } .ds-face-back { transform: rotateY(180deg); background: var(--bone); color: var(--ink); box-shadow: inset 0 -5px 0 var(--bone-shade), 0 9px 0 var(--jade-800), 0 13px 0 var(--jade-900), 0 26px 36px rgba(7, 42, 34, 0.3); } .ds-flip-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 5rem; line-height: 1.1; } .ds-hint { color: var(--on-jade-muted); font-family: var(--font-ui); font-size: var(--text-sm); } .ds-flip-pinyin { color: var(--ink-soft); font-family: var(--font-ui); font-weight: 600; font-size: 1.5rem; } .ds-flip-hebrew { font-family: var(--font-ui); font-weight: 600; font-size: var(--text-lg); } @media (prefers-reduced-motion: reduce) { .ds-flip { transition: none; } }"
+    },
+    {
+      "name": "Felt Table and Empty Well",
+      "kind": "custom",
+      "refersTo": "empty-well",
+      "description": "The felt table (Felt under the --felt-nap noise and falloff, rounded top corners, inset seam shadow) holding a felt-deep empty well with a primary clear button. Wells stay untextured.",
+      "html": "<div class=\"ds-table\" dir=\"rtl\"><div class=\"ds-empty\"><p>לא נמצאו מילים עבור <strong>xyz</strong></p><button type=\"button\" class=\"ds-empty-btn\">ניקוי החיפוש</button></div></div>",
+      "css": ".ds-table { width: 28rem; padding: var(--space-6) var(--space-5); background-color: var(--felt); background-image: var(--felt-nap); border-radius: var(--radius-lg) var(--radius-lg) 0 0; box-shadow: inset 0 6px 14px rgba(7, 42, 34, 0.14); } .ds-empty { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-7) var(--space-4); border-radius: var(--radius-lg); background: var(--felt-deep); box-shadow: inset 0 3px 8px rgba(7, 42, 34, 0.18), inset 0 -1px 0 rgba(255, 255, 255, 0.35); color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-md); text-align: center; } .ds-empty p { margin: 0; } .ds-empty strong { color: var(--ink); } .ds-empty-btn { --lift: 0px; min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: var(--radius-sm); background: var(--jade-800); color: var(--on-jade); font-family: var(--font-ui); font-weight: 600; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -2px 0 var(--jade-900), 0 calc(3px + var(--lift)) 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--bone-deep), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-empty-btn:hover { --lift: 3px; } .ds-empty-btn:active { --lift: -2px; transition-duration: var(--dur-fast); } .ds-empty-btn:focus-visible { outline: 2px solid var(--jade-800); outline-offset: 2px; }"
     }
   ],
   "narrative": {
@@ -505,14 +581,14 @@
     "keyCharacteristics": [
       "Bone tile faces on visible jade undersides; every interactive surface is a tile, a well, or the felt.",
       "Jade shell (header) over a felt table (content) with a soft inset at their seam.",
-      "Four carving inks, reserved for tone contours: 1 red flat, 2 green rising, 3 blue dipping, 4 black falling.",
+      "Four carving inks, reserved for tones (contours and Pinyin syllables): 1 red flat, 2 green rising, 3 blue dipping, 4 black falling.",
       "Serif Hanzi (Noto Serif SC 700) beside humanist sans Hebrew and Pinyin (Assistant).",
       "Spring motion for tile physics only; everything else eases out."
     ],
     "rules": [
       {
         "name": "The Carving Ink Rule",
-        "body": "The four carving inks are reserved for tone contours (1 red, 2 green, 3 blue, 4 black; the neutral tone is a short ink-muted dot). They never decorate, never mark a brand, never colour a heading.",
+        "body": "The four carving inks are reserved for tones (1 red, 2 green, 3 blue, 4 black; the neutral tone is a short ink-muted dot): the contours, and the Pinyin syllables that spell the same tones. They never decorate, never mark a brand, never colour a heading.",
         "section": "colors"
       },
       {
@@ -526,8 +602,8 @@
         "section": "colors"
       },
       {
-        "name": "The Neutral Pinyin Rule",
-        "body": "Pinyin is Soft Ink, weight 600. Never jade, never a carving ink: the contour beneath already carries its tone, and jade sits too close to tone 2 green.",
+        "name": "The Tone-Inked Pinyin Rule",
+        "body": "Where a word's Pinyin is shown with its Hanzi, each syllable is inked in its own tone colour (`PinyinText`), matching the contour above it: the carving inks are the tone, wherever the tone is written. Separators and neutral-tone syllables stay Soft Ink / Muted Ink; weight 600. Pinyin that stands alone, such as quiz answer options, stays Soft Ink. Never jade: it sits too close to tone 2 green.",
         "section": "colors"
       },
       {
@@ -554,16 +630,16 @@
     "dos": [
       "**Do** build every new interactive surface as a tile (bone face, jade underside, `--lift`), a well, or plain felt.",
       "**Do** draw tones only with the Tone Contour, in tone order 1 red, 2 green, 3 blue, 4 black, neutral as an ink-muted dot, replayed in reading order.",
-      "**Do** keep Hanzi in ink on bone (bone on the jade back) and Pinyin in Soft Ink at 600.",
+      "**Do** keep Hanzi in ink on bone (bone on the jade back), and ink each Pinyin syllable in its tone colour at 600.",
       "**Do** carry quiz verdicts in fill, edge, underside, icon and the verdict line.",
       "**Do** step Hanzi size by character count so a word never wraps inside a tile.",
       "**Do** use `--ease-spring` only for lift, press, flip and land, `--ease-out` for everything else, and let reduced motion collapse animation (contours stay drawn, flips and slides go instant).",
       "**Do** keep 44px touch targets and visible focus (jade on felt, bone on the shell)."
     ],
     "donts": [
-      "**Don't** use a carving ink for anything but a tone contour or a quiz verdict.",
+      "**Don't** use a carving ink for anything but a tone (contour or Pinyin syllable) or a quiz verdict.",
       "**Don't** colour a Hanzi glyph with a carving ink, including on a verdict tile.",
-      "**Don't** colour Pinyin jade or with a carving ink.",
+      "**Don't** colour Pinyin jade, or ink a syllable in any colour but its own tone's.",
       "**Don't** flatten tiles into borderless white cards on grey with a single blue accent.",
       "**Don't** replace the solid jade underside with a blurred floating shadow.",
       "**Don't** add radii outside 6, 10 and 16px."

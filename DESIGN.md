@@ -180,7 +180,7 @@ The memorable moment is the tone write: hovering, focusing, flipping or opening 
 **Key Characteristics:**
 - Bone tile faces on visible jade undersides; every interactive surface is a tile, a well, or the felt.
 - Jade shell (header) over a felt table (content) with a soft inset at their seam.
-- Four carving inks, reserved for tone contours: 1 red flat, 2 green rising, 3 blue dipping, 4 black falling.
+- Four carving inks, reserved for tones (contours and Pinyin syllables): 1 red flat, 2 green rising, 3 blue dipping, 4 black falling.
 - Serif Hanzi (Noto Serif SC 700) beside humanist sans Hebrew and Pinyin (Assistant).
 - Spring motion for tile physics only; everything else eases out.
 

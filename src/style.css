@@ -180,8 +180,9 @@ a {
   font-weight: 700;
 }
 
-/* A neutral ink, clear of every tone hue: the carving inks (and the jade that
-   sits beside tone-2 green) are reserved for the tone contours. */
+/* Base pinyin ink: neutral, clear of every tone hue (and of jade, which sits
+   beside tone-2 green). PinyinText inks each syllable in its tone colour on
+   top; this covers separators and standalone pinyin such as quiz options. */
 .pinyin {
   color: var(--ink-soft);
   font-weight: 600;
