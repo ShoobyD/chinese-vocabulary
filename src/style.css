@@ -59,8 +59,10 @@
   --tone-3: var(--carve-blue);
   --tone-4: var(--carve-black);
   --tone-0: var(--ink-muted);
-  --tone-stagger: 380ms;
-  --tone-draw: 450ms;
+  /* Each contour draws for --tone-draw; the next starts --tone-stagger after
+     it, a little later than the draw ends, so strokes never overlap. */
+  --tone-stagger: 450ms;
+  --tone-draw: 400ms;
 
   /* Type. */
   --font-ui: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -113,6 +115,8 @@
 
   /* Motion. */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  /* A brush stroke: eases in and out evenly, so every frame carries ink. */
+  --ease-draw: cubic-bezier(0.45, 0, 0.25, 1);
   --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);
   --dur-fast: 120ms;
   --dur-base: 220ms;

@@ -39,7 +39,9 @@ const tones = computed(() => pinyinTones(props.pinyin, props.hanzi))
       viewBox="0 0 32 20"
       :style="{ '--i': i, '--tone-color': `var(--tone-${t})` }"
     >
-      <path :d="PATHS[t]" :class="{ neutral: t === 0 }" />
+      <!-- pathLength="1" normalises every contour, so the dash draw spans the
+           full duration whatever the shape's real length. -->
+      <path :d="PATHS[t]" pathLength="1" :class="{ neutral: t === 0 }" />
     </svg>
   </span>
 </template>
@@ -75,7 +77,8 @@ path {
   stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 40;
+  /* In pathLength units (1 = the whole contour). */
+  stroke-dasharray: 1;
   stroke-dashoffset: 0;
 }
 
@@ -92,7 +95,10 @@ path.neutral {
 }
 
 .playing path {
-  animation: draw var(--tone-draw) var(--ease-out) both;
+  /* An even pen-stroke ease, not a front-loaded ease-out: with ease-out the
+     visible draw collapsed into ~3 frames, so the first contour (which also
+     loses its first frame when the animation is created) looked faster. */
+  animation: draw var(--tone-draw) var(--ease-draw) both;
   /* --tone-lead lets a parent hold the first stroke, e.g. until a flip lands. */
   animation-delay: calc(var(--tone-lead, 0ms) + var(--i) * var(--tone-stagger));
 }
@@ -105,7 +111,7 @@ path.neutral {
 
 @keyframes draw {
   from {
-    stroke-dashoffset: 40;
+    stroke-dashoffset: 1;
   }
   to {
     stroke-dashoffset: 0;

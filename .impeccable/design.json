@@ -470,13 +470,13 @@
       },
       {
         "name": "tone-draw",
-        "value": "450ms",
-        "purpose": "One contour stroke redrawing."
+        "value": "400ms",
+        "purpose": "One contour stroke redrawing (on --ease-draw, over its normalised pathLength)."
       },
       {
         "name": "tone-stagger",
-        "value": "380ms",
-        "purpose": "Delay between syllables, in reading order."
+        "value": "450ms",
+        "purpose": "Delay between syllables, in reading order; longer than tone-draw so strokes never overlap."
       },
       {
         "name": "tone-lead",
@@ -514,8 +514,8 @@
       "kind": "custom",
       "refersTo": "tone-contour",
       "description": "Signature: one pitch line per syllable in its carving ink (1 red flat, 2 green rising, 3 blue dipping, 4 black falling, neutral dot), redrawn in reading order on hover.",
-      "html": "<span class=\"ds-tones-demo\" dir=\"ltr\" tabindex=\"0\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-1)\"><path d=\"M3 4 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-2)\"><path d=\"M3 12 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-4)\"><path d=\"M3 4 L29 15\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-0)\"><path class=\"ds-neutral\" d=\"M15 10 L17 10\"/></svg></span>",
-      "css": ".ds-tones-demo { display: inline-flex; gap: 0.75rem; padding: var(--space-4); border-radius: var(--radius-md); background: var(--bone); } .ds-tones-demo .ds-contour { width: 3.5rem; height: 2.2rem; overflow: visible; } .ds-tones-demo path { fill: none; stroke: var(--tone-color); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 0; } .ds-tones-demo path.ds-neutral { stroke-width: 5; } .ds-tones-demo:hover path, .ds-tones-demo:focus-visible path { animation: ds-draw var(--tone-draw) var(--ease-out) both; } .ds-tones-demo .ds-contour:nth-child(2) path { animation-delay: calc(1 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(3) path { animation-delay: calc(2 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(4) path { animation-delay: calc(3 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(5) path { animation-delay: calc(4 * var(--tone-stagger)); } @keyframes ds-draw { from { stroke-dashoffset: 40; } to { stroke-dashoffset: 0; } } @media (prefers-reduced-motion: reduce) { .ds-tones-demo path { animation: none !important; } }"
+      "html": "<span class=\"ds-tones-demo\" dir=\"ltr\" tabindex=\"0\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-1)\"><path pathLength=\"1\" d=\"M3 4 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-2)\"><path pathLength=\"1\" d=\"M3 12 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path pathLength=\"1\" d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-4)\"><path pathLength=\"1\" d=\"M3 4 L29 15\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-0)\"><path class=\"ds-neutral\" d=\"M15 10 L17 10\"/></svg></span>",
+      "css": ".ds-tones-demo { display: inline-flex; gap: 0.75rem; padding: var(--space-4); border-radius: var(--radius-md); background: var(--bone); } .ds-tones-demo .ds-contour { width: 3.5rem; height: 2.2rem; overflow: visible; } .ds-tones-demo path { fill: none; stroke: var(--tone-color); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; } .ds-tones-demo path.ds-neutral { stroke-width: 5; } .ds-tones-demo:hover path, .ds-tones-demo:focus-visible path { animation: ds-draw var(--tone-draw) var(--ease-draw) both; } .ds-tones-demo .ds-contour:nth-child(2) path { animation-delay: calc(1 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(3) path { animation-delay: calc(2 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(4) path { animation-delay: calc(3 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(5) path { animation-delay: calc(4 * var(--tone-stagger)); } @keyframes ds-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } } @media (prefers-reduced-motion: reduce) { .ds-tones-demo path { animation: none !important; } }"
     },
     {
       "name": "Sub-word Seam",
