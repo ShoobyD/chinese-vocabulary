@@ -351,7 +351,9 @@ const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: var(--felt);
+  background-color: var(--felt);
+  background-image: var(--felt-nap);
+  background-attachment: local;
   color: var(--text);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   box-shadow: inset 0 6px 14px rgba(7, 42, 34, 0.14);
