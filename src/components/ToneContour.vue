@@ -93,7 +93,8 @@ path.neutral {
 
 .playing path {
   animation: draw var(--tone-draw) var(--ease-out) both;
-  animation-delay: calc(var(--i) * var(--tone-stagger));
+  /* --tone-lead lets a parent hold the first stroke, e.g. until a flip lands. */
+  animation-delay: calc(var(--tone-lead, 0ms) + var(--i) * var(--tone-stagger));
 }
 
 @media (prefers-reduced-motion: reduce) {
