@@ -84,15 +84,21 @@ function onActivate(word: Word) {
   margin-left: 0.14em;
 }
 
+/* A short carved groove, not a typed pipe: a warm shadow edge with a pale
+   highlight beside it, spanning only the middle of the glyph height. */
 .seg.known + .seg.known::before {
   content: '';
   position: absolute;
-  left: -0.085em;
-  top: 22%;
-  bottom: 18%;
-  width: max(1px, 0.025em);
-  border-radius: 1px;
-  background: var(--bone-deep);
+  left: calc(-0.07em - 1px);
+  top: 32%;
+  bottom: 28%;
+  width: max(2px, 0.04em);
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgba(185, 174, 149, 0.85) 0 50%,
+    rgba(255, 252, 244, 0.9) 50% 100%
+  );
   pointer-events: none;
 }
 </style>
