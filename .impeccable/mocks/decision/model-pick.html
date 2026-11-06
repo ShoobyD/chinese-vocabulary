@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>מחברת 田字格 — סקיצה</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&family=Heebo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cover:#2f6b3a;--cover-d:#24542d;--cover-l:#3d8249;--paper:#fbfbf7;--paper2:#f1efe6;--grid:#d9443a;--ink:#222;--muted:#6b6b63;--desk:#c9c2b0}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--desk);font-family:Heebo,sans-serif;color:var(--ink)}
+.hz{font-family:'Noto Serif SC',serif}
+header{background:var(--cover);color:#f3f6ef;padding:22px 72px 0;box-shadow:0 8px 18px rgba(0,0,0,.25);position:relative;z-index:2}
+.row{display:flex;align-items:center;gap:32px}
+h1{font-size:22px;font-weight:700;display:flex;gap:12px;align-items:center}
+.label{background:var(--paper);color:var(--ink);padding:4px 14px;border-radius:2px;font-size:22px;box-shadow:0 2px 0 rgba(0,0,0,.2);transform:rotate(-1.5deg)}
+nav{display:flex;margin-top:16px;gap:4px}
+nav a{padding:12px 26px;font-weight:600;font-size:17px;color:#cfe0cf;cursor:pointer;border-radius:8px 8px 0 0;transition:all .2s;transform:translateY(4px)}
+nav a:hover{background:var(--cover-l);color:#fff;transform:none}
+nav a.on{background:var(--paper);color:var(--cover);transform:none}
+.search{margin-inline-start:auto;width:320px;height:42px;background:var(--cover-d);border:none;border-radius:6px;padding:0 16px;color:#fff;font:inherit;box-shadow:inset 0 2px 4px rgba(0,0,0,.25)}
+.search::placeholder{color:#a8c4a8}
+.search:focus{outline:2px solid #fff}
+.sheet{background:var(--paper);height:100%;margin:0 40px;padding:0 32px;box-shadow:0 0 0 1px #e4e0d4,10px 0 0 -2px var(--paper2),-10px 0 0 -2px var(--paper2),0 20px 40px rgba(0,0,0,.2)}
+.tags{padding:20px 0;display:flex;gap:8px;border-bottom:1px dashed #e0b9b4}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0}
+.chip span{display:block;padding:6px 14px;border:1px solid #d8d4c8;border-radius:4px;font-size:15px;background:#fff;transition:all .18s}
+.chip:hover span{border-color:var(--cover);transform:translateY(-2px);box-shadow:0 4px 0 #e3dfd3}
+.chip input:checked+span{background:var(--cover);color:#fff;border-color:var(--cover);box-shadow:0 3px 0 var(--cover-d)}
+.chip input:focus-visible+span{outline:2px solid var(--grid);outline-offset:2px}
+main{padding:28px 0;display:grid;grid-template-columns:1fr 340px;gap:40px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;padding:14px;cursor:pointer;position:relative;border:1px solid #e3dfd3;box-shadow:3px 3px 0 #ece8dc,6px 6px 0 #e3dfd3;transition:transform .25s cubic-bezier(.3,1.4,.5,1),box-shadow .25s}
+.card:nth-child(odd){transform:rotate(-.6deg)}.card:nth-child(3n){transform:rotate(.7deg)}
+.card:hover{transform:translateY(-8px) rotate(0);box-shadow:3px 3px 0 #ece8dc,6px 6px 0 #e3dfd3,0 22px 30px rgba(0,0,0,.15);z-index:2}
+.card:active{transform:translateY(-2px) scale(.98)}
+.py{font-size:16px;color:var(--grid);direction:ltr;text-align:center;font-weight:600;height:22px}
+.cells{display:flex;justify-content:center;direction:ltr;margin:6px 0 10px}
+.cell{width:84px;height:84px;border:1.5px solid var(--grid);position:relative;display:grid;place-items:center;font-size:58px;transition:background .2s}
+.cell+.cell{border-left:none}
+.cell::before,.cell::after{content:"";position:absolute;border-color:var(--grid);opacity:.5}
+.cell::before{left:50%;top:0;bottom:0;border-left:1px dashed}
+.cell::after{top:50%;left:0;right:0;border-top:1px dashed}
+.cell span{position:relative;z-index:1}
+.card:hover .cell{background:#fdf1ef}
+.he{text-align:center;font-size:15px;color:var(--muted)}
+#flip{position:absolute;opacity:0}
+.stage{display:block;perspective:1300px;height:420px;cursor:pointer}
+.pg{position:relative;height:100%;transform-style:preserve-3d;transform-origin:right center;transition:transform .8s cubic-bezier(.3,1.1,.4,1)}
+#flip:checked+.stage .pg{transform:rotateY(-180deg)}
+.stage:hover .pg{transform:rotateY(-12deg)}
+#flip:checked+.stage:hover .pg{transform:rotateY(-168deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;background:#fff;border:1px solid #e3dfd3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;box-shadow:0 18px 30px rgba(0,0,0,.15)}
+.face .cell{width:130px;height:130px;font-size:92px}
+.bk{transform:rotateY(180deg)}
+.bk .py{font-size:40px;height:auto}
+.bk .he{font-size:28px;color:var(--ink)}
+.hint{font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="row"><h1><span class="label hz">汉语</span>לימוד סינית</h1><input class="search" placeholder="חיפוש…"></div>
+  <nav><a class="on">עיון וחיפוש</a><a>כרטיסיות</a><a>בוחן</a></nav>
+</header>
+<div class="sheet">
+  <div class="tags">
+    <label class="chip"><input type="checkbox" checked><span>הכול (175)</span></label>
+    <label class="chip"><input type="checkbox"><span>כיוון ומיקום</span></label>
+    <label class="chip"><input type="checkbox"><span>זמני היום</span></label>
+    <label class="chip"><input type="checkbox"><span>חלקי היום</span></label>
+    <label class="chip"><input type="checkbox"><span>כינויי גוף</span></label>
+    <label class="chip"><input type="checkbox"><span>ברכות</span></label>
+  </div>
+  <main>
+    <div class="grid">
+      <div class="card"><div class="py">shàng</div><div class="cells hz"><div class="cell"><span>上</span></div></div><div class="he">לפני / למעלה</div></div>
+      <div class="card"><div class="py">zǎoshang</div><div class="cells hz"><div class="cell"><span>早</span></div><div class="cell"><span>上</span></div></div><div class="he">בוקר</div></div>
+      <div class="card"><div class="py">wǎn</div><div class="cells hz"><div class="cell"><span>晚</span></div></div><div class="he">לילה</div></div>
+      <div class="card"><div class="py">wǒ</div><div class="cells hz"><div class="cell"><span>我</span></div></div><div class="he">אני</div></div>
+      <div class="card"><div class="py">xià</div><div class="cells hz"><div class="cell"><span>下</span></div></div><div class="he">אחרי / למטה</div></div>
+      <div class="card"><div class="py">xiàwǔ</div><div class="cells hz"><div class="cell"><span>下</span></div><div class="cell"><span>午</span></div></div><div class="he">אחר־צוהריים</div></div>
+      <div class="card"><div class="py">nǐ</div><div class="cells hz"><div class="cell"><span>你</span></div></div><div class="he">אתה</div></div>
+      <div class="card"><div class="py">zǎo</div><div class="cells hz"><div class="cell"><span>早</span></div></div><div class="he">מוקדם / בוקר</div></div>
+    </div>
+    <aside>
+      <input type="checkbox" id="flip">
+      <label class="stage" for="flip">
+        <div class="pg">
+          <div class="face"><div class="cells hz"><div class="cell"><span>晚</span></div><div class="cell"><span>安</span></div></div><div class="hint">לחצו להפוך את הדף</div></div>
+          <div class="face bk"><div class="py">wǎn'ān</div><div class="he">לילה טוב</div><div class="hint">לחצו לחזרה</div></div>
+        </div>
+      </label>
+    </aside>
+  </main>
+</div>
+</body>
+</html>
+

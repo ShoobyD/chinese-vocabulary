@@ -1,0 +1,27 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-06T03:53:35.331Z",
+        "reason": "user chose the Mahjong-tiles direction: the jade underside drawn as box-shadow is the tile thickness, the direction's signature"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-06T03:53:35.426Z",
+        "reason": "user chose the Mahjong-tiles direction: tiles on a felt table are the composition, not nested cards"
+      }
+    ]
+  }
+}
+

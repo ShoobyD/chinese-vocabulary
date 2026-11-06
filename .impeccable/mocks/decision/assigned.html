@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>אריחי מהג׳ונג — סקיצה</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--jade:#0f4f40;--jade-d:#0a3a2f;--jade-l:#1b6b57;--bone:#f1ece0;--bone-d:#d8cfba;--felt:#e4ddcc;--ink:#1a1a1a;--red:#b8232b;--blue:#1d4f9a}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--jade);font-family:Assistant,sans-serif;color:var(--bone)}
+.hz{font-family:'Noto Serif SC',serif}
+header{padding:24px 72px 0;display:flex;align-items:center;gap:36px}
+.brand{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:700}
+.mini{width:42px;height:54px;background:var(--bone);border-radius:6px;box-shadow:0 5px 0 var(--jade-l),0 7px 0 var(--jade-d);display:grid;place-items:center;color:var(--red);font-size:28px}
+nav{display:flex;gap:4px;background:var(--jade-d);padding:5px;border-radius:10px;box-shadow:inset 0 2px 4px rgba(0,0,0,.3)}
+nav a{padding:10px 22px;border-radius:7px;font-weight:600;font-size:17px;color:#cfe0d8;cursor:pointer;transition:all .2s}
+nav a:hover{background:var(--jade-l);color:#fff}
+nav a.on{background:var(--bone);color:var(--ink);box-shadow:0 3px 0 var(--bone-d)}
+.search{margin-inline-start:auto;width:300px;height:44px;border-radius:8px;background:var(--jade-d);border:1px solid var(--jade-l);padding:0 16px;color:var(--bone);font:inherit;box-shadow:inset 0 2px 4px rgba(0,0,0,.3);transition:border-color .2s}
+.search::placeholder{color:#a9c6ba}
+.search:focus{outline:none;border-color:var(--bone)}
+.tags{padding:20px 72px 22px;display:flex;gap:8px;flex-wrap:wrap}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0}
+.chip span{display:flex;align-items:center;gap:8px;padding:7px 14px;border-radius:6px;border:1px solid var(--jade-l);font-size:15px;color:#e1ece7;transition:all .18s}
+.chip i{width:8px;height:8px;border-radius:2px}
+.chip:hover span{background:var(--jade-l)}
+.chip input:checked+span{background:var(--bone);color:var(--ink);border-color:var(--bone);box-shadow:0 3px 0 var(--bone-d),0 5px 0 var(--jade-d)}
+.chip input:focus-visible+span{outline:2px solid var(--bone);outline-offset:2px}
+main{background:var(--felt);height:100%;padding:34px 72px;border-radius:18px 18px 0 0;display:grid;grid-template-columns:1fr 360px;gap:48px;box-shadow:inset 0 6px 14px rgba(0,0,0,.12)}
+.meta{display:flex;justify-content:space-between;color:#5d5a52;font-size:15px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:30px 22px}
+.t{--lift:0px;background:var(--bone);border-radius:10px;padding:16px 10px 14px;text-align:center;color:var(--ink);cursor:pointer;
+ transform:translateY(calc(var(--lift) * -1));
+ box-shadow:inset 0 -3px 0 var(--bone-d),0 calc(6px + var(--lift)) 0 var(--jade),0 calc(9px + var(--lift)) 0 var(--jade-d),0 calc(14px + var(--lift)*2) calc(18px + var(--lift)*2) rgba(10,58,47,.28);
+ transition:transform .22s cubic-bezier(.3,1.4,.5,1),box-shadow .22s cubic-bezier(.3,1.4,.5,1)}
+.t:hover{--lift:8px}
+.t:active{--lift:-4px;transition-duration:.08s}
+.t .hz{font-size:58px;line-height:1.15}
+.t.two .hz{font-size:42px;padding:8px 0}
+.t .py{font-size:17px;color:var(--blue);font-weight:600;direction:ltr}
+.t .he{font-size:15px;margin-top:4px;color:#3d3a33}
+.t .suit{display:block;width:22px;height:4px;border-radius:2px;margin:9px auto 0}
+/* Tone contours in the tile's own carved inks: 1 red, 2 green, 3 blue, 4 black. */
+:root{--t1:#b8232b;--t2:#1d7a46;--t3:#1d4f9a;--t4:#1a1a1a}
+.tone{display:flex;justify-content:center;gap:6px;direction:ltr;height:18px;margin-top:4px}
+.tone svg{width:34px;height:18px;overflow:visible}
+.tone path{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:60;stroke-dashoffset:0}
+.t:hover .tone path,.stage:hover .tone path{animation:draw .45s cubic-bezier(.4,0,.2,1) both;animation-delay:calc(var(--i,0) * .38s)}
+@keyframes draw{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
+.front .tone{height:40px;gap:22px}.front .tone svg{width:80px;height:40px}.front .tone path{stroke-width:4}
+@media (prefers-reduced-motion:reduce){.tone path{animation:none!important}}
+.t.red .hz{color:var(--red)}
+#flip{position:absolute;opacity:0}
+.stage{display:block;perspective:1200px;height:440px;cursor:pointer;margin-top:36px}
+.card{position:relative;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,1.3,.4,1)}
+#flip:checked+.stage .card{transform:rotateY(180deg)}
+.stage:hover .card{transform:rotateX(6deg) translateY(-6px)}
+#flip:checked+.stage:hover .card{transform:rotateY(180deg) rotateX(6deg) translateY(-6px)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.back-jade{background:var(--jade);box-shadow:inset 0 0 0 10px var(--jade-l),0 10px 0 var(--bone-d),0 14px 0 #b9ae95,0 30px 40px rgba(0,0,0,.3);color:#bfe0d3}
+.back-jade .hz{font-size:120px;color:var(--bone);opacity:.95}
+.front{transform:rotateY(180deg);background:var(--bone);color:var(--ink);box-shadow:inset 0 -5px 0 var(--bone-d),0 10px 0 var(--jade),0 14px 0 var(--jade-d),0 30px 40px rgba(0,0,0,.3)}
+.front .py{font-size:44px;color:var(--blue);font-weight:700;direction:ltr}
+.front .he{font-size:28px;font-weight:600}
+.front .hz{font-size:64px;color:var(--red)}
+.hint{font-size:15px;opacity:.75}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="mini hz">汉</div>לימוד סינית</div>
+  <nav><a class="on">עיון וחיפוש</a><a>כרטיסיות</a><a>בוחן</a></nav>
+  <input class="search" placeholder="חיפוש הנדזי, פיניין או עברית…">
+</header>
+<div class="tags">
+  <label class="chip"><input type="checkbox" checked><span>הכול 175</span></label>
+  <label class="chip"><input type="checkbox"><span><i style="background:#e05a4f"></i>כיוון ומיקום 14</span></label>
+  <label class="chip"><input type="checkbox"><span><i style="background:#5b8ee0"></i>זמני היום 9</span></label>
+  <label class="chip"><input type="checkbox"><span><i style="background:#58c08a"></i>חלקי היום 6</span></label>
+  <label class="chip"><input type="checkbox"><span><i style="background:#e0b04f"></i>כינויי גוף 8</span></label>
+  <label class="chip"><input type="checkbox"><span><i style="background:#b07ae0"></i>ברכות 11</span></label>
+</div>
+<main>
+  <section>
+    <div class="meta"><span>175 מילים · רחפו על אריח: קווי הטון נכתבים לפי סדר הקריאה</span><span>מימין: האריח שבכרטיסייה</span></div>
+    <div class="grid">
+      <div class="t red"><div class="hz">上</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 3 L32 15" stroke="var(--t4)"/></svg></div><div class="py">shàng</div><div class="he">לפני / למעלה</div></div>
+      <div class="t"><div class="hz">下</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 3 L32 15" stroke="var(--t4)"/></svg></div><div class="py">xià</div><div class="he">אחרי / למטה</div></div>
+      <div class="t"><div class="hz">早</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg></div><div class="py">zǎo</div><div class="he">מוקדם / בוקר</div></div>
+      <div class="t"><div class="hz">午</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg></div><div class="py">wǔ</div><div class="he">צוהריים</div></div>
+      <div class="t red"><div class="hz">我</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg></div><div class="py">wǒ</div><div class="he">אני</div></div>
+      <div class="t two"><div class="hz">早上</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg><svg viewBox="0 0 34 18" style="--i:1"><path d="M2 3 L32 15" stroke="var(--t4)"/></svg></div><div class="py">zǎoshang</div><div class="he">בוקר</div></div>
+      <div class="t two"><div class="hz">上午</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 3 L32 15" stroke="var(--t4)"/></svg><svg viewBox="0 0 34 18" style="--i:1"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg></div><div class="py">shàngwǔ</div><div class="he">לפני־צוהריים</div></div>
+      <div class="t two"><div class="hz">下午</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 3 L32 15" stroke="var(--t4)"/></svg><svg viewBox="0 0 34 18" style="--i:1"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg></div><div class="py">xiàwǔ</div><div class="he">אחר־צוהריים</div></div>
+      <div class="t two"><div class="hz">晚上</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg><svg viewBox="0 0 34 18" style="--i:1"><path d="M2 3 L32 15" stroke="var(--t4)"/></svg></div><div class="py">wǎnshang</div><div class="he">ערב</div></div>
+      <div class="t red"><div class="hz">你</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg></div><div class="py">nǐ</div><div class="he">אתה</div></div>
+    </div>
+  </section>
+  <aside>
+    <input type="checkbox" id="flip">
+    <label class="stage" for="flip">
+      <div class="card">
+        <div class="face back-jade"><div class="hz">晚安</div><div class="hint">לחצו להפוך את האריח</div></div>
+        <div class="face front"><div class="hz">晚安</div><div class="tone"><svg viewBox="0 0 34 18" style="--i:0"><path d="M2 7 Q14 22 32 3" stroke="var(--t3)"/></svg><svg viewBox="0 0 34 18" style="--i:1"><path d="M2 3 L32 3" stroke="var(--t1)"/></svg></div><div class="py">wǎn'ān</div><div class="he">לילה טוב</div><div class="hint">לחצו לחזרה</div></div>
+      </div>
+    </label>
+  </aside>
+</main>
+</body>
+</html>
+

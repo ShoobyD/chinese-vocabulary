@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&family=Barlow+Condensed:wght@600&family=Heebo:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#2a2d30;--flap:#111;--white:#f2f2f2;--amber:#f2a900;--dim:#8a8f94}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--steel);font-family:Heebo,sans-serif;color:var(--white)}
+.hz{font-family:'Noto Sans SC',sans-serif}
+header{padding:26px 80px;display:flex;align-items:center;gap:36px;border-bottom:1px solid #3a3e42}
+h1{font-size:22px;font-weight:700}
+nav{display:flex;gap:6px}
+nav a{padding:10px 20px;border-radius:6px;background:#1c1e20;font-weight:500;color:var(--dim)}
+nav a.on{background:var(--amber);color:#111}
+.tags{margin-inline-start:auto;display:flex;gap:6px}
+.tag{padding:6px 12px;border:1px solid #44484c;border-radius:4px;font-size:14px;color:var(--dim)}
+main{padding:60px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.card{background:#1a1c1e;border-radius:14px;padding:48px;display:flex;flex-direction:column;align-items:center;gap:28px}
+.big{display:flex;gap:10px;direction:ltr}
+.f{width:150px;height:190px;background:var(--flap);border-radius:8px;display:grid;place-items:center;font-size:120px;position:relative}
+.f::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:#000}
+.line{display:flex;gap:4px;direction:ltr}
+.c{width:40px;height:56px;background:var(--flap);border-radius:4px;display:grid;place-items:center;font-family:'Barlow Condensed';font-size:34px;position:relative}
+.c::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#000}
+.c.mid{color:var(--amber)}
+.he .c{font-family:Heebo;font-size:26px}
+.hint{color:var(--dim);font-size:16px}
+.btns{display:flex;gap:12px}
+.btn{padding:12px 28px;border-radius:8px;background:#2a2d30;font-weight:700}
+.btn.p{background:var(--amber);color:#111}
+.side h2{font-size:15px;color:var(--dim);font-weight:500;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:20px}
+td{padding:12px 8px;border-bottom:1px solid #3a3e42}
+td.hz{font-size:28px}
+td.py{font-family:'Barlow Condensed';direction:ltr;text-align:right;color:var(--amber)}
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="hz">汉语</span> · לימוד סינית</h1>
+  <nav><a>עיון וחיפוש</a><a class="on">כרטיסיות</a><a>בוחן</a></nav>
+  <div class="tags"><span class="tag">הכול 175</span><span class="tag">זמני היום</span><span class="tag">ברכות</span></div>
+</header>
+<main>
+  <div class="card">
+    <div class="big hz"><div class="f">晚</div><div class="f">安</div></div>
+    <div class="line"><div class="c">W</div><div class="c mid">Ǎ</div><div class="c">N</div><div class="c">'</div><div class="c mid">Ā</div><div class="c">N</div></div>
+    <div class="line he"><div class="c">ב</div><div class="c">ו</div><div class="c">ט</div><div class="c"> </div><div class="c">ה</div><div class="c">ל</div><div class="c">י</div><div class="c">ל</div></div>
+    <div class="hint">כרטיס 12 מתוך 175 · רווח להיפוך</div>
+    <div class="btns"><div class="btn">הקודם</div><div class="btn p">הפוך</div><div class="btn">הבא</div></div>
+  </div>
+  <div class="side">
+    <h2>הבאים בתור</h2>
+    <table>
+      <tr><td class="hz">早上</td><td class="py">ZǍOSHANG</td><td>בוקר</td></tr>
+      <tr><td class="hz">上午</td><td class="py">SHÀNGWǓ</td><td>לפני־צוהריים</td></tr>
+      <tr><td class="hz">下午</td><td class="py">XIÀWǓ</td><td>אחר־צוהריים</td></tr>
+      <tr><td class="hz">晚上</td><td class="py">WǍNSHANG</td><td>ערב</td></tr>
+      <tr><td class="hz">我</td><td class="py">WǑ</td><td>אני</td></tr>
+      <tr><td class="hz">你</td><td class="py">NǏ</td><td>אתה</td></tr>
+    </table>
+  </div>
+</main>
+</body>
+</html>
+

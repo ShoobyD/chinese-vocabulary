@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>קווי טונים — סקיצה</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#1b1c1f;--ash:#2a2c31;--ash2:#33363c;--bone:#ece6d6;--dim:#a9a49a;--t1:#ff4b3e;--t2:#ffc61a;--t3:#3ddc84;--t4:#4f8bff;--t0:#a9a49a}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;font-family:Heebo,sans-serif;color:var(--bone);
+ background:var(--coal) repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px,rgba(0,0,0,.08) 9px 11px,transparent 11px 23px)}
+.hz{font-family:'Noto Sans SC',sans-serif}
+header{display:flex;align-items:center;gap:40px;padding:22px 72px;border-bottom:1px solid #34363b;background:rgba(20,21,24,.7)}
+h1{font-size:20px;font-weight:700;display:flex;gap:10px;align-items:baseline}
+h1 .hz{font-size:24px}
+nav{display:flex;gap:2px;position:relative}
+nav a{position:relative;padding:12px 20px;font-weight:500;color:var(--dim);cursor:pointer;transition:color .2s}
+nav a::after{content:"";position:absolute;inset-inline:20px;bottom:0;height:1px;background:var(--bone);transform:scaleX(0);transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
+nav a:hover{color:var(--bone)}nav a:hover::after{transform:scaleX(.5)}
+nav a.on{color:var(--bone)}nav a.on::after{transform:scaleX(1);height:2px;background:var(--t2);box-shadow:0 -4px 0 -3px var(--t2)}
+.search{margin-inline-start:auto;width:320px;height:44px;background:var(--ash);border:1px solid #3c3f45;border-radius:6px;color:var(--bone);padding:0 16px;font:inherit;transition:border-color .2s,box-shadow .2s}
+.search:focus{outline:none;border-color:var(--t4);box-shadow:0 0 0 3px rgba(79,139,255,.25)}
+.tags{display:flex;gap:6px;padding:18px 72px;flex-wrap:wrap}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0}
+.chip span{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:4px;background:var(--ash);font-size:14px;color:var(--dim);border-top:2px solid var(--c,#555);transition:all .2s}
+.chip span b{font-weight:400;opacity:.6}
+.chip:hover span{color:var(--bone);transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.35)}
+.chip input:checked+span{background:var(--bone);color:#111;border-top-width:4px}
+.chip input:focus-visible+span{outline:2px solid var(--t4);outline-offset:2px}
+main{display:grid;grid-template-columns:1fr 440px;gap:40px;padding:12px 72px}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--dim);margin-bottom:16px}
+.legend i{display:inline-block;width:18px;height:2px;vertical-align:middle;margin-inline-end:6px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.p{background:var(--ash);border-radius:8px;padding:18px 16px 14px;text-align:center;cursor:pointer;position:relative;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 2px 0 #141518,0 10px 20px rgba(0,0,0,.3);transition:transform .25s cubic-bezier(.3,1.3,.5,1),box-shadow .25s,background .2s}
+.p:hover{transform:translateY(-6px);background:var(--ash2);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 2px 0 #141518,0 22px 32px rgba(0,0,0,.45)}
+.p:active{transform:translateY(-1px) scale(.98)}
+.p .hz{font-size:52px;line-height:1.2}
+.p .py{direction:ltr;font-size:16px;color:var(--dim);margin-top:2px}
+.p .he{font-size:15px;margin-top:4px}
+.tone{display:flex;justify-content:center;gap:6px;direction:ltr;height:22px;margin-top:6px}
+.tone svg{width:44px;height:22px;overflow:visible}
+.tone path{fill:none;stroke-width:2;stroke-linecap:round;stroke-dasharray:80;stroke-dashoffset:0;transition:stroke-dashoffset .6s ease}
+.p:hover .tone path{animation:draw .7s ease}
+@keyframes draw{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+.side{position:relative}
+#flip{position:absolute;opacity:0}
+.stage{perspective:1400px;height:500px;display:block;cursor:pointer}
+.card{position:relative;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+#flip:checked+.stage .card{transform:rotateY(180deg)}
+.stage:hover .card{transform:rotateY(-6deg) translateY(-4px)}
+#flip:checked+.stage:hover .card{transform:rotateY(186deg) translateY(-4px)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;background:var(--ash);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 3px 0 #141518,0 30px 50px rgba(0,0,0,.5)}
+.back{transform:rotateY(180deg)}
+.face .hz{font-size:150px;line-height:1}
+.face .tone svg{width:120px;height:50px}.face .tone{height:50px;gap:24px}
+.face .tone path{stroke-width:3}
+.big-py{direction:ltr;font-size:44px;font-weight:500}
+.big-py span:nth-child(1){color:var(--t3)}.big-py span:nth-child(2){color:var(--t1)}
+.big-he{font-size:28px}
+.hint{font-size:14px;color:var(--dim)}
+.ctrl{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.btn{padding:12px 24px;border-radius:6px;background:var(--ash);color:var(--bone);font-weight:500;cursor:pointer;border:none;font:inherit;box-shadow:0 2px 0 #141518;transition:transform .15s,background .2s}
+.btn:hover{background:var(--ash2);transform:translateY(-2px)}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn.pri{background:var(--bone);color:#111}
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="hz">汉语</span>לימוד סינית</h1>
+  <nav><a class="on">עיון וחיפוש</a><a>כרטיסיות</a><a>בוחן</a></nav>
+  <input class="search" placeholder="חיפוש הנדזי, פיניין או עברית…">
+</header>
+<div class="tags">
+  <label class="chip"><input type="checkbox" checked><span>הכול <b>175</b></span></label>
+  <label class="chip" style="--c:var(--t1)"><input type="checkbox"><span>כיוון ומיקום <b>14</b></span></label>
+  <label class="chip" style="--c:var(--t2)"><input type="checkbox"><span>זמני היום <b>9</b></span></label>
+  <label class="chip" style="--c:var(--t3)"><input type="checkbox"><span>חלקי היום <b>6</b></span></label>
+  <label class="chip" style="--c:var(--t4)"><input type="checkbox"><span>כינויי גוף <b>8</b></span></label>
+  <label class="chip" style="--c:#c77dff"><input type="checkbox"><span>ברכות <b>11</b></span></label>
+  <label class="chip" style="--c:#ff9f43"><input type="checkbox"><span>מילות פונקציה <b>12</b></span></label>
+</div>
+<main>
+  <section>
+    <div class="legend"><span><i style="background:var(--t1)"></i>טון 1 שטוח</span><span><i style="background:var(--t2)"></i>טון 2 עולה</span><span><i style="background:var(--t3)"></i>טון 3 צולל</span><span><i style="background:var(--t4)"></i>טון 4 יורד</span></div>
+    <div class="grid">
+      <div class="p"><div class="hz">上</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 3 L42 19" stroke="var(--t4)"/></svg></div><div class="py">shàng</div><div class="he">לפני / למעלה</div></div>
+      <div class="p"><div class="hz">早</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg></div><div class="py">zǎo</div><div class="he">מוקדם / בוקר</div></div>
+      <div class="p"><div class="hz">晚安</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg><svg viewBox="0 0 44 22"><path d="M2 3 L42 3" stroke="var(--t1)"/></svg></div><div class="py">wǎn'ān</div><div class="he">לילה טוב</div></div>
+      <div class="p"><div class="hz">下午</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 3 L42 19" stroke="var(--t4)"/></svg><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg></div><div class="py">xiàwǔ</div><div class="he">אחר־צוהריים</div></div>
+      <div class="p"><div class="hz">我</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg></div><div class="py">wǒ</div><div class="he">אני</div></div>
+      <div class="p"><div class="hz">下</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 3 L42 19" stroke="var(--t4)"/></svg></div><div class="py">xià</div><div class="he">אחרי / למטה</div></div>
+      <div class="p"><div class="hz">上午</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 3 L42 19" stroke="var(--t4)"/></svg><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg></div><div class="py">shàngwǔ</div><div class="he">לפני־צוהריים</div></div>
+      <div class="p"><div class="hz">你</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg></div><div class="py">nǐ</div><div class="he">אתה</div></div>
+    </div>
+  </section>
+  <aside class="side">
+    <input type="checkbox" id="flip">
+    <label class="stage" for="flip">
+      <div class="card">
+        <div class="face"><div class="hz">晚安</div><div class="tone"><svg viewBox="0 0 44 22"><path d="M2 9 Q18 24 42 4" stroke="var(--t3)"/></svg><svg viewBox="0 0 44 22"><path d="M2 3 L42 3" stroke="var(--t1)"/></svg></div><div class="hint">לחצו להיפוך · כרטיס 12 מתוך 175</div></div>
+        <div class="face back"><div class="big-py"><span>wǎn</span>'<span>ān</span></div><div class="big-he">לילה טוב</div><div class="hint">לחצו לחזרה</div></div>
+      </div>
+    </label>
+    <div class="ctrl"><button class="btn">הקודם</button><button class="btn pri">ידעתי</button><button class="btn">הבא</button></div>
+  </aside>
+</main>
+</body>
+</html>
+

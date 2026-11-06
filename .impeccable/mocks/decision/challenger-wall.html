@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>קיר כותרים — סקיצה</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101114;--bg2:#1c1e24;--txt:#f3f1ec;--dim:#9a9ca4;--red:#e8423f;--gold:#f2b33d;--blue:#3f7bd9;--teal:#2fae86;--plum:#9b5de5}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--bg);font-family:Rubik,sans-serif;color:var(--txt)}
+.hz{font-family:'Noto Serif SC',serif;font-weight:900}
+header{display:flex;align-items:center;gap:36px;padding:22px 64px}
+h1{font-size:22px;font-weight:800;display:flex;gap:10px;align-items:center}
+h1 .hz{background:var(--red);padding:2px 8px;border-radius:4px;font-size:20px}
+nav{display:flex;gap:6px}
+nav a{padding:10px 18px;border-radius:999px;font-weight:500;color:var(--dim);cursor:pointer;transition:all .2s}
+nav a:hover{color:var(--txt);background:var(--bg2)}
+nav a.on{color:#111;background:var(--txt)}
+.search{margin-inline-start:auto;width:300px;height:44px;border-radius:999px;border:none;background:var(--bg2);color:var(--txt);padding:0 20px;font:inherit;transition:box-shadow .2s,background .2s}
+.search:focus{outline:none;background:#262931;box-shadow:0 0 0 2px var(--txt)}
+.toggle{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--dim);cursor:pointer}
+.toggle input{appearance:none;width:40px;height:22px;border-radius:999px;background:#33363e;position:relative;cursor:pointer;transition:background .2s}
+.toggle input::after{content:"";position:absolute;top:3px;right:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .25s cubic-bezier(.3,1.4,.5,1)}
+.toggle input:checked{background:var(--teal)}
+.toggle input:checked::after{transform:translateX(-18px)}
+main{padding:6px 0 0}
+.row{margin-bottom:26px;transition:opacity .3s}
+main:hover .row:not(:hover){opacity:.4}
+.row h2{font-size:20px;font-weight:700;padding:0 64px 12px;display:flex;gap:12px;align-items:baseline}
+.row h2 small{font-size:14px;font-weight:400;color:var(--dim)}
+.rail{display:flex;gap:14px;padding:18px 64px 26px;overflow:hidden}
+.t{flex:0 0 150px;height:190px;border-radius:10px;background:var(--c);position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ box-shadow:inset 0 -60px 0 rgba(0,0,0,.14),0 10px 22px rgba(0,0,0,.45);transition:transform .35s cubic-bezier(.25,1.2,.4,1),box-shadow .35s,flex-basis .35s;z-index:1}
+.t .hz{font-size:76px;line-height:1;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.18);transition:transform .35s}
+.t.two .hz{font-size:54px}
+.t .info{position:absolute;inset-inline:0;bottom:0;padding:10px 12px;border-radius:0 0 10px 10px;background:rgba(10,10,12,.82);opacity:0;transform:translateY(8px);transition:all .3s;text-align:center}
+.t .py{direction:ltr;font-weight:500;font-size:16px}
+.t .he{font-size:14px;color:#ddd}
+.rail:hover .t:not(:hover){transform:scale(.96);filter:saturate(.6) brightness(.75)}
+.t:hover{transform:scale(1.14) translateY(-6px);z-index:5;box-shadow:inset 0 -60px 0 rgba(0,0,0,.14),0 0 0 3px var(--txt),0 26px 40px rgba(0,0,0,.6)}
+.t:hover .hz{transform:translateY(-22px)}
+.t:hover .info{opacity:1;transform:none}
+.t:active{transform:scale(1.08) translateY(-2px)}
+.reveal:checked~main .t .info{opacity:1;transform:none}
+.reveal:checked~main .t .hz{transform:translateY(-22px)}
+.badge{position:absolute;top:10px;inset-inline-start:10px;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(0,0,0,.35)}
+</style>
+</head>
+<body>
+<input type="checkbox" id="rv" class="reveal" hidden>
+<header>
+  <h1><span class="hz">汉语</span>לימוד סינית</h1>
+  <nav><a class="on">עיון וחיפוש</a><a>כרטיסיות</a><a>בוחן</a></nav>
+  <input class="search" placeholder="חיפוש הנדזי, פיניין או עברית…">
+  <label class="toggle" for="rv"><input type="checkbox" onclick="document.getElementById('rv').checked=this.checked">הצג תרגומים</label>
+</header>
+<main>
+  <div class="row"><h2>זמני היום <small>9 מילים · רחפו כדי לחשוף</small></h2>
+    <div class="rail">
+      <div class="t" style="--c:var(--gold)"><span class="badge">חדש</span><div class="hz">早</div><div class="info"><div class="py">zǎo</div><div class="he">מוקדם / בוקר</div></div></div>
+      <div class="t" style="--c:var(--gold)"><div class="hz">午</div><div class="info"><div class="py">wǔ</div><div class="he">צוהריים</div></div></div>
+      <div class="t" style="--c:var(--gold)"><div class="hz">晚</div><div class="info"><div class="py">wǎn</div><div class="he">לילה</div></div></div>
+      <div class="t two" style="--c:var(--gold)"><div class="hz">早上</div><div class="info"><div class="py">zǎoshang</div><div class="he">בוקר</div></div></div>
+      <div class="t two" style="--c:var(--gold)"><div class="hz">上午</div><div class="info"><div class="py">shàngwǔ</div><div class="he">לפני־צוהריים</div></div></div>
+      <div class="t two" style="--c:var(--gold)"><div class="hz">下午</div><div class="info"><div class="py">xiàwǔ</div><div class="he">אחר־צוהריים</div></div></div>
+      <div class="t two" style="--c:var(--gold)"><div class="hz">晚上</div><div class="info"><div class="py">wǎnshang</div><div class="he">ערב</div></div></div>
+      <div class="t two" style="--c:var(--gold)"><div class="hz">晚安</div><div class="info"><div class="py">wǎn'ān</div><div class="he">לילה טוב</div></div></div>
+    </div>
+  </div>
+  <div class="row"><h2>כינויי גוף <small>8 מילים</small></h2>
+    <div class="rail">
+      <div class="t" style="--c:var(--blue)"><div class="hz">我</div><div class="info"><div class="py">wǒ</div><div class="he">אני</div></div></div>
+      <div class="t" style="--c:var(--blue)"><div class="hz">你</div><div class="info"><div class="py">nǐ</div><div class="he">אתה</div></div></div>
+      <div class="t" style="--c:var(--blue)"><div class="hz">他</div><div class="info"><div class="py">tā</div><div class="he">הוא</div></div></div>
+      <div class="t" style="--c:var(--blue)"><div class="hz">她</div><div class="info"><div class="py">tā</div><div class="he">היא</div></div></div>
+      <div class="t two" style="--c:var(--blue)"><div class="hz">我们</div><div class="info"><div class="py">wǒmen</div><div class="he">אנחנו</div></div></div>
+      <div class="t two" style="--c:var(--blue)"><div class="hz">你们</div><div class="info"><div class="py">nǐmen</div><div class="he">אתם</div></div></div>
+      <div class="t two" style="--c:var(--blue)"><div class="hz">他们</div><div class="info"><div class="py">tāmen</div><div class="he">הם</div></div></div>
+      <div class="t" style="--c:var(--blue)"><div class="hz">您</div><div class="info"><div class="py">nín</div><div class="he">אתה (מנומס)</div></div></div>
+    </div>
+  </div>
+  <div class="row"><h2>כיוון ומיקום <small>14 מילים</small></h2>
+    <div class="rail">
+      <div class="t" style="--c:var(--red)"><div class="hz">上</div><div class="info"><div class="py">shàng</div><div class="he">למעלה</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">下</div><div class="info"><div class="py">xià</div><div class="he">למטה</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">左</div><div class="info"><div class="py">zuǒ</div><div class="he">שמאל</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">右</div><div class="info"><div class="py">yòu</div><div class="he">ימין</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">前</div><div class="info"><div class="py">qián</div><div class="he">מלפנים</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">后</div><div class="info"><div class="py">hòu</div><div class="he">מאחור</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">里</div><div class="info"><div class="py">lǐ</div><div class="he">בפנים</div></div></div>
+      <div class="t" style="--c:var(--red)"><div class="hz">外</div><div class="info"><div class="py">wài</div><div class="he">בחוץ</div></div></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
+
