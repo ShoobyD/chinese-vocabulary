@@ -52,10 +52,22 @@ function onActivate(word: Word) {
   white-space: nowrap;
 }
 
+/* Known sub-words carry a fine dotted rule; it inks red under the pointer. */
 .seg.known {
   cursor: pointer;
-  border-bottom: 2px dotted var(--accent);
+  text-decoration: underline dotted var(--bone-deep);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
   outline-offset: 2px;
+  transition:
+    color var(--dur-base) var(--ease-out),
+    text-decoration-color var(--dur-base) var(--ease-out);
+}
+
+.seg.known:hover,
+.seg.known:focus-visible {
+  color: var(--carve-red);
+  text-decoration-color: var(--carve-red);
 }
 
 /* Small gap between adjacent known segments so the dotted underlines read as
@@ -64,3 +76,4 @@ function onActivate(word: Word) {
   margin-inline-start: 0.12em;
 }
 </style>
+
