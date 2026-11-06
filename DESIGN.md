@@ -235,7 +235,7 @@ A jade, bone and felt material palette, with four small carving inks that mean t
 The UI scale is a fixed rem ramp: 0.8125, 0.9375, 1.0625, 1.25, 1.625rem.
 
 ### Named Rules
-**The Count-Steps Rule.** Hanzi size is chosen by character count, not by container queries or wrapping: every tile, prompt and flip face keeps its word on one line.
+**The Count-Steps Rule.** Hanzi size is chosen by character count, not by container queries or wrapping: every tile, prompt and flip face keeps its word on one line. Every Hanzi size is a step of the `--hanzi-*` scale: 1 = 1.6rem, 2 = 2rem, 3 = 2.5rem, 4 = 2.75rem, 5 = 3.25rem, 6 = 3.5rem, 7 = 4.5rem, 8 = 5rem, 9 = 6rem (the display ceiling). No literal Hanzi sizes.
 
 **The Isolation Rule.** Hebrew is tagged `dir="rtl"`; Hanzi, Pinyin and contours are tagged LTR and isolated per element, never left to the bidi algorithm.
 

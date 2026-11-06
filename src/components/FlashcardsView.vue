@@ -109,15 +109,16 @@ function go(step: 1 | -1) {
 
 <style scoped>
 .flashcards {
+  --card-w: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-6);
 }
 
+/* Toolbar, tile and controls share one column: the card's width. */
 .toolbar {
-  width: 100%;
-  max-width: 30rem;
+  width: min(100%, var(--card-w));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,7 +138,7 @@ function go(step: 1 | -1) {
 /* ---------- The tile ---------- */
 
 .card-area {
-  width: min(100%, 20rem);
+  width: min(100%, var(--card-w));
 }
 
 /* Perspective lives on the slot so the inner flip reads as real 3D. */
@@ -219,19 +220,19 @@ function go(step: 1 | -1) {
 }
 
 .len-1 {
-  font-size: 7rem;
+  font-size: var(--hanzi-9);
 }
 
 .len-2 {
-  font-size: 5rem;
+  font-size: var(--hanzi-8);
 }
 
 .len-3 {
-  font-size: 3.5rem;
+  font-size: var(--hanzi-6);
 }
 
 .len-4 {
-  font-size: 2.75rem;
+  font-size: var(--hanzi-4);
 }
 
 .hint {
@@ -245,19 +246,19 @@ function go(step: 1 | -1) {
 }
 
 .back-len-1 {
-  font-size: 4.5rem;
+  font-size: var(--hanzi-7);
 }
 
 .back-len-2 {
-  font-size: 3.5rem;
+  font-size: var(--hanzi-6);
 }
 
 .back-len-3 {
-  font-size: 2.75rem;
+  font-size: var(--hanzi-4);
 }
 
 .back-len-4 {
-  font-size: 2.25rem;
+  font-size: var(--hanzi-2);
 }
 
 .back-tones {
@@ -411,15 +412,12 @@ function go(step: 1 | -1) {
 
 @media (max-width: 640px) {
   .flashcards {
+    --card-w: 17rem;
     gap: var(--space-5);
   }
 
-  .card-area {
-    width: min(100%, 17rem);
-  }
-
   .len-1 {
-    font-size: 6rem;
+    font-size: var(--hanzi-9);
   }
 
   .nav {

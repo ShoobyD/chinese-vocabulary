@@ -30,10 +30,6 @@ const usedIn = computed<Word[]>(() =>
 
 <template>
   <article class="word-card" dir="rtl">
-    <ul v-if="tagLabelsForWord.length" class="tags">
-      <li v-for="(label, i) in tagLabelsForWord" :key="i" class="tag">{{ label }}</li>
-    </ul>
-
     <div class="headline" lang="zh-Hans">
       <HanziText class="big" :text="word.hanzi" />
     </div>
@@ -48,6 +44,11 @@ const usedIn = computed<Word[]>(() =>
     />
     <p class="pinyin big-pinyin"><PinyinText :pinyin="word.pinyin" :hanzi="word.hanzi" /></p>
     <p class="hebrew meaning">{{ word.hebrew ?? '—' }}</p>
+
+    <!-- The word's tags: a quiet row under the gloss, never an eyebrow above the word. -->
+    <ul v-if="tagLabelsForWord.length" class="tags">
+      <li v-for="(label, i) in tagLabelsForWord" :key="i" class="tag">{{ label }}</li>
+    </ul>
 
     <section v-if="breakdown.length" class="group">
       <h3 class="group-title">פירוק לרכיבים</h3>
@@ -87,7 +88,7 @@ const usedIn = computed<Word[]>(() =>
 
 .tags {
   list-style: none;
-  margin: 0 0 var(--space-4);
+  margin: var(--space-4) 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -110,11 +111,11 @@ const usedIn = computed<Word[]>(() =>
 }
 
 .big {
-  font-size: 4.5rem;
+  font-size: var(--hanzi-7);
   line-height: 1.15;
 }
 
-/* Clear the dotted sub-word rule under the Hanzi before the contours start. */
+/* Breathing room between the headline Hanzi and its contours. */
 .headline-tones {
   margin-top: var(--space-4);
 }
@@ -195,7 +196,7 @@ button.mini:active {
 }
 
 .mini-hanzi {
-  font-size: 1.6rem;
+  font-size: var(--hanzi-1);
   line-height: 1.2;
 }
 

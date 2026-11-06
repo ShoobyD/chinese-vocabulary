@@ -413,19 +413,19 @@ const promptSize = computed(() => {
 }
 
 .prompt-text.len-1 {
-  font-size: 6rem;
+  font-size: var(--hanzi-9);
 }
 
 .prompt-text.len-2 {
-  font-size: 4.5rem;
+  font-size: var(--hanzi-7);
 }
 
 .prompt-text.len-3 {
-  font-size: 3.25rem;
+  font-size: var(--hanzi-5);
 }
 
 .prompt-text.len-4 {
-  font-size: 2.5rem;
+  font-size: var(--hanzi-3);
 }
 
 .reveal {
@@ -440,7 +440,7 @@ const promptSize = computed(() => {
 }
 
 .reveal-hanzi {
-  font-size: 2.5rem;
+  font-size: var(--hanzi-3);
   line-height: 1.2;
 }
 
@@ -502,7 +502,7 @@ const promptSize = computed(() => {
 }
 
 .option.hanzi {
-  font-size: 2rem;
+  font-size: var(--hanzi-2);
 }
 
 .option.pinyin {
@@ -802,11 +802,11 @@ const promptSize = computed(() => {
   }
 
   .prompt-text.len-1 {
-    font-size: 4.5rem;
+    font-size: var(--hanzi-7);
   }
 
   .prompt-text.len-2 {
-    font-size: 3.5rem;
+    font-size: var(--hanzi-6);
   }
 
   .options {

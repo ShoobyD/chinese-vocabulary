@@ -23,7 +23,7 @@ OWN-WORLD: Jade-green shell (#0f4f40 family, darker well and lighter rim), a war
 
 STORY: The learner sees words as a table of tiles, scopes by tag, hovers to hear-by-eye the tones, flips a tile to recall, then quizzes. They believe the three scripts belong together and act by studying.
 
-FIRST VIEWPORT: Jade header with brand mini-tile, standard segmented tabs (Browse / Flashcards / Quiz) and a search field. A tag chip row below. Then the felt area holding a grid of tiles (Hanzi at tile scale, tone contours, Pinyin, Hebrew). In Flashcards, one large tile flips from the jade back to the face, and its contours draw syllable by syllable.
+FIRST VIEWPORT: Jade header with brand mini-tile and standard segmented tabs (Browse / Flashcards / Quiz). A tag chip row below. The search field sits on the felt at the top of Browse, not in the header: it filters Browse only, and the header is shared by every mode (adaptation, recorded at the finish review). Then the felt area holding a grid of tiles (Hanzi at tile scale, tone contours, Pinyin, Hebrew). In Flashcards, one large tile flips from the jade back to the face, and its contours draw syllable by syllable.
 
 FORM: Mahjong tiles (user-kept grounded direction from round 1, chosen over the bolder re-roll), with the raised line from Emission-line rail: tone shape and colour drawn per syllable, animated sequentially in reading order (staggered by syllable index, LTR). seed:01267209ff55e0a9
 

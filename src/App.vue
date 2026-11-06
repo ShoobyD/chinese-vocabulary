@@ -335,7 +335,7 @@ const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
 .badge {
   min-width: 1.375rem;
   padding: 0 0.375rem;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   background: var(--bone);
   color: var(--ink);
   font-size: var(--text-xs);

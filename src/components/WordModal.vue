@@ -74,7 +74,8 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
 .close {
   position: absolute;
   top: var(--space-3);
-  inset-inline-start: var(--space-3);
+  /* RTL page: the inline end is the top-left corner, away from the content start. */
+  inset-inline-end: var(--space-3);
   width: 2.75rem;
   height: 2.75rem;
   display: grid;

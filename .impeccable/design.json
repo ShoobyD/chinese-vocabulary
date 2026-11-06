@@ -608,7 +608,7 @@
       },
       {
         "name": "The Count-Steps Rule",
-        "body": "Hanzi size is chosen by character count, not by container queries or wrapping: every tile, prompt and flip face keeps its word on one line.",
+        "body": "Hanzi size is chosen by character count, not by container queries or wrapping: every tile, prompt and flip face keeps its word on one line. Every Hanzi size is a step of the `--hanzi-*` scale: 1 = 1.6rem, 2 = 2rem, 3 = 2.5rem, 4 = 2.75rem, 5 = 3.25rem, 6 = 3.5rem, 7 = 4.5rem, 8 = 5rem, 9 = 6rem (the display ceiling). No literal Hanzi sizes.",
         "section": "typography"
       },
       {

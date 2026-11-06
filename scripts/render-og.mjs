@@ -1,4 +1,4 @@
-// Renders public/og-image.html -> public/og-image.png at 1200x630 using headless Chrome.
+// Renders scripts/og-image.html -> public/og-image.png at 1200x630 using headless Chrome.
 // Usage: node scripts/render-og.mjs
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
@@ -35,3 +35,4 @@ execFileSync(chrome, [
 ], { stdio: 'inherit' })
 
 console.log(`Rendered ${output}`)
+

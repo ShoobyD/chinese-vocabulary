@@ -77,7 +77,7 @@ onUnmounted(() => {
 }
 
 .tip-hanzi {
-  font-size: 1.75rem;
+  font-size: var(--hanzi-1);
   line-height: 1.15;
 }
 

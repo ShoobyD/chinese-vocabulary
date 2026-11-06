@@ -65,6 +65,21 @@
   --text-lg: 1.25rem;
   --text-xl: 1.625rem;
 
+  /*
+   * Hanzi scale. Every carved character uses one of these steps; which step
+   * is picked by character count per surface (DESIGN.md: Count-Steps Rule).
+   * 6rem is the display ceiling.
+   */
+  --hanzi-1: 1.6rem;
+  --hanzi-2: 2rem;
+  --hanzi-3: 2.5rem;
+  --hanzi-4: 2.75rem;
+  --hanzi-5: 3.25rem;
+  --hanzi-6: 3.5rem;
+  --hanzi-7: 4.5rem;
+  --hanzi-8: 5rem;
+  --hanzi-9: 6rem;
+
   /* Space, on a 4px step. */
   --space-1: 0.25rem;
   --space-2: 0.5rem;

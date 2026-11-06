@@ -208,19 +208,19 @@ function hanziSize(hanzi: string): string {
 }
 
 .len-1 {
-  font-size: 3.25rem;
+  font-size: var(--hanzi-5);
 }
 
 .len-2 {
-  font-size: 2.6rem;
+  font-size: var(--hanzi-3);
 }
 
 .len-3 {
-  font-size: 2rem;
+  font-size: var(--hanzi-2);
 }
 
 .len-4 {
-  font-size: 1.6rem;
+  font-size: var(--hanzi-1);
 }
 
 .face-pinyin {
