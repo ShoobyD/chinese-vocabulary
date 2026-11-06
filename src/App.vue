@@ -422,8 +422,17 @@ const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
     flex-wrap: wrap;
   }
 
+  /* Capped at ~4.5 rows so the table stays reachable; the half row and a
+     soft fade at the foot say the list scrolls on. */
   .filters.expanded .tag-list {
     flex-basis: 100%;
+    max-height: calc(4.5 * (var(--chip-h) + 0.75rem));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: var(--space-3);
+    scrollbar-color: var(--jade-700) transparent;
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), transparent);
   }
 
   .mode-btn {

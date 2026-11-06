@@ -13,6 +13,7 @@ colors:
   bone-deep: "#b9ae95"
   felt: "#e4ddcc"
   felt-deep: "#d6cdb8"
+  felt-well: "#cbc0a5"
   ink: "#1a1a1a"
   ink-soft: "#3d3a33"
   ink-muted: "#5d574b"
@@ -202,7 +203,8 @@ A jade, bone and felt material palette, with four small carving inks that mean t
 
 ### Neutral
 - **Felt** (felt): the table under the content area and the page background. The table carries a nap (`--felt-nap`): a fine warm-umber fractal noise plus a faint falloff toward its lower edge, so it reads as cloth rather than paper. Wells and tiles stay untextured.
-- **Deep Felt** (felt-deep): input borders, sunken empty wells, quiet-button hover.
+- **Deep Felt** (felt-deep): input borders, quiet-button hover.
+- **Well Felt** (felt-well): sunken empty-state wells, with `--well-inset` (a deeper inset shadow plus a pale lower lip). A step darker than the napped table, which itself reads close to Deep Felt, so a well never blends into it.
 - **Ink** (ink): all body text and every Hanzi on a bone face.
 - **Soft Ink** (ink-soft): Pinyin separators and standalone Pinyin (quiz options), Hebrew glosses on tiles, empty-state copy.
 - **Muted Ink** (ink-muted): counts, field labels, progress, placeholders, footer, and the neutral-tone dot (tone 0).
@@ -241,7 +243,7 @@ The UI scale is a fixed rem ramp: 0.8125, 0.9375, 1.0625, 1.25, 1.625rem.
 
 ## Layout
 
-A jade shell spans the viewport; the content column caps at 1120px with a fluid gutter (`clamp(1rem, 4vw, 3rem)`). The header stacks brand plus segmented tabs, then one collapsible row of tag chips. Below it the felt table takes the remaining height, its top corners rounded (16px) and its top edge shadowed inward where it meets the shell.
+A jade shell spans the viewport; the content column caps at 1120px with a fluid gutter (`clamp(1rem, 4vw, 3rem)`). The header stacks brand plus segmented tabs, then one collapsible row of tag chips. On phones the expanded list takes the full row and caps at about four and a half rows, scrolling inside itself with a soft fade at its foot, so the table stays reachable. Below it the felt table takes the remaining height, its top corners rounded (16px) and its top edge shadowed inward where it meets the shell.
 
 Spacing runs on a 4px step (4, 8, 12, 16, 24, 32, 48px). Tiles need room for their undersides: grid row gaps are larger than column gaps (32 by 24px desktop, 24 by 16px phone) so a lifted tile's jade stack never touches the row below.
 
@@ -305,7 +307,7 @@ Wells: bone fill, 1px Deep Felt border, 10px radius, soft inset shadow, 48px tal
 The word dialog is one large bone tile (16px radius, max 28rem) on the raised-dialog stack, rising and settling on spring over a jade scrim; inside, a round close button, word tags in Jade Wash, the headline Hanzi with large contours that write once on open, and breakdown / used-in rows of small bone mini-tiles. The character tooltip is a small bone tile with a jade notch, popping above the character with its own contours.
 
 ### Empty Well
-A felt-deep well pressed into the table (16px radius, inset shadow, white lower highlight), Soft Ink text, the query in bold ink, and a primary jade button to clear the search.
+A Well Felt well pressed into the table (16px radius, inset shadow, white lower highlight), Soft Ink text, the query in bold ink, and a primary jade button to clear the search.
 
 ## Do's and Don'ts
 

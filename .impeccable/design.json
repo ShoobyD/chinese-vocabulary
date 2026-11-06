@@ -169,6 +169,21 @@
           "oklch(95% 0.03 87.6)"
         ]
       },
+      "felt-well": {
+        "role": "neutral",
+        "displayName": "Well Felt",
+        "canonical": "oklch(81% 0.039 88.5)",
+        "tonalRamp": [
+          "oklch(15% 0.039 88.5)",
+          "oklch(26.4% 0.039 88.5)",
+          "oklch(37.9% 0.039 88.5)",
+          "oklch(49.3% 0.039 88.5)",
+          "oklch(60.7% 0.039 88.5)",
+          "oklch(72.1% 0.039 88.5)",
+          "oklch(83.6% 0.039 88.5)",
+          "oklch(95% 0.039 88.5)"
+        ]
+      },
       "ink": {
         "role": "neutral",
         "displayName": "Ink",
@@ -570,9 +585,9 @@
       "name": "Felt Table and Empty Well",
       "kind": "custom",
       "refersTo": "empty-well",
-      "description": "The felt table (Felt under the --felt-nap noise and falloff, rounded top corners, inset seam shadow) holding a felt-deep empty well with a primary clear button. Wells stay untextured.",
+      "description": "The felt table (Felt under the --felt-nap noise and falloff, rounded top corners, inset seam shadow) holding a Well Felt empty well with a primary clear button. Wells stay untextured.",
       "html": "<div class=\"ds-table\" dir=\"rtl\"><div class=\"ds-empty\"><p>לא נמצאו מילים עבור <strong>xyz</strong></p><button type=\"button\" class=\"ds-empty-btn\">ניקוי החיפוש</button></div></div>",
-      "css": ".ds-table { width: 28rem; padding: var(--space-6) var(--space-5); background-color: var(--felt); background-image: var(--felt-nap); border-radius: var(--radius-lg) var(--radius-lg) 0 0; box-shadow: inset 0 6px 14px rgba(7, 42, 34, 0.14); } .ds-empty { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-7) var(--space-4); border-radius: var(--radius-lg); background: var(--felt-deep); box-shadow: inset 0 3px 8px rgba(7, 42, 34, 0.18), inset 0 -1px 0 rgba(255, 255, 255, 0.35); color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-md); text-align: center; } .ds-empty p { margin: 0; } .ds-empty strong { color: var(--ink); } .ds-empty-btn { --lift: 0px; min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: var(--radius-sm); background: var(--jade-800); color: var(--on-jade); font-family: var(--font-ui); font-weight: 600; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -2px 0 var(--jade-900), 0 calc(3px + var(--lift)) 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--bone-deep), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-empty-btn:hover { --lift: 3px; } .ds-empty-btn:active { --lift: -2px; transition-duration: var(--dur-fast); } .ds-empty-btn:focus-visible { outline: 2px solid var(--jade-800); outline-offset: 2px; }"
+      "css": ".ds-table { width: 28rem; padding: var(--space-6) var(--space-5); background-color: var(--felt); background-image: var(--felt-nap); border-radius: var(--radius-lg) var(--radius-lg) 0 0; box-shadow: inset 0 6px 14px rgba(7, 42, 34, 0.14); } .ds-empty { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-7) var(--space-4); border-radius: var(--radius-lg); background: var(--felt-well); box-shadow: var(--well-inset); color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-md); text-align: center; } .ds-empty p { margin: 0; } .ds-empty strong { color: var(--ink); } .ds-empty-btn { --lift: 0px; min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: var(--radius-sm); background: var(--jade-800); color: var(--on-jade); font-family: var(--font-ui); font-weight: 600; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -2px 0 var(--jade-900), 0 calc(3px + var(--lift)) 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--bone-deep), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-empty-btn:hover { --lift: 3px; } .ds-empty-btn:active { --lift: -2px; transition-duration: var(--dur-fast); } .ds-empty-btn:focus-visible { outline: 2px solid var(--jade-800); outline-offset: 2px; }"
     }
   ],
   "narrative": {
