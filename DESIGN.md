@@ -192,7 +192,7 @@ A jade, bone and felt material palette, with four small carving inks that mean t
 - **Table Jade** (jade-800): the shell background, tile undersides (first layer), primary buttons, focus outlines, selection, caret, link and score accents. Its family carries the world: **Jade Well** (jade-900) for sunken wells and the deeper underside layer, **Deepest Jade** (jade-950) for the darkest underside edge and as the base of every overlay and shadow tint (`rgba(7, 42, 34, …)`), **Rim Jade** (jade-700) for hover fills and chip outlines on the shell, **Pale Jade** (jade-200) for muted text on jade and the focus halo on inputs, **Jade Wash** (jade-100) for word-tag fills inside the dialog.
 
 ### Secondary
-- **Carved Bone** (bone): every tile face, the active tab, the selected chip, input wells, the dialog and tooltip. Also the text colour on jade. **Bone Edge** (bone-shade) is the inset bottom lip of a face and its hairline dividers; **Old Bone** (bone-deep) is the second underside layer under jade buttons, the dotted sub-word rule and input hover borders.
+- **Carved Bone** (bone): every tile face, the active tab, the selected chip, input wells, the dialog and tooltip. Also the text colour on jade. **Bone Edge** (bone-shade) is the inset bottom lip of a face and its hairline dividers; **Old Bone** (bone-deep) is the second underside layer under jade buttons, the carved seam between a word's sub-word parts (e.g. 早|上; no underline, a Jade Wash fill on hover) and input hover borders.
 
 ### Tertiary
 - **Carving Red** (carve-red): tone 1, high flat.

@@ -55,29 +55,45 @@ function onActivate(word: Word) {
   white-space: nowrap;
 }
 
-/* Known sub-words carry a fine dotted rule; it turns jade under the pointer
-   (never a carving ink — those are reserved for tones). */
+/*
+ * Known sub-words are joined like the halves of a tile: a fine carved seam
+ * between adjacent parts (e.g. 一家 | 老小), no underline. Under the pointer a
+ * part lifts into a soft jade wash (never a carving ink — those mean tones).
+ *
+ * Han characters always run left-to-right, even inside the RTL page, so the
+ * seam uses physical `left` / `margin-left`: logical inline-start would land
+ * on the wrong side here.
+ */
 .seg.known {
+  position: relative;
   cursor: pointer;
-  text-decoration: underline dotted var(--bone-deep);
-  text-decoration-thickness: 0.06em;
-  text-underline-offset: 0.18em;
+  border-radius: 0.12em;
   outline-offset: 2px;
   transition:
     color var(--dur-base) var(--ease-out),
-    text-decoration-color var(--dur-base) var(--ease-out);
+    background-color var(--dur-base) var(--ease-out);
 }
 
 .seg.known:hover,
 .seg.known:focus-visible {
   color: var(--jade-800);
-  text-decoration-color: var(--jade-800);
+  background-color: var(--jade-100);
 }
 
-/* Small gap between adjacent known segments so the dotted underlines read as
-   separate units (e.g. 一家 · 老小). */
 .seg.known + .seg.known {
-  margin-inline-start: 0.12em;
+  margin-left: 0.14em;
+}
+
+.seg.known + .seg.known::before {
+  content: '';
+  position: absolute;
+  left: -0.085em;
+  top: 22%;
+  bottom: 18%;
+  width: max(1px, 0.025em);
+  border-radius: 1px;
+  background: var(--bone-deep);
+  pointer-events: none;
 }
 </style>
 
