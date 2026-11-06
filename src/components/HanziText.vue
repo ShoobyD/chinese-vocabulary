@@ -5,7 +5,10 @@ import type { Segment, Word } from '@/data'
 import { useHanziTooltip } from '@/composables/useHanziTooltip'
 import { useCard } from '@/composables/useCard'
 
-const props = defineProps<{ text: string }>()
+// `nested`: rendered inside another control (a Browse tile). Segments keep
+// their pointer hover/click but leave the tab order and the accessibility
+// tree, so the tile stays the single keyboard target.
+const props = defineProps<{ text: string; nested?: boolean }>()
 
 const { show, hide } = useHanziTooltip()
 const { open } = useCard()
@@ -31,8 +34,8 @@ function onActivate(word: Word) {
       <span
         v-if="s.word"
         class="seg known"
-        role="button"
-        tabindex="0"
+        :role="nested ? undefined : 'button'"
+        :tabindex="nested ? undefined : 0"
         @mouseenter="onEnter($event, s.word)"
         @mouseleave="hide"
         @focus="onEnter($event, s.word)"
@@ -66,8 +69,8 @@ function onActivate(word: Word) {
 
 .seg.known:hover,
 .seg.known:focus-visible {
-  color: var(--carve-red);
-  text-decoration-color: var(--carve-red);
+  color: var(--jade-800);
+  text-decoration-color: var(--jade-800);
 }
 
 /* Small gap between adjacent known segments so the dotted underlines read as

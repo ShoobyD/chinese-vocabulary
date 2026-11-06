@@ -78,7 +78,6 @@ onUnmounted(() => {
 .tip-hanzi {
   font-size: 1.75rem;
   line-height: 1.15;
-  color: var(--carve-red);
 }
 
 .tip-pinyin {

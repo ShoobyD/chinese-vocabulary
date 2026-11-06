@@ -167,8 +167,10 @@ a {
   font-weight: 700;
 }
 
+/* A neutral ink, clear of every tone hue: the carving inks (and the jade that
+   sits beside tone-2 green) are reserved for the tone contours. */
 .pinyin {
-  color: var(--carve-blue);
+  color: var(--ink-soft);
   font-weight: 600;
 }
 

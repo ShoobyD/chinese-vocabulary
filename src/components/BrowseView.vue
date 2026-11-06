@@ -64,13 +64,14 @@ function hanziSize(hanzi: string): string {
         tabindex="0"
         @click="open(w)"
         @keydown.enter="open(w)"
+        @keydown.space.prevent="open(w)"
         @mouseenter="playingId = w.id"
         @mouseleave="playingId = null"
         @focus="playingId = w.id"
         @blur="playingId = null"
       >
         <span :class="['face-hanzi', hanziSize(w.hanzi)]" lang="zh-Hans">
-          <HanziText :text="w.hanzi" />
+          <HanziText :text="w.hanzi" nested />
         </span>
         <ToneContour :pinyin="w.pinyin" :hanzi="w.hanzi" :playing="playingId === w.id" />
         <span class="pinyin face-pinyin" dir="ltr">{{ w.pinyin }}</span>
@@ -78,7 +79,12 @@ function hanziSize(hanzi: string): string {
       </li>
     </ul>
 
-    <p v-if="results.length === 0" class="empty">לא נמצאו תוצאות.</p>
+    <div v-if="results.length === 0" class="empty">
+      <p class="empty-text">
+        לא נמצאו תוצאות<template v-if="query.trim()"> עבור <bdi class="empty-query">{{ query.trim() }}</bdi></template>.
+      </p>
+      <button v-if="query.trim()" type="button" class="empty-clear" @click="query = ''">ניקוי החיפוש</button>
+    </div>
   </section>
 </template>
 
@@ -228,13 +234,58 @@ function hanziSize(hanzi: string): string {
   color: var(--ink-soft);
 }
 
+/* An empty tile well pressed into the felt. */
 .empty {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
   padding: var(--space-7) var(--space-4);
-  border: 2px dashed var(--felt-deep);
   border-radius: var(--radius-lg);
-  color: var(--ink-muted);
+  background: var(--felt-deep);
+  box-shadow:
+    inset 0 3px 8px rgba(7, 42, 34, 0.18),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
   text-align: center;
+}
+
+.empty-text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-md);
+}
+
+.empty-query {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.empty-clear {
+  --lift: 0px;
+  min-height: 2.75rem;
+  padding: 0 var(--space-5);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--jade-800);
+  color: var(--on-jade);
+  font-weight: 600;
+  transform: translateY(calc(var(--lift) * -1));
+  box-shadow:
+    inset 0 -2px 0 var(--jade-900),
+    0 calc(3px + var(--lift)) 0 var(--jade-950),
+    0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2);
+  transition:
+    transform var(--dur-base) var(--ease-spring),
+    box-shadow var(--dur-base) var(--ease-spring);
+}
+
+.empty-clear:hover {
+  --lift: 3px;
+}
+
+.empty-clear:active {
+  --lift: -2px;
+  transition-duration: var(--dur-fast);
 }
 
 @media (max-width: 640px) {

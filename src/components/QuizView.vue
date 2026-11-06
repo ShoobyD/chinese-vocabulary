@@ -336,7 +336,7 @@ const promptSize = computed(() => {
   color: var(--jade-800);
   font-size: var(--text-xl);
   font-weight: 700;
-  animation: pop var(--dur-slow) var(--ease-spring);
+  animation: pop var(--dur-base) var(--ease-out);
 }
 
 .score-of {
@@ -345,7 +345,7 @@ const promptSize = computed(() => {
 
 @keyframes pop {
   0% {
-    transform: scale(1.5);
+    transform: scale(1.25);
   }
   100% {
     transform: scale(1);
@@ -435,7 +435,6 @@ const promptSize = computed(() => {
 .reveal-hanzi {
   font-size: 2.5rem;
   line-height: 1.2;
-  color: var(--carve-red);
 }
 
 .reveal-pinyin {
@@ -500,7 +499,7 @@ const promptSize = computed(() => {
 }
 
 .option.pinyin {
-  color: var(--carve-blue);
+  color: var(--ink-soft);
 }
 
 .option:not(:disabled):hover {
@@ -538,6 +537,21 @@ const promptSize = computed(() => {
     0 calc(8px + var(--lift)) 0 #7d161c,
     0 6px 10px rgba(7, 42, 34, 0.18);
   animation: shake 380ms var(--ease-out);
+}
+
+/* Hanzi glyphs never take a carving ink (those mean tones); the fill, edge
+   and icon carry the verdict instead. */
+.option.hanzi.correct,
+.option.hanzi.wrong {
+  color: var(--ink);
+}
+
+.option.correct .mark {
+  color: var(--carve-green);
+}
+
+.option.wrong .mark {
+  color: var(--carve-red);
 }
 
 .option.faded {

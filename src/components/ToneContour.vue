@@ -56,8 +56,8 @@ const tones = computed(() => pinyinTones(props.pinyin, props.hanzi))
 }
 
 .tones-sm .contour {
-  width: 1.75rem;
-  height: 1.1rem;
+  width: 2.25rem;
+  height: 1.4rem;
 }
 
 .tones-lg .contour {

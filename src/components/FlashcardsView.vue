@@ -74,7 +74,7 @@ function go(step: 1 | -1) {
             </div>
             <!-- Revealed: the carved bone face; tones write in once it lands. -->
             <div class="face face-back" dir="rtl">
-              <div class="hanzi back-hanzi" lang="zh-Hans">{{ current.hanzi }}</div>
+              <div :class="['hanzi', 'back-hanzi', `back-${hanziSize}`]" lang="zh-Hans">{{ current.hanzi }}</div>
               <ToneContour
                 class="back-tones"
                 :pinyin="current.pinyin"
@@ -239,9 +239,24 @@ function go(step: 1 | -1) {
 }
 
 .back-hanzi {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  color: var(--carve-red);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.back-len-1 {
+  font-size: 4.5rem;
+}
+
+.back-len-2 {
+  font-size: 3.5rem;
+}
+
+.back-len-3 {
+  font-size: 2.75rem;
+}
+
+.back-len-4 {
+  font-size: 2.25rem;
 }
 
 .back-tones {

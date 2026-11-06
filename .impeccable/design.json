@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T06:05:41.829Z",
+  "title": "Design System: לימוד סינית",
+  "extensions": {
+    "colorMeta": {
+      "jade-950": {
+        "role": "primary",
+        "displayName": "Deepest Jade",
+        "canonical": "oklch(25.8% 0.042 174.5)",
+        "tonalRamp": [
+          "#072a22",
+          "#0a3a2f",
+          "#0f4f40",
+          "#1b6b57",
+          "oklch(72.1% 0.082 172.2)",
+          "#bfd9cd",
+          "#dcebe4",
+          "oklch(95% 0.082 172.2)"
+        ]
+      },
+      "jade-900": {
+        "role": "primary",
+        "displayName": "Jade Well",
+        "canonical": "oklch(31.4% 0.054 173.7)",
+        "tonalRamp": [
+          "#072a22",
+          "#0a3a2f",
+          "#0f4f40",
+          "#1b6b57",
+          "oklch(72.1% 0.082 172.2)",
+          "#bfd9cd",
+          "#dcebe4",
+          "oklch(95% 0.082 172.2)"
+        ]
+      },
+      "jade-800": {
+        "role": "primary",
+        "displayName": "Table Jade",
+        "canonical": "oklch(38.4% 0.067 173)",
+        "tonalRamp": [
+          "#072a22",
+          "#0a3a2f",
+          "#0f4f40",
+          "#1b6b57",
+          "oklch(72.1% 0.082 172.2)",
+          "#bfd9cd",
+          "#dcebe4",
+          "oklch(95% 0.082 172.2)"
+        ]
+      },
+      "jade-700": {
+        "role": "primary",
+        "displayName": "Rim Jade",
+        "canonical": "oklch(47.5% 0.082 172.2)",
+        "tonalRamp": [
+          "#072a22",
+          "#0a3a2f",
+          "#0f4f40",
+          "#1b6b57",
+          "oklch(72.1% 0.082 172.2)",
+          "#bfd9cd",
+          "#dcebe4",
+          "oklch(95% 0.082 172.2)"
+        ]
+      },
+      "jade-200": {
+        "role": "primary",
+        "displayName": "Pale Jade",
+        "canonical": "oklch(86.3% 0.032 166.1)",
+        "tonalRamp": [
+          "#072a22",
+          "#0a3a2f",
+          "#0f4f40",
+          "#1b6b57",
+          "oklch(72.1% 0.082 172.2)",
+          "#bfd9cd",
+          "#dcebe4",
+          "oklch(95% 0.082 172.2)"
+        ]
+      },
+      "jade-100": {
+        "role": "primary",
+        "displayName": "Jade Wash",
+        "canonical": "oklch(92.7% 0.018 166.4)",
+        "tonalRamp": [
+          "#072a22",
+          "#0a3a2f",
+          "#0f4f40",
+          "#1b6b57",
+          "oklch(72.1% 0.082 172.2)",
+          "#bfd9cd",
+          "#dcebe4",
+          "oklch(95% 0.082 172.2)"
+        ]
+      },
+      "bone": {
+        "role": "secondary",
+        "displayName": "Carved Bone",
+        "canonical": "oklch(94.4% 0.017 88)",
+        "tonalRamp": [
+          "oklch(15% 0.03 87.6)",
+          "oklch(26.4% 0.03 87.6)",
+          "oklch(37.9% 0.03 87.6)",
+          "oklch(49.3% 0.03 87.6)",
+          "oklch(60.7% 0.03 87.6)",
+          "#b9ae95",
+          "#d8cfba",
+          "#f1ece0"
+        ]
+      },
+      "bone-shade": {
+        "role": "secondary",
+        "displayName": "Bone Edge",
+        "canonical": "oklch(85.6% 0.03 87.6)",
+        "tonalRamp": [
+          "oklch(15% 0.03 87.6)",
+          "oklch(26.4% 0.03 87.6)",
+          "oklch(37.9% 0.03 87.6)",
+          "oklch(49.3% 0.03 87.6)",
+          "oklch(60.7% 0.03 87.6)",
+          "#b9ae95",
+          "#d8cfba",
+          "#f1ece0"
+        ]
+      },
+      "bone-deep": {
+        "role": "secondary",
+        "displayName": "Old Bone",
+        "canonical": "oklch(75.3% 0.037 87.1)",
+        "tonalRamp": [
+          "oklch(15% 0.03 87.6)",
+          "oklch(26.4% 0.03 87.6)",
+          "oklch(37.9% 0.03 87.6)",
+          "oklch(49.3% 0.03 87.6)",
+          "oklch(60.7% 0.03 87.6)",
+          "#b9ae95",
+          "#d8cfba",
+          "#f1ece0"
+        ]
+      },
+      "felt": {
+        "role": "neutral",
+        "displayName": "Felt",
+        "canonical": "oklch(89.8% 0.024 88.2)",
+        "tonalRamp": [
+          "oklch(15% 0.024 88.2)",
+          "oklch(26.4% 0.024 88.2)",
+          "oklch(37.9% 0.024 88.2)",
+          "oklch(49.3% 0.024 88.2)",
+          "oklch(60.7% 0.024 88.2)",
+          "oklch(72.1% 0.024 88.2)",
+          "oklch(83.6% 0.024 88.2)",
+          "oklch(95% 0.024 88.2)"
+        ]
+      },
+      "felt-deep": {
+        "role": "neutral",
+        "displayName": "Deep Felt",
+        "canonical": "oklch(85% 0.03 87.6)",
+        "tonalRamp": [
+          "oklch(15% 0.03 87.6)",
+          "oklch(26.4% 0.03 87.6)",
+          "oklch(37.9% 0.03 87.6)",
+          "oklch(49.3% 0.03 87.6)",
+          "oklch(60.7% 0.03 87.6)",
+          "oklch(72.1% 0.03 87.6)",
+          "oklch(83.6% 0.03 87.6)",
+          "oklch(95% 0.03 87.6)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(21.8% 0 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0 89.9)",
+          "oklch(26.4% 0 89.9)",
+          "oklch(37.9% 0 89.9)",
+          "oklch(49.3% 0 89.9)",
+          "oklch(60.7% 0 89.9)",
+          "oklch(72.1% 0 89.9)",
+          "oklch(83.6% 0 89.9)",
+          "oklch(95% 0 89.9)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(34.9% 0.013 87.6)",
+        "tonalRamp": [
+          "oklch(15% 0.013 87.6)",
+          "oklch(26.4% 0.013 87.6)",
+          "oklch(37.9% 0.013 87.6)",
+          "oklch(49.3% 0.013 87.6)",
+          "oklch(60.7% 0.013 87.6)",
+          "oklch(72.1% 0.013 87.6)",
+          "oklch(83.6% 0.013 87.6)",
+          "oklch(95% 0.013 87.6)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(45.9% 0.02 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.02 84.6)",
+          "oklch(26.4% 0.02 84.6)",
+          "oklch(37.9% 0.02 84.6)",
+          "oklch(49.3% 0.02 84.6)",
+          "oklch(60.7% 0.02 84.6)",
+          "oklch(72.1% 0.02 84.6)",
+          "oklch(83.6% 0.02 84.6)",
+          "oklch(95% 0.02 84.6)"
+        ]
+      },
+      "carve-red": {
+        "role": "tertiary",
+        "displayName": "Carving Red (tone 1)",
+        "canonical": "oklch(51% 0.184 24.5)",
+        "tonalRamp": [
+          "oklch(15% 0.16 24.5)",
+          "oklch(26.4% 0.16 24.5)",
+          "oklch(37.9% 0.16 24.5)",
+          "oklch(49.3% 0.16 24.5)",
+          "oklch(60.7% 0.16 24.5)",
+          "oklch(72.1% 0.16 24.5)",
+          "oklch(83.6% 0.16 24.5)",
+          "oklch(95% 0.16 24.5)"
+        ]
+      },
+      "carve-green": {
+        "role": "tertiary",
+        "displayName": "Carving Green (tone 2)",
+        "canonical": "oklch(45.8% 0.105 153.8)",
+        "tonalRamp": [
+          "oklch(15% 0.105 153.8)",
+          "oklch(26.4% 0.105 153.8)",
+          "oklch(37.9% 0.105 153.8)",
+          "oklch(49.3% 0.105 153.8)",
+          "oklch(60.7% 0.105 153.8)",
+          "oklch(72.1% 0.105 153.8)",
+          "oklch(83.6% 0.105 153.8)",
+          "oklch(95% 0.105 153.8)"
+        ]
+      },
+      "carve-blue": {
+        "role": "tertiary",
+        "displayName": "Carving Blue (tone 3)",
+        "canonical": "oklch(43.8% 0.134 258.8)",
+        "tonalRamp": [
+          "oklch(15% 0.134 258.8)",
+          "oklch(26.4% 0.134 258.8)",
+          "oklch(37.9% 0.134 258.8)",
+          "oklch(49.3% 0.134 258.8)",
+          "oklch(60.7% 0.134 258.8)",
+          "oklch(72.1% 0.134 258.8)",
+          "oklch(83.6% 0.134 258.8)",
+          "oklch(95% 0.134 258.8)"
+        ]
+      },
+      "carve-black": {
+        "role": "tertiary",
+        "displayName": "Carving Black (tone 4)",
+        "canonical": "oklch(21.8% 0 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0 89.9)",
+          "oklch(26.4% 0 89.9)",
+          "oklch(37.9% 0 89.9)",
+          "oklch(49.3% 0 89.9)",
+          "oklch(60.7% 0 89.9)",
+          "oklch(72.1% 0 89.9)",
+          "oklch(83.6% 0 89.9)",
+          "oklch(95% 0 89.9)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "hanzi-display": {
+        "displayName": "Hanzi Display",
+        "purpose": "Dialog headline and quiz prompt Hanzi; up to 7rem on the flashcard back. Stepped down by character count."
+      },
+      "hanzi-tile": {
+        "displayName": "Hanzi Tile",
+        "purpose": "Browse-tile Hanzi, 3.25rem for one character down to 1.6rem for four, in a fixed 4.25rem band."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Brand name, completion line, large dialog Pinyin."
+      },
+      "pinyin": {
+        "displayName": "Pinyin",
+        "purpose": "Pinyin under every contour row, always Soft Ink at 600."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Inputs, empty-state copy, verdict lines."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Hebrew glosses on tiles, chips, counts, footer."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Quiz field labels and dialog word tags."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tile-depth",
+        "value": "inset 0 -3px 0 var(--bone-shade), 0 calc(5px + var(--lift, 0px)) 0 var(--jade-800), 0 calc(8px + var(--lift, 0px)) 0 var(--jade-900), 0 calc(12px + var(--lift, 0px) * 2) calc(16px + var(--lift, 0px) * 2) rgba(7, 42, 34, 0.24)",
+        "purpose": "Word and answer tiles: bone face on a two-layer jade underside driven by --lift (+6px hover, -3px press)."
+      },
+      {
+        "name": "tile-large",
+        "value": "inset 0 -5px 0 var(--bone-shade), 0 9px 0 var(--jade-800), 0 13px 0 var(--jade-900), 0 26px 36px rgba(7, 42, 34, 0.3)",
+        "purpose": "Quiz prompt tile and flashcard face."
+      },
+      {
+        "name": "tile-small",
+        "value": "inset 0 -2px 0 var(--bone-shade), 0 calc(3px + var(--lift)) 0 var(--jade-800), 0 calc(5px + var(--lift)) 0 var(--jade-900), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2)",
+        "purpose": "Bone buttons and dialog mini-tiles (+3px hover, -2px press)."
+      },
+      {
+        "name": "jade-button",
+        "value": "inset 0 -2px 0 var(--jade-900), 0 calc(3px + var(--lift)) 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--bone-deep), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2)",
+        "purpose": "Primary button: a jade tile on a bone underside."
+      },
+      {
+        "name": "dialog",
+        "value": "inset 0 -5px 0 var(--bone-shade), 0 10px 0 var(--jade-700), 0 14px 0 var(--jade-950), 0 32px 60px rgba(0, 0, 0, 0.35)",
+        "purpose": "Word dialog over a rgba(7, 42, 34, 0.6) scrim."
+      },
+      {
+        "name": "tooltip",
+        "value": "inset 0 0 0 1px var(--bone-shade), inset 0 -3px 0 var(--bone-shade), 0 4px 0 var(--jade-800), 0 6px 0 var(--jade-900), 0 14px 24px rgba(7, 42, 34, 0.3)",
+        "purpose": "Character tooltip tile."
+      },
+      {
+        "name": "tab-active",
+        "value": "inset 0 -3px 0 var(--bone-shade), 0 2px 0 var(--jade-950)",
+        "purpose": "Active segmented tab as a bone tile in the jade well."
+      },
+      {
+        "name": "chip-active",
+        "value": "inset 0 -2px 0 var(--bone-shade), 0 3px 0 var(--jade-950)",
+        "purpose": "Selected tag chip as a small bone tile."
+      },
+      {
+        "name": "well-jade",
+        "value": "inset 0 2px 4px rgba(0, 0, 0, 0.3)",
+        "purpose": "Tab rail sunk into the shell."
+      },
+      {
+        "name": "well-input",
+        "value": "inset 0 2px 4px rgba(7, 42, 34, 0.12)",
+        "purpose": "Search, select and answer inputs; focus adds 0 0 0 3px var(--jade-200)."
+      },
+      {
+        "name": "well-empty",
+        "value": "inset 0 3px 8px rgba(7, 42, 34, 0.18), inset 0 -1px 0 rgba(255, 255, 255, 0.35)",
+        "purpose": "Empty state pressed into the felt."
+      },
+      {
+        "name": "felt-seam",
+        "value": "inset 0 6px 14px rgba(7, 42, 34, 0.14)",
+        "purpose": "Top edge of the felt table where it meets the jade shell."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default for colour, border, opacity, reveals, slides, the score pop and contour drawing."
+      },
+      {
+        "name": "ease-spring",
+        "value": "cubic-bezier(0.3, 1.4, 0.5, 1)",
+        "purpose": "Reserved for tile physics: lift, press, flip, land (incl. dialog and tooltip settling)."
+      },
+      {
+        "name": "dur-fast",
+        "value": "120ms",
+        "purpose": "Press and tooltip fade."
+      },
+      {
+        "name": "dur-base",
+        "value": "220ms",
+        "purpose": "Hover, lift, state changes."
+      },
+      {
+        "name": "dur-slow",
+        "value": "650ms",
+        "purpose": "Flashcard flip, dialog rise, quiz reveal."
+      },
+      {
+        "name": "tone-draw",
+        "value": "450ms",
+        "purpose": "One contour stroke redrawing."
+      },
+      {
+        "name": "tone-stagger",
+        "value": "380ms",
+        "purpose": "Delay between syllables, in reading order."
+      },
+      {
+        "name": "tone-lead",
+        "value": "0ms (320ms on the flashcard)",
+        "purpose": "Holds the first stroke until a flip lands."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition durations 1ms; contours static",
+        "purpose": "prefers-reduced-motion: reduce disables animation globally."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "640px"
+      },
+      {
+        "name": "quiz-stack",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Word Tile",
+      "kind": "card",
+      "refersTo": "word-tile",
+      "description": "Signature: a bone tile on a jade underside with Hanzi, tone contours, Pinyin and Hebrew. Lifts on hover, presses on click.",
+      "html": "<div class=\"ds-tile\" tabindex=\"0\" role=\"button\"><span class=\"ds-tile-hanzi\" lang=\"zh-Hans\">你好</span><span class=\"ds-tones\" dir=\"ltr\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg></span><span class=\"ds-tile-pinyin\" dir=\"ltr\">nǐ hǎo</span><span class=\"ds-tile-hebrew\" dir=\"rtl\">שלום</span></div>",
+      "css": ".ds-tile { --lift: 0px; display: inline-flex; flex-direction: column; align-items: center; gap: var(--space-1); width: 9rem; padding: var(--space-4) var(--space-3); border-radius: var(--radius-md); background: var(--bone); color: var(--ink); text-align: center; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--jade-800), 0 calc(8px + var(--lift)) 0 var(--jade-900), 0 calc(12px + var(--lift) * 2) calc(16px + var(--lift) * 2) rgba(7, 42, 34, 0.24); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-tile:hover { --lift: 6px; } .ds-tile:active { --lift: -3px; transition-duration: var(--dur-fast); } .ds-tile:focus-visible { --lift: 6px; outline: 3px solid var(--jade-800); outline-offset: 4px; } .ds-tile-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 2.6rem; line-height: 1; height: 4.25rem; display: flex; align-items: center; } .ds-tones { display: inline-flex; gap: 0.25rem; } .ds-contour { width: 2.25rem; height: 1.4rem; overflow: visible; } .ds-contour path { fill: none; stroke: var(--tone-color); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; } .ds-tile-pinyin { margin-top: var(--space-1); color: var(--ink-soft); font-weight: 600; font-size: var(--text-md); line-height: 1.3; } .ds-tile-hebrew { color: var(--ink-soft); font-size: var(--text-sm); line-height: 1.35; }"
+    },
+    {
+      "name": "Tone Contour",
+      "kind": "custom",
+      "refersTo": "tone-contour",
+      "description": "Signature: one pitch line per syllable in its carving ink (1 red flat, 2 green rising, 3 blue dipping, 4 black falling, neutral dot), redrawn in reading order on hover.",
+      "html": "<span class=\"ds-tones-demo\" dir=\"ltr\" tabindex=\"0\"><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-1)\"><path d=\"M3 4 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-2)\"><path d=\"M3 12 L29 4\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-3)\"><path d=\"M3 9 Q13 21 29 5\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-4)\"><path d=\"M3 4 L29 15\"/></svg><svg class=\"ds-contour\" viewBox=\"0 0 32 20\" style=\"--tone-color: var(--tone-0)\"><path class=\"ds-neutral\" d=\"M15 10 L17 10\"/></svg></span>",
+      "css": ".ds-tones-demo { display: inline-flex; gap: 0.75rem; padding: var(--space-4); border-radius: var(--radius-md); background: var(--bone); } .ds-tones-demo .ds-contour { width: 3.5rem; height: 2.2rem; overflow: visible; } .ds-tones-demo path { fill: none; stroke: var(--tone-color); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 0; } .ds-tones-demo path.ds-neutral { stroke-width: 5; } .ds-tones-demo:hover path, .ds-tones-demo:focus-visible path { animation: ds-draw var(--tone-draw) var(--ease-out) both; } .ds-tones-demo .ds-contour:nth-child(2) path { animation-delay: calc(1 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(3) path { animation-delay: calc(2 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(4) path { animation-delay: calc(3 * var(--tone-stagger)); } .ds-tones-demo .ds-contour:nth-child(5) path { animation-delay: calc(4 * var(--tone-stagger)); } @keyframes ds-draw { from { stroke-dashoffset: 40; } to { stroke-dashoffset: 0; } } @media (prefers-reduced-motion: reduce) { .ds-tones-demo path { animation: none !important; } }"
+    },
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "A small bone tile on a jade underside; lifts 3px on hover, sinks 2px on press.",
+      "html": "<button type=\"button\" class=\"ds-btn\">הבא <svg class=\"ds-icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M12 5l-5 5 5 5\"/></svg></button>",
+      "css": ".ds-btn { --lift: 0px; min-height: 2.75rem; display: inline-flex; align-items: center; gap: var(--space-2); padding: 0 var(--space-5); border: 0; border-radius: var(--radius-sm); background: var(--bone); color: var(--ink); font-family: var(--font-ui); font-weight: 600; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -2px 0 var(--bone-shade), 0 calc(3px + var(--lift)) 0 var(--jade-800), 0 calc(5px + var(--lift)) 0 var(--jade-900), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-btn:hover { --lift: 3px; } .ds-btn:active { --lift: -2px; transition-duration: var(--dur-fast); } .ds-btn:focus-visible { outline: 2px solid var(--jade-800); outline-offset: 2px; } .ds-icon { width: 1.125rem; height: 1.125rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A jade tile resting on a bone underside; one per view.",
+      "html": "<button type=\"button\" class=\"ds-btn-primary\">הפיכה</button>",
+      "css": ".ds-btn-primary { --lift: 0px; min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: var(--radius-sm); background: var(--jade-800); color: var(--on-jade); font-family: var(--font-ui); font-weight: 600; cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -2px 0 var(--jade-900), 0 calc(3px + var(--lift)) 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--bone-deep), 0 calc(8px + var(--lift)) 12px rgba(7, 42, 34, 0.2); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring); } .ds-btn-primary:hover { --lift: 3px; } .ds-btn-primary:active { --lift: -2px; transition-duration: var(--dur-fast); } .ds-btn-primary:focus-visible { outline: 2px solid var(--jade-800); outline-offset: 2px; }"
+    },
+    {
+      "name": "Segmented Tabs",
+      "kind": "nav",
+      "refersTo": "tab-active",
+      "description": "Mode tabs sunk into a jade well; the active tab becomes a bone tile.",
+      "html": "<nav class=\"ds-modes\" dir=\"rtl\"><button type=\"button\" class=\"ds-mode is-active\" aria-pressed=\"true\">עיון וחיפוש</button><button type=\"button\" class=\"ds-mode\" aria-pressed=\"false\">כרטיסיות</button><button type=\"button\" class=\"ds-mode\" aria-pressed=\"false\">בוחן</button></nav>",
+      "css": ".ds-modes { display: inline-flex; gap: var(--space-1); padding: var(--space-1); border-radius: var(--radius-md); background: var(--jade-900); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3); } .ds-mode { min-height: 2.75rem; padding: 0 var(--space-5); border: 0; border-radius: 7px; background: transparent; color: var(--on-jade-muted); font-family: var(--font-ui); font-size: var(--text-md); font-weight: 600; cursor: pointer; transition: background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-spring); } .ds-mode:hover { background: var(--jade-700); color: var(--on-jade); } .ds-mode.is-active { background: var(--bone); color: var(--ink); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 2px 0 var(--jade-950); } .ds-mode:active { transform: translateY(1px); } .ds-mode:focus-visible { outline: 2px solid var(--bone); outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "chip-active",
+      "description": "Outlined chips on the jade shell; a selected chip becomes a small bone tile.",
+      "html": "<div class=\"ds-chips\" dir=\"rtl\"><button type=\"button\" class=\"ds-chip is-active\" aria-pressed=\"true\">הכול <span class=\"ds-chip-count\">412</span></button><button type=\"button\" class=\"ds-chip\" aria-pressed=\"false\">משפחה <span class=\"ds-chip-count\">24</span></button></div>",
+      "css": ".ds-chips { display: inline-flex; gap: var(--space-2); padding: var(--space-4); background: var(--jade-800); border-radius: var(--radius-md); } .ds-chip { min-height: 2.25rem; display: inline-flex; align-items: center; gap: var(--space-2); padding: 0 0.875rem; border: 1px solid var(--jade-700); border-radius: var(--radius-sm); background: transparent; color: var(--on-jade); font-family: var(--font-ui); font-size: var(--text-sm); cursor: pointer; transition: background-color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-spring); } .ds-chip-count { color: var(--on-jade-muted); font-variant-numeric: tabular-nums; } .ds-chip:hover { background: var(--jade-700); } .ds-chip.is-active { background: var(--bone); border-color: var(--bone); color: var(--ink); font-weight: 600; box-shadow: inset 0 -2px 0 var(--bone-shade), 0 3px 0 var(--jade-950); transform: translateY(-1px); } .ds-chip.is-active .ds-chip-count { color: var(--ink-muted); } .ds-chip:active { transform: translateY(1px); box-shadow: none; } .ds-chip:focus-visible { outline: 2px solid var(--bone); outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Well",
+      "kind": "input",
+      "refersTo": "input-well",
+      "description": "A bone input sunk into the felt, with a leading stroked magnifier.",
+      "html": "<label class=\"ds-search\" dir=\"rtl\"><svg class=\"ds-search-icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"8.5\" cy=\"8.5\" r=\"5.5\"/><path d=\"M12.6 12.6 17 17\"/></svg><input type=\"search\" placeholder=\"חיפוש בסינית, פין־יין או עברית…\" aria-label=\"חיפוש מילים\"/></label>",
+      "css": ".ds-search { position: relative; display: flex; align-items: center; width: 22rem; } .ds-search-icon { position: absolute; inset-inline-start: var(--space-4); width: 1.25rem; height: 1.25rem; fill: none; stroke: var(--ink-muted); stroke-width: 2; stroke-linecap: round; pointer-events: none; } .ds-search input { width: 100%; min-height: 3rem; padding: 0 var(--space-4); padding-inline-start: 3rem; border: 1px solid var(--felt-deep); border-radius: var(--radius-md); background: var(--bone); color: var(--ink); font-family: var(--font-ui); font-size: var(--text-md); box-shadow: inset 0 2px 4px rgba(7, 42, 34, 0.12); transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); } .ds-search input::placeholder { color: var(--ink-muted); } .ds-search input:hover { border-color: var(--bone-deep); } .ds-search input:focus { outline: none; border-color: var(--jade-800); box-shadow: inset 0 2px 4px rgba(7, 42, 34, 0.12), 0 0 0 3px var(--jade-200); }"
+    },
+    {
+      "name": "Quiz Answer Tile",
+      "kind": "button",
+      "refersTo": "word-tile",
+      "description": "Answer tiles that lift and press, then hold their verdict in fill, edge, underside and icon; Hanzi stay ink.",
+      "html": "<div class=\"ds-options\" dir=\"rtl\"><button type=\"button\" class=\"ds-option ds-correct\" lang=\"zh-Hans\" disabled><span class=\"ds-option-hanzi\">朋友</span><svg class=\"ds-mark\" viewBox=\"0 0 20 20\" aria-label=\"נכון\"><path d=\"M4.5 10.5 8.5 14.5 15.5 6\"/></svg></button><button type=\"button\" class=\"ds-option ds-wrong\" lang=\"zh-Hans\" disabled><span class=\"ds-option-hanzi\">老师</span><svg class=\"ds-mark\" viewBox=\"0 0 20 20\" aria-label=\"לא נכון\"><path d=\"M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5\"/></svg></button><button type=\"button\" class=\"ds-option\"><span class=\"ds-option-hanzi\">学生</span></button></div>",
+      "css": ".ds-options { display: grid; grid-template-columns: repeat(3, 9rem); gap: var(--space-5) var(--space-4); padding-bottom: var(--space-4); } .ds-option { --lift: 0px; min-height: 5rem; display: flex; align-items: center; justify-content: center; gap: var(--space-2); border: 0; border-radius: var(--radius-md); background: var(--bone); color: var(--ink); cursor: pointer; transform: translateY(calc(var(--lift) * -1)); box-shadow: inset 0 -3px 0 var(--bone-shade), 0 calc(5px + var(--lift)) 0 var(--jade-800), 0 calc(8px + var(--lift)) 0 var(--jade-900), 0 calc(12px + var(--lift) * 2) calc(16px + var(--lift) * 2) rgba(7, 42, 34, 0.24); transition: transform var(--dur-base) var(--ease-spring), box-shadow var(--dur-base) var(--ease-spring), background-color var(--dur-base) var(--ease-out); } .ds-option:not(:disabled):hover { --lift: 5px; } .ds-option:not(:disabled):active { --lift: -3px; transition-duration: var(--dur-fast); } .ds-option:disabled { cursor: default; } .ds-option-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 2rem; color: var(--ink); } .ds-correct { --lift: 3px; background: #e2efe6; box-shadow: inset 0 0 0 2px var(--carve-green), 0 calc(5px + var(--lift)) 0 var(--carve-green), 0 calc(8px + var(--lift)) 0 #0f4a29, 0 calc(12px + var(--lift) * 2) 18px rgba(7, 42, 34, 0.24); } .ds-wrong { --lift: -3px; background: #f6e1e1; box-shadow: inset 0 0 0 2px var(--carve-red), 0 calc(5px + var(--lift)) 0 var(--carve-red), 0 calc(8px + var(--lift)) 0 #7d161c, 0 6px 10px rgba(7, 42, 34, 0.18); } .ds-mark { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; } .ds-correct .ds-mark { color: var(--carve-green); } .ds-wrong .ds-mark { color: var(--carve-red); }"
+    },
+    {
+      "name": "Flashcard",
+      "kind": "card",
+      "refersTo": "flip-tile-back",
+      "description": "A 3:4 tile that flips on spring from its jade back (Hanzi inlaid in bone) to its bone face.",
+      "html": "<div class=\"ds-flip-slot\"><div class=\"ds-flip\" tabindex=\"0\" role=\"button\" aria-label=\"הפיכת הכרטיס\"><div class=\"ds-face ds-face-front\"><span class=\"ds-flip-hanzi\" lang=\"zh-Hans\">茶</span><span class=\"ds-hint\" dir=\"rtl\">לחצו לחשיפה</span></div><div class=\"ds-face ds-face-back\"><span class=\"ds-flip-hanzi\" lang=\"zh-Hans\">茶</span><span class=\"ds-flip-pinyin\" dir=\"ltr\">chá</span><span class=\"ds-flip-hebrew\" dir=\"rtl\">תה</span></div></div></div>",
+      "css": ".ds-flip-slot { width: 14rem; perspective: 1400px; padding-bottom: 2.5rem; } .ds-flip { position: relative; aspect-ratio: 3 / 4; transform-style: preserve-3d; transition: transform var(--dur-slow) var(--ease-spring); cursor: pointer; } .ds-flip:hover, .ds-flip:focus-visible { transform: rotateY(180deg); outline: none; } .ds-face { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-3); border-radius: var(--radius-lg); backface-visibility: hidden; -webkit-backface-visibility: hidden; } .ds-face-front { background: var(--jade-800); color: var(--bone); box-shadow: inset 0 0 0 0.6rem var(--jade-700), inset 0 0 0 calc(0.6rem + 1px) var(--jade-900), 0 9px 0 var(--bone-shade), 0 13px 0 var(--bone-deep), 0 26px 36px rgba(7, 42, 34, 0.3); } .ds-face-back { transform: rotateY(180deg); background: var(--bone); color: var(--ink); box-shadow: inset 0 -5px 0 var(--bone-shade), 0 9px 0 var(--jade-800), 0 13px 0 var(--jade-900), 0 26px 36px rgba(7, 42, 34, 0.3); } .ds-flip-hanzi { font-family: var(--font-hanzi); font-weight: 700; font-size: 5rem; line-height: 1.1; } .ds-hint { color: var(--on-jade-muted); font-family: var(--font-ui); font-size: var(--text-sm); } .ds-flip-pinyin { color: var(--ink-soft); font-family: var(--font-ui); font-weight: 600; font-size: 1.5rem; } .ds-flip-hebrew { font-family: var(--font-ui); font-weight: 600; font-size: var(--text-lg); } @media (prefers-reduced-motion: reduce) { .ds-flip { transition: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Mahjong Table",
+    "overview": "Every word is a mahjong tile with real thickness: a carved bone face resting on a jade back, set out on a warm felt table inside a jade-green shell. The Hanzi is carved large on the face, and beneath it each syllable's tone is drawn as a short pitch contour in the tile's own carving inks. Pinyin and Hebrew sit below in a humanist sans. Hebrew reads right to left; Hanzi, Pinyin and the contours run left to right, isolated per element.\n\nDensity is a study table, not a dashboard: a loose grid of tiles with generous gutters, one large tile in Flashcards, one question tile in Quiz. Depth is physical and stacked rather than blurred: tiles lift on hover, press on click, flip to reveal and land on a verdict, and the jade underside grows or shrinks with them. The system rejects the category default it replaced: flat white rounded cards on a grey ground with a single blue accent.\n\nThe memorable moment is the tone write: hovering, focusing, flipping or opening a tile redraws its contours one syllable after another, in reading order.",
+    "keyCharacteristics": [
+      "Bone tile faces on visible jade undersides; every interactive surface is a tile, a well, or the felt.",
+      "Jade shell (header) over a felt table (content) with a soft inset at their seam.",
+      "Four carving inks, reserved for tone contours: 1 red flat, 2 green rising, 3 blue dipping, 4 black falling.",
+      "Serif Hanzi (Noto Serif SC 700) beside humanist sans Hebrew and Pinyin (Assistant).",
+      "Spring motion for tile physics only; everything else eases out."
+    ],
+    "rules": [
+      {
+        "name": "The Carving Ink Rule",
+        "body": "The four carving inks are reserved for tone contours (1 red, 2 green, 3 blue, 4 black; the neutral tone is a short ink-muted dot). They never decorate, never mark a brand, never colour a heading.",
+        "section": "colors"
+      },
+      {
+        "name": "The Verdict Exception",
+        "body": "Quiz verdicts may borrow carving green (correct) and carving red (wrong), but only through a tile's fill, edge, underside and check/cross icon, and the verdict line. Never on a Hanzi glyph.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Hanzi Rule",
+        "body": "Hanzi are ink on a bone face (and inlaid in bone on the jade back of a flashcard). A Hanzi glyph never takes a carving ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Neutral Pinyin Rule",
+        "body": "Pinyin is Soft Ink, weight 600. Never jade, never a carving ink: the contour beneath already carries its tone, and jade sits too close to tone 2 green.",
+        "section": "colors"
+      },
+      {
+        "name": "The Count-Steps Rule",
+        "body": "Hanzi size is chosen by character count, not by container queries or wrapping: every tile, prompt and flip face keeps its word on one line.",
+        "section": "typography"
+      },
+      {
+        "name": "The Isolation Rule",
+        "body": "Hebrew is tagged `dir=\"rtl\"`; Hanzi, Pinyin and contours are tagged LTR and isolated per element, never left to the bidi algorithm.",
+        "section": "typography"
+      },
+      {
+        "name": "The Underside Rule",
+        "body": "Tile thickness is drawn as stacked solid jade offsets under a bone face. That stack is the world's native material, not decoration: keep it on every tile, button-tile and dialog, and let `--lift` move it.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Spring Rule",
+        "body": "`--ease-spring` is reserved for tile physics: lift, press, flip and land (including the dialog and tooltip settling as tiles). Every other transition (colour, border, opacity, reveals, slides, the score pop) uses `--ease-out`.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** build every new interactive surface as a tile (bone face, jade underside, `--lift`), a well, or plain felt.",
+      "**Do** draw tones only with the Tone Contour, in tone order 1 red, 2 green, 3 blue, 4 black, neutral as an ink-muted dot, replayed in reading order.",
+      "**Do** keep Hanzi in ink on bone (bone on the jade back) and Pinyin in Soft Ink at 600.",
+      "**Do** carry quiz verdicts in fill, edge, underside, icon and the verdict line.",
+      "**Do** step Hanzi size by character count so a word never wraps inside a tile.",
+      "**Do** use `--ease-spring` only for lift, press, flip and land, `--ease-out` for everything else, and let reduced motion collapse animation (contours stay drawn, flips and slides go instant).",
+      "**Do** keep 44px touch targets and visible focus (jade on felt, bone on the shell)."
+    ],
+    "donts": [
+      "**Don't** use a carving ink for anything but a tone contour or a quiz verdict.",
+      "**Don't** colour a Hanzi glyph with a carving ink, including on a verdict tile.",
+      "**Don't** colour Pinyin jade or with a carving ink.",
+      "**Don't** flatten tiles into borderless white cards on grey with a single blue accent.",
+      "**Don't** replace the solid jade underside with a blurred floating shadow.",
+      "**Don't** add radii outside 6, 10 and 16px."
+    ]
+  }
+}
+

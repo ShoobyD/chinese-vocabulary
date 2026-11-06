@@ -414,6 +414,16 @@ const { tags, selectedTags, scopedWords, toggleTag, clearTags } = useScope()
     width: 100%;
   }
 
+  /* Expanded: give the chips the full row so they wrap several per line, and
+     drop the toggle beneath. Collapsed, the toggle stays at the row's end. */
+  .filters.expanded {
+    flex-wrap: wrap;
+  }
+
+  .filters.expanded .tag-list {
+    flex-basis: 100%;
+  }
+
   .mode-btn {
     flex: 1;
     padding: 0 var(--space-2);

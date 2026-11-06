@@ -20,6 +20,60 @@
         ],
         "createdAt": "2026-11-06T03:53:35.426Z",
         "reason": "user chose the Mahjong-tiles direction: tiles on a felt table are the composition, not nested cards"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-11-06T06:06:17.178Z",
+        "reason": "decision-round sketch of an alternative direction; its own fonts are the point, it is not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-splitflap.html"
+        ],
+        "createdAt": "2026-11-06T06:06:17.215Z",
+        "reason": "decision-round sketch of an alternative direction; its own fonts are the point, it is not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-11-06T06:06:17.258Z",
+        "reason": "decision-round sketch of an alternative direction; its own fonts are the point, it is not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/lead-spectrum.html"
+        ],
+        "createdAt": "2026-11-06T06:06:17.295Z",
+        "reason": "decision-round sketch of an alternative direction; its own fonts are the point, it is not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-wall.html"
+        ],
+        "createdAt": "2026-11-06T06:06:17.333Z",
+        "reason": "decision-round sketch of an alternative direction; its own fonts are the point, it is not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-signage.html"
+        ],
+        "createdAt": "2026-11-06T06:06:17.375Z",
+        "reason": "decision-round sketch of an alternative direction; its own fonts are the point, it is not shipped UI"
       }
     ]
   }
