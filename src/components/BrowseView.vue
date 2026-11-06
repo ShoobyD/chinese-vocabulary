@@ -31,6 +31,17 @@ const results = computed<Word[]>(() => {
   })
 })
 
+/**
+ * Split a gloss from its trailing literal note, e.g.
+ * "בוקר (מילולית: על הבוקר)" → ["בוקר", "(מילולית: על הבוקר)"], so the tile
+ * can set the note on its own line. Glosses without one come back whole.
+ */
+function splitGloss(hebrew: string | undefined): [string, string | null] {
+  if (!hebrew) return ['—', null]
+  const m = hebrew.match(/^(.*?)\s*(\(מילולית:.*\))\s*$/)
+  return m ? [m[1], m[2]] : [hebrew, null]
+}
+
 /** Hanzi scale steps down with length so every tile keeps one line. */
 function hanziSize(hanzi: string): string {
   const n = [...hanzi].length
@@ -76,7 +87,10 @@ function hanziSize(hanzi: string): string {
         </span>
         <ToneContour :pinyin="w.pinyin" :hanzi="w.hanzi" :playing="playingId === w.id" />
         <PinyinText class="pinyin face-pinyin" :pinyin="w.pinyin" :hanzi="w.hanzi" />
-        <span class="hebrew face-hebrew">{{ w.hebrew ?? '—' }}</span>
+        <span class="hebrew face-hebrew">
+          {{ splitGloss(w.hebrew)[0] }}
+          <span v-if="splitGloss(w.hebrew)[1]" class="face-literal">{{ splitGloss(w.hebrew)[1] }}</span>
+        </span>
       </li>
     </ul>
 
@@ -233,6 +247,14 @@ function hanziSize(hanzi: string): string {
   font-size: var(--text-sm);
   line-height: 1.35;
   color: var(--ink-soft);
+}
+
+/* The literal sense sits on its own quieter line under the gloss. */
+.face-literal {
+  display: block;
+  margin-top: 0.125rem;
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
 }
 
 /* An empty tile well pressed into the felt. */
