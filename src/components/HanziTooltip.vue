@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted } from 'vue'
 import { useHanziTooltip } from '@/composables/useHanziTooltip'
 import ToneContour from './ToneContour.vue'
+import PinyinText from './PinyinText.vue'
 
 const { word, x, y, hide } = useHanziTooltip()
 
@@ -30,7 +31,7 @@ onUnmounted(() => {
       >
         <span class="tip-hanzi hanzi" lang="zh-Hans">{{ word.hanzi }}</span>
         <ToneContour :pinyin="word.pinyin" :hanzi="word.hanzi" playing />
-        <span class="tip-pinyin pinyin" dir="ltr">{{ word.pinyin || '—' }}</span>
+        <PinyinText class="tip-pinyin pinyin" :pinyin="word.pinyin" :hanzi="word.hanzi" />
         <span class="tip-hebrew hebrew">{{ word.hebrew ?? '—' }}</span>
       </div>
     </transition>

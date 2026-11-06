@@ -3,6 +3,7 @@ import { computed, ref, watch } from 'vue'
 import type { Word } from '@/data'
 import { shuffle } from '@/utils'
 import ToneContour from './ToneContour.vue'
+import PinyinText from './PinyinText.vue'
 
 const props = defineProps<{ words: Word[] }>()
 
@@ -82,7 +83,7 @@ function go(step: 1 | -1) {
                 size="lg"
                 :playing="flipped"
               />
-              <div class="pinyin card-pinyin" dir="ltr">{{ current.pinyin || '—' }}</div>
+              <div class="pinyin card-pinyin"><PinyinText :pinyin="current.pinyin" :hanzi="current.hanzi" /></div>
               <div class="hebrew card-hebrew">{{ current.hebrew ?? '—' }}</div>
             </div>
           </div>

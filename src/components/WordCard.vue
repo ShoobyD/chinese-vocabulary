@@ -4,6 +4,7 @@ import { allWords, segment, tagLabels } from '@/data'
 import type { Segment, Word } from '@/data'
 import HanziText from './HanziText.vue'
 import ToneContour from './ToneContour.vue'
+import PinyinText from './PinyinText.vue'
 
 const props = defineProps<{ word: Word }>()
 const emit = defineEmits<{ (e: 'select', word: Word): void }>()
@@ -45,7 +46,7 @@ const usedIn = computed<Word[]>(() =>
       size="lg"
       playing
     />
-    <p class="pinyin big-pinyin" dir="ltr">{{ word.pinyin || '—' }}</p>
+    <p class="pinyin big-pinyin"><PinyinText :pinyin="word.pinyin" :hanzi="word.hanzi" /></p>
     <p class="hebrew meaning">{{ word.hebrew ?? '—' }}</p>
 
     <section v-if="breakdown.length" class="group">
@@ -54,7 +55,7 @@ const usedIn = computed<Word[]>(() =>
         <li v-for="(p, i) in breakdown" :key="i">
           <button v-if="p.word" type="button" class="mini" @click="emit('select', p.word)">
             <span class="hanzi mini-hanzi" lang="zh-Hans">{{ p.text }}</span>
-            <span class="pinyin mini-pinyin">{{ p.word.pinyin || '—' }}</span>
+            <PinyinText class="pinyin mini-pinyin" :pinyin="p.word.pinyin" :hanzi="p.word.hanzi" />
             <span class="hebrew mini-hebrew">{{ p.word.hebrew ?? '—' }}</span>
           </button>
           <span v-else class="mini static">
@@ -71,7 +72,7 @@ const usedIn = computed<Word[]>(() =>
         <li v-for="w in usedIn" :key="w.id">
           <button type="button" class="mini" @click="emit('select', w)">
             <span class="hanzi mini-hanzi" lang="zh-Hans">{{ w.hanzi }}</span>
-            <span class="pinyin mini-pinyin">{{ w.pinyin }}</span>
+            <PinyinText class="pinyin mini-pinyin" :pinyin="w.pinyin" :hanzi="w.hanzi" />
           </button>
         </li>
       </ul>

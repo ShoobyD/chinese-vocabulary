@@ -204,17 +204,17 @@ A jade, bone and felt material palette, with four small carving inks that mean t
 - **Felt** (felt): the table under the content area and the page background. The table carries a nap (`--felt-nap`): a fine warm-umber fractal noise plus a faint falloff toward its lower edge, so it reads as cloth rather than paper. Wells and tiles stay untextured.
 - **Deep Felt** (felt-deep): input borders, sunken empty wells, quiet-button hover.
 - **Ink** (ink): all body text and every Hanzi on a bone face.
-- **Soft Ink** (ink-soft): Pinyin everywhere, Hebrew glosses on tiles, empty-state copy.
+- **Soft Ink** (ink-soft): Pinyin separators and standalone Pinyin (quiz options), Hebrew glosses on tiles, empty-state copy.
 - **Muted Ink** (ink-muted): counts, field labels, progress, placeholders, footer, and the neutral-tone dot (tone 0).
 
 ### Named Rules
-**The Carving Ink Rule.** The four carving inks are reserved for tone contours (1 red, 2 green, 3 blue, 4 black; the neutral tone is a short ink-muted dot). They never decorate, never mark a brand, never colour a heading.
+**The Carving Ink Rule.** The four carving inks are reserved for tones (1 red, 2 green, 3 blue, 4 black; the neutral tone is a short ink-muted dot): the contours, and the Pinyin syllables that spell the same tones. They never decorate, never mark a brand, never colour a heading.
 
 **The Verdict Exception.** Quiz verdicts may borrow carving green (correct) and carving red (wrong), but only through a tile's fill, edge, underside and check/cross icon, and the verdict line. Never on a Hanzi glyph.
 
 **The Ink Hanzi Rule.** Hanzi are ink on a bone face (and inlaid in bone on the jade back of a flashcard). A Hanzi glyph never takes a carving ink.
 
-**The Neutral Pinyin Rule.** Pinyin is Soft Ink, weight 600. Never jade, never a carving ink: the contour beneath already carries its tone, and jade sits too close to tone 2 green.
+**The Tone-Inked Pinyin Rule.** Where a word's Pinyin is shown with its Hanzi, each syllable is inked in its own tone colour (`PinyinText`), matching the contour above it: the carving inks are the tone, wherever the tone is written. Separators and neutral-tone syllables stay Soft Ink / Muted Ink; weight 600. Pinyin that stands alone, such as quiz answer options, stays Soft Ink. Never jade: it sits too close to tone 2 green.
 
 ## Typography
 
@@ -274,7 +274,7 @@ Gently rounded, tile-like rectangles. Three radii only: 6px for small tiles (but
 ## Components
 
 ### Word Tile (signature)
-Bone face on tile depth, 10px radius, content stacked: Hanzi in its count-stepped band, tone contours, Pinyin (Soft Ink), Hebrew gloss (Soft Ink, small). Hover or focus lifts it 6px and replays its contours; press sinks it 3px; focus adds a 3px Table Jade outline offset 4px. Opens the word dialog.
+Bone face on tile depth, 10px radius, content stacked: Hanzi in its count-stepped band, tone contours, Pinyin (tone-inked per syllable), Hebrew gloss (Soft Ink, small). Hover or focus lifts it 6px and replays its contours; press sinks it 3px; focus adds a 3px Table Jade outline offset 4px. Opens the word dialog.
 
 ### Tone Contour (signature)
 One short pitch line per syllable, drawn on a 32 by 20 box after Chao's tone letters: 1 high flat, 2 rising, 3 dipping, 4 falling, neutral a short dot in Muted Ink. Stroked 2.5px (3px large) with round caps, in the syllable's carving ink, always visible at rest. When playing, each path redraws by dash offset over `--tone-draw` (450ms), staggered by `--tone-stagger` (380ms) per syllable in reading order (LTR); `--tone-lead` delays the first stroke (320ms on the flashcard, so it starts after the flip lands). Reduced motion keeps the lines static. Contours are decorative (`aria-hidden`); Pinyin carries the text.
@@ -312,16 +312,16 @@ A felt-deep well pressed into the table (16px radius, inset shadow, white lower 
 ### Do:
 - **Do** build every new interactive surface as a tile (bone face, jade underside, `--lift`), a well, or plain felt.
 - **Do** draw tones only with the Tone Contour, in tone order 1 red, 2 green, 3 blue, 4 black, neutral as an ink-muted dot, replayed in reading order.
-- **Do** keep Hanzi in ink on bone (bone on the jade back) and Pinyin in Soft Ink at 600.
+- **Do** keep Hanzi in ink on bone (bone on the jade back), and ink each Pinyin syllable in its tone colour at 600.
 - **Do** carry quiz verdicts in fill, edge, underside, icon and the verdict line.
 - **Do** step Hanzi size by character count so a word never wraps inside a tile.
 - **Do** use `--ease-spring` only for lift, press, flip and land, `--ease-out` for everything else, and let reduced motion collapse animation (contours stay drawn, flips and slides go instant).
 - **Do** keep 44px touch targets and visible focus (jade on felt, bone on the shell).
 
 ### Don't:
-- **Don't** use a carving ink for anything but a tone contour or a quiz verdict.
+- **Don't** use a carving ink for anything but a tone (contour or Pinyin syllable) or a quiz verdict.
 - **Don't** colour a Hanzi glyph with a carving ink, including on a verdict tile.
-- **Don't** colour Pinyin jade or with a carving ink.
+- **Don't** colour Pinyin jade, or ink a syllable in any colour but its own tone's.
 - **Don't** flatten tiles into borderless white cards on grey with a single blue accent.
 - **Don't** replace the solid jade underside with a blurred floating shadow.
 - **Don't** add radii outside 6, 10 and 16px.

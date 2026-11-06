@@ -3,6 +3,7 @@ import { computed, ref, watch } from 'vue'
 import type { Word } from '@/data'
 import { looseEqual, normalizePinyin, sample, shuffle } from '@/utils'
 import ToneContour from './ToneContour.vue'
+import PinyinText from './PinyinText.vue'
 
 const props = defineProps<{ words: Word[] }>()
 
@@ -175,13 +176,19 @@ const promptSize = computed(() => {
             :lang="direction.prompt === 'hanzi' ? 'zh-Hans' : undefined"
             :dir="direction.prompt === 'hebrew' ? 'rtl' : 'ltr'"
           >
-            {{ field(current, direction.prompt) }}
+            <PinyinText v-if="direction.prompt === 'pinyin'" :pinyin="current.pinyin" :hanzi="current.hanzi" />
+            <template v-else>{{ field(current, direction.prompt) }}</template>
           </div>
 
           <div v-if="submitted" class="reveal">
             <span v-if="direction.prompt !== 'hanzi'" class="hanzi reveal-hanzi" lang="zh-Hans">{{ current.hanzi }}</span>
             <ToneContour :pinyin="current.pinyin" :hanzi="current.hanzi" size="lg" playing />
-            <span v-if="direction.prompt !== 'pinyin'" class="pinyin reveal-pinyin" dir="ltr">{{ current.pinyin }}</span>
+            <PinyinText
+              v-if="direction.prompt !== 'pinyin'"
+              class="pinyin reveal-pinyin"
+              :pinyin="current.pinyin"
+              :hanzi="current.hanzi"
+            />
             <span v-if="direction.prompt !== 'hebrew' && current.hebrew" class="hebrew reveal-hebrew">{{ current.hebrew }}</span>
           </div>
         </div>

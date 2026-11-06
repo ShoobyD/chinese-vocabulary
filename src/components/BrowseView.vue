@@ -5,6 +5,7 @@ import { normalizePinyin } from '@/utils'
 import { useCard } from '@/composables/useCard'
 import HanziText from './HanziText.vue'
 import ToneContour from './ToneContour.vue'
+import PinyinText from './PinyinText.vue'
 
 const props = defineProps<{ words: Word[] }>()
 
@@ -74,7 +75,7 @@ function hanziSize(hanzi: string): string {
           <HanziText :text="w.hanzi" nested />
         </span>
         <ToneContour :pinyin="w.pinyin" :hanzi="w.hanzi" :playing="playingId === w.id" />
-        <span class="pinyin face-pinyin" dir="ltr">{{ w.pinyin }}</span>
+        <PinyinText class="pinyin face-pinyin" :pinyin="w.pinyin" :hanzi="w.hanzi" />
         <span class="hebrew face-hebrew">{{ w.hebrew ?? '—' }}</span>
       </li>
     </ul>
