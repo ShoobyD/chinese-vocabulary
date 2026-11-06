@@ -203,6 +203,37 @@ function go(step: 1 | -1) {
     0 26px 36px rgba(7, 42, 34, 0.3);
 }
 
+/*
+ * The tile back's design: a band of 回纹 (huiwen meander) carved in rim jade
+ * inside the frame, an authored 16px SVG repeat. ::before lays the pattern,
+ * ::after covers the centre with plain jade so the inlaid Hanzi reads clean.
+ */
+.face-front::before,
+.face-front::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.face-front::before {
+  inset: calc(0.6rem + 5px);
+  border-radius: calc(var(--radius-lg) - 0.6rem);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M0 15.25H15.25V0.75H2.75V12.25H12.25V3.75H5.75V9.25H9.25' fill='none' stroke='%231b6b57' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E")
+    round 0 0 / 16px 16px;
+}
+
+.face-front::after {
+  inset: calc(0.6rem + 5px + 1.25rem);
+  border-radius: var(--radius-sm);
+  background: var(--jade-800);
+  box-shadow: 0 0 0 1px var(--jade-700);
+}
+
+.face-front > * {
+  position: relative;
+  z-index: 1;
+}
+
 .face-back {
   transform: rotateY(180deg);
   background: var(--bone);
