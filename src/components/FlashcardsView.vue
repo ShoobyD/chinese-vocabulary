@@ -387,10 +387,8 @@ function go(step: 1 | -1) {
   padding: var(--space-7) var(--space-4);
   /* An empty tile well pressed into the felt, as in Browse. */
   border-radius: var(--radius-lg);
-  background: var(--felt-deep);
-  box-shadow:
-    inset 0 3px 8px rgba(7, 42, 34, 0.18),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: var(--felt-well);
+  box-shadow: var(--well-inset);
   color: var(--ink-soft);
   text-align: center;
 }

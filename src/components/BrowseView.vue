@@ -243,10 +243,8 @@ function hanziSize(hanzi: string): string {
   gap: var(--space-4);
   padding: var(--space-7) var(--space-4);
   border-radius: var(--radius-lg);
-  background: var(--felt-deep);
-  box-shadow:
-    inset 0 3px 8px rgba(7, 42, 34, 0.18),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: var(--felt-well);
+  box-shadow: var(--well-inset);
   text-align: center;
 }
 

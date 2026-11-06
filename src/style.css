@@ -20,6 +20,12 @@
   /* Felt: the table the tiles sit on. */
   --felt: #e4ddcc;
   --felt-deep: #d6cdb8;
+  /* Empty wells pressed into the felt: a step deeper than the napped table
+     (which reads near --felt-deep), so a well never blends into it. */
+  --felt-well: #cbc0a5;
+  --well-inset:
+    inset 0 4px 10px rgba(7, 42, 34, 0.26),
+    inset 0 -1px 0 rgba(255, 252, 244, 0.45);
   /*
    * Felt nap: a fine warm-umber fractal noise tile (inline SVG, ~0.5KB) plus
    * a faint falloff toward the table's lower edge. Layer over --felt.
