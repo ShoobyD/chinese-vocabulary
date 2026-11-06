@@ -37,7 +37,14 @@ const usedIn = computed<Word[]>(() =>
       <HanziText class="big" :text="word.hanzi" />
     </div>
     <!-- Remounts per word, so the contours write themselves once on open. -->
-    <ToneContour :key="word.id" :pinyin="word.pinyin" :hanzi="word.hanzi" size="lg" playing />
+    <ToneContour
+      :key="word.id"
+      class="headline-tones"
+      :pinyin="word.pinyin"
+      :hanzi="word.hanzi"
+      size="lg"
+      playing
+    />
     <p class="pinyin big-pinyin" dir="ltr">{{ word.pinyin || '—' }}</p>
     <p class="hebrew meaning">{{ word.hebrew ?? '—' }}</p>
 
@@ -104,6 +111,11 @@ const usedIn = computed<Word[]>(() =>
 .big {
   font-size: 4.5rem;
   line-height: 1.15;
+}
+
+/* Clear the dotted sub-word rule under the Hanzi before the contours start. */
+.headline-tones {
+  margin-top: var(--space-4);
 }
 
 .big-pinyin {

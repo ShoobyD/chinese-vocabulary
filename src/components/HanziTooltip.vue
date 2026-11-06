@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue'
 import { useHanziTooltip } from '@/composables/useHanziTooltip'
+import ToneContour from './ToneContour.vue'
 
 const { word, x, y, hide } = useHanziTooltip()
 
@@ -19,14 +20,17 @@ onUnmounted(() => {
 <template>
   <Teleport to="body">
     <transition name="tip">
+      <!-- A small tile that pops up above the character it explains. -->
       <div
         v-if="word"
+        :key="word.id"
         class="tip"
         dir="rtl"
         :style="{ left: x + 'px', top: y + 'px' }"
       >
-        <span class="tip-hanzi hanzi">{{ word.hanzi }}</span>
-        <span class="tip-pinyin pinyin">{{ word.pinyin || '—' }}</span>
+        <span class="tip-hanzi hanzi" lang="zh-Hans">{{ word.hanzi }}</span>
+        <ToneContour :pinyin="word.pinyin" :hanzi="word.hanzi" playing />
+        <span class="tip-pinyin pinyin" dir="ltr">{{ word.pinyin || '—' }}</span>
         <span class="tip-hebrew hebrew">{{ word.hebrew ?? '—' }}</span>
       </div>
     </transition>
@@ -36,56 +40,73 @@ onUnmounted(() => {
 <style scoped>
 .tip {
   position: fixed;
-  /* anchor point is the top-center of the character; sit above it */
-  transform: translate(-50%, calc(-100% - 8px));
+  /* Anchor point is the top-center of the character; sit above it. Placement
+     uses `translate` so `transform` stays free for the pop-in. */
+  translate: -50% calc(-100% - 14px);
+  z-index: 200; /* above the modal (overlay is z-index 100) */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
-  padding: 0.55rem 0.8rem;
-  background: #2a2a2a;
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgb(0 0 0 / 25%);
+  gap: 0.125rem;
+  min-width: 5.5rem;
+  padding: var(--space-3) var(--space-4) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--bone);
+  color: var(--ink);
   text-align: center;
-  pointer-events: none;
   white-space: nowrap;
-  /* above the modal (overlay is z-index 100) so card tooltips show on top */
-  z-index: 200;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1px var(--bone-shade),
+    inset 0 -3px 0 var(--bone-shade),
+    0 4px 0 var(--jade-800),
+    0 6px 0 var(--jade-900),
+    0 14px 24px rgba(7, 42, 34, 0.3);
 }
 
+/* Pointer notch, in the tile's jade edge colour. */
 .tip::after {
   content: '';
   position: absolute;
-  top: 100%;
+  top: calc(100% + 6px);
   left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: #2a2a2a;
+  translate: -50% 0;
+  border: 7px solid transparent;
+  border-top-color: var(--jade-900);
 }
 
 .tip-hanzi {
-  font-size: 1.6rem;
-  line-height: 1.1;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  color: var(--carve-red);
 }
 
 .tip-pinyin {
-  font-size: 0.95rem;
-  color: #ffd9d0;
-  font-style: italic;
+  font-size: var(--text-sm);
 }
 
 .tip-hebrew {
-  font-size: 1rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
 }
 
-.tip-enter-active,
+.tip-enter-active {
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-spring);
+}
+
 .tip-leave-active {
-  transition: opacity 0.1s ease;
+  transition: opacity var(--dur-fast) var(--ease-out);
 }
 
-.tip-enter-from,
+.tip-enter-from {
+  opacity: 0;
+  transform: translateY(6px) scale(0.94);
+}
+
 .tip-leave-to {
   opacity: 0;
 }
 </style>
+

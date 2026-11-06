@@ -301,7 +301,7 @@ onUnmounted(() => window.removeEventListener('beforeunload', onBeforeUnload))
 .chip.on {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--on-jade);
 }
 
 .btn {
@@ -324,7 +324,7 @@ onUnmounted(() => window.removeEventListener('beforeunload', onBeforeUnload))
 .btn.primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--on-jade);
 }
 
 .btn.danger {
