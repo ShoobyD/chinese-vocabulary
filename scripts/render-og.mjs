@@ -28,6 +28,8 @@ execFileSync(chrome, [
   '--hide-scrollbars',
   '--force-device-scale-factor=1',
   '--window-size=1200,630',
+  // Give the template's web fonts (Google Fonts) time to load before capture.
+  '--virtual-time-budget=8000',
   `--screenshot=${output}`,
   `file://${input}`,
 ], { stdio: 'inherit' })
