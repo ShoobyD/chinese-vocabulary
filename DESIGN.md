@@ -201,7 +201,7 @@ A jade, bone and felt material palette, with four small carving inks that mean t
 - **Carving Black** (carve-black): tone 4, falling. Same value as ink, but a distinct role.
 
 ### Neutral
-- **Felt** (felt): the table under the content area and the page background. The table carries a nap (`--felt-nap`): a fine jade-tinted fractal noise plus a faint falloff toward its lower edge, so it reads as cloth rather than paper. Wells and tiles stay untextured.
+- **Felt** (felt): the table under the content area and the page background. The table carries a nap (`--felt-nap`): a fine warm-umber fractal noise plus a faint falloff toward its lower edge, so it reads as cloth rather than paper. Wells and tiles stay untextured.
 - **Deep Felt** (felt-deep): input borders, sunken empty wells, quiet-button hover.
 - **Ink** (ink): all body text and every Hanzi on a bone face.
 - **Soft Ink** (ink-soft): Pinyin everywhere, Hebrew glosses on tiles, empty-state copy.
